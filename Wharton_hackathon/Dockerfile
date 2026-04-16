@@ -1,13 +1,9 @@
 # ── Stage 1: Build React frontend ─────────────────────────────────────────
 FROM node:20-slim AS frontend
-RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
 WORKDIR /build
 COPY gapquest-react-stl-2/package*.json ./
 RUN npm ci
 COPY gapquest-react-stl-2/ ./
-# Download actual GLB files from GitHub Release (bypasses LFS pointer issue)
-RUN curl -fL "https://github.com/MLN-MNJ/wharton-hackathon/releases/download/v1.0-assets/demo-resort3.glb" -o public/demo-resort3.glb \
-    && curl -fL "https://github.com/MLN-MNJ/wharton-hackathon/releases/download/v1.0-assets/hotel1.glb" -o public/hotel1.glb
 RUN npm run build
 
 # ── Stage 2: Python API + static server ───────────────────────────────────

@@ -3,7 +3,7 @@ export const properties = [
     id: 'resort',
     name: 'Paradise Resort',
     icon: '🏝️',
-    modelUrl: '/demo-resort3.glb',
+    modelUrl: 'https://github.com/MLN-MNJ/wharton-hackathon/releases/download/v1.0-assets/demo-resort3.glb',
     modelRotation: { x: Math.PI / 2, y: 0, z: 0 },
     camera: { distY: 1.0, distZ: 0.92, lookZ: 0.0 },
     // Property: Broomfield, CO — eg_property_id: db38b19b...
@@ -87,7 +87,7 @@ export const properties = [
     id: 'hotel',
     name: 'San Isidro Hotel',
     icon: '🏨',
-    modelUrl: '/hotel1.glb',
+    modelUrl: 'https://github.com/MLN-MNJ/wharton-hackathon/releases/download/v1.0-assets/hotel1.glb',
     modelRotation: { x: Math.PI / 2, y: 0, z: 0 },
     camera: { distY: 1.8, distZ: 1.4, lookZ: 0.1 },
     // Property: San Isidro de El General — eg_property_id: 3b984f3b...
