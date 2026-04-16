@@ -1,0 +1,12 @@
+gapquest-react-stl-2/node_modules
+__pycache__
+**/__pycache__
+**/*.pyc
+adaptive_review_engine/_sessions.pkl
+adaptive_review_engine/*.pkl
+adaptive_review_engine/new_bounties_db_backup_*.json
+adaptive_review_engine/physical_landmarks_db_backup_*.json
+adaptive_review_engine/gamified_responses_processed.json
+adaptive_review_engine/.env
+.env
+dist/

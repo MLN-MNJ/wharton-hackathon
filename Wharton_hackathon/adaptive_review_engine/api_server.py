@@ -8,8 +8,10 @@ import uuid
 import csv
 import pickle
 from dotenv import load_dotenv
+import pathlib
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 from langchain_openai import ChatOpenAI
 from langchain_core.messages import SystemMessage, HumanMessage, AIMessage
@@ -628,6 +630,13 @@ def dashboard(property_id: str = "resort"):
     }
 
 
+# Serve built React app for all non-API routes (production)
+_dist = pathlib.Path(__file__).parent.parent / "dist"
+if _dist.exists():
+    app.mount("/", StaticFiles(directory=str(_dist), html=True), name="static")
+
+
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8507)
+    port = int(os.environ.get("PORT", 8507))
+    uvicorn.run(app, host="0.0.0.0", port=port)
