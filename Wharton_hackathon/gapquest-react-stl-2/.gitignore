@@ -1,0 +1,36 @@
+# ─── Node / React ─────────────────────────────
+node_modules/
+dist/
+build/
+.cache/
+.vite/
+
+# ─── Logs ─────────────────────────────────────
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ─── Environment ──────────────────────────────
+.env
+.env.local
+.env.*.local
+
+# ─── OS junk ──────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ─── IDE / Editor ─────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ─── Large / Generated 3D Files ───────────────
+*.stl
+*.obj
+*.glb
+
+# ─── Temp / uploads ───────────────────────────
+public/uploads/
+tmp/
+temp/

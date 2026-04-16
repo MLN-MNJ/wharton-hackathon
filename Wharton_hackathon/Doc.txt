@@ -1,0 +1,736 @@
+Winning a smart‑surveys hackathon with the provided travel‑review dataset
+
+Evidence‑grounded micro‑surveys (1–2 follow‑ups), voice + text capture, and an explainable demo plan
+
+Executive summary
+
+I will win this hackathon by building the smallest credible “smart survey engine” that does three things better than a generic chatbot: it (a) detects exactly what is missing, stale, or contradictory about a specific property right now, (b) asks only one or two tightly controlled follow‑up questions inside the review flow, and (c) immediately shows a before/after property facts card so judges can see why the questions mattered.
+
+Using the uploaded dataset, I can show real, dataset‑driven gaps. The property table includes structured amenity and policy fields (amenity lists by category; check‑in/out times; pet and children policies; check‑in instructions; “know before you go”), and the reviews table includes time‑stamped free‑text reviews and a JSON rating payload with sub‑ratings (e.g., check‑in, hotel condition, room cleanliness). fileciteturn1file0 From a quick exploratory pass over the review text in the last 180 days of data, “cleanliness” language is common, while mentions of factual but high‑value topics like Wi‑Fi reliability, shuttle availability, and several amenity/policy details are scarce—creating ideal opportunities for micro‑follow‑ups that improve coverage with minimal burden.
+
+I will implement an evidence‑grounded pipeline: extract evidence from reviews (baseline regex/keyword + optional ABSA), calculate gap scores (missingness, staleness, contradiction/uncertainty), generate candidates (templates + constrained LLM paraphrase) and rank them using a utility‑vs‑friction objective. For grounding and explainability, I will adopt a lightweight RAG pattern so every asked question can cite “why” (e.g., “last mentioned 26 months ago”, “limited parking complaints”). RAG is widely used to mitigate outdated knowledge and hallucination by incorporating external sources, but research also shows groundedness is not guaranteed—even with retrieval—so I will keep strict schemas and verification checks. [1]
+
+For voice input, I will provide speech capture + automatic transcription + transcript confirmation, because survey‑methodology evidence shows ASR can introduce transcription errors and even change meaning, and noise can materially degrade performance. [2] I will harden the system against LLM failure modes (bias and prompt injection), because bias/fairness surveys stress that LLMs can amplify social biases, and OWASP ranks prompt injection as a top GenAI risk. [3]
+
+Dataset mapping to an attribute taxonomy and gap opportunities
+
+What I will treat as the dataset’s “knowledge base” and “evidence stream”
+
+I will map the dataset into two conceptual layers:
+
+I will treat Description_PROC as the property knowledge base: it contains property identifiers, location fields, a high‑level “popular amenities” list, multiple amenity subcategory lists (e.g., internet, parking, food and drink), and key operational policies (check‑in/out times and narrative policy fields). fileciteturn1file0
+
+I will treat Reviews_PROC as the evidence stream: it contains property identifiers, a review acquisition date (timestamp), review title and free text, and a rating field that encodes overall and sub‑ratings (with “0” representing missing sub‑ratings). fileciteturn1file0
+
+This split is ideal for smart micro‑surveys because it naturally supports: (a) coverage questions (what has not been evidenced recently), (b) staleness questions (what might have changed), and (c) contradiction questions (what evidence disagrees).
+
+Attribute taxonomy I will use in the hackathon
+
+I will construct an attribute taxonomy that is:
+
+compact (so the demo is explainable),
+
+mappable to Description_PROC fields,
+
+detectable from review text (at least with a baseline extractor),
+
+actionable as “property facts” (so answers can update the facts card).
+
+I will use a two‑level structure:
+
+I will define top‑level domains: amenity, policy, condition, and accessibility.
+
+I will define attribute keys within domains, seeded from Description_PROC columns:
+
+amenity.internet.wifi (Description_PROC: popular_amenities_list, property_amenity_internet) fileciteturn1file0
+
+amenity.parking (Description_PROC: popular_amenities_list, property_amenity_parking) fileciteturn1file0
+
+amenity.food.breakfast (Description_PROC: popular_amenities_list, property_amenity_food_and_drink) fileciteturn1file0
+
+amenity.pool and amenity.fitness (Description_PROC: popular_amenities_list, property_amenity_things_to_do) fileciteturn1file0
+
+policy.checkin.window and policy.checkin.instructions (Description_PROC: check_in_start_time, check_in_end_time, check_in_instructions) fileciteturn1file0
+
+policy.checkout.time and policy.checkout.details (Description_PROC: check_out_time, check_out_policy) fileciteturn1file0
+
+policy.pets (Description_PROC: pet_policy) fileciteturn1file0
+
+policy.children_extrabeds (Description_PROC: children_and_extra_bed_policy) fileciteturn1file0
+
+policy.know_before_you_go (Description_PROC: know_before_you_go) fileciteturn1file0
+
+condition.cleanliness and condition.hotel_condition (Reviews_PROC: inferred from review text; optional: use rating sub‑fields indirectly)
+
+This taxonomy is intentionally aligned with industry and research emphasis on answerable follow‑ups: I will prefer questions that can be answered concretely (“Was parking available and free?”) rather than opinion prompts.
+
+How I will identify missing, stale, and contradictory attributes in this dataset
+
+I will compute three gap signals for each attribute  on each property  at the time a review is written:
+
+I will compute missingness as “low recent evidence density”: few or no mentions of  in the last  days, despite the attribute being present in the property description or known to matter for travellers (e.g., Wi‑Fi, parking). A baseline implementation uses keyword triggers; a higher‑quality implementation uses ABSA.
+
+I will compute staleness as “time since last reliable mention/confirmation”:
+
+
+
+
+
+where  is an attribute‑specific decay constant (e.g., renovations decay faster than star rating). RAG surveys explicitly motivate retrieval as a mechanism to address outdated knowledge and integrate new evidence. [4]
+
+I will compute contradiction/uncertainty as disagreement in extracted evidence across reviews and/or between reviews and the property knowledge base. This can be approximated by entropy over extracted values or detected contradiction pairs via NLI.
+
+For the hackathon demo, I will show a small property‑level “gap card” that highlights the top 1–3 candidate attributes with their missing/stale/contradiction scores and the evidence snippets that triggered them.
+
+Evidence‑grounded pipeline and MVP demo plan
+
+System architecture I will implement
+
+I will implement the pipeline as a tight loop optimised for demo clarity:
+
+flowchart TD
+  A[Load property row from Description_PROC] --> B[Build attribute catalogue for property<br/>from popular_amenities_list + property_amenity_* + policies]
+  C[Load recent reviews for property from Reviews_PROC] --> D[Evidence extraction<br/>baseline: regex/keywords<br/>upgrade: ABSA model/LLM extraction]
+  D --> E[Gap scoring per attribute<br/>missingness + staleness + contradiction]
+  E --> F[Candidate question generation<br/>templates + constrained LLM rewrite]
+  B --> F
+  F --> G[Ranker: maximise utility, minimise friction & risk]
+  G --> H[Ask 1–2 follow-ups in review UI]
+  H --> I[Answer capture<br/>text OR voice]
+  I --> J[If voice: ASR + transcript confirmation]
+  J --> K[Normalise answer to structured fact shape<br/>value + confidence + timestamp + provenance]
+  K --> L[Show “Property facts update” preview<br/>before/after + why]
+  K --> M[Log metrics for evaluation<br/>response rate, skip rate, time, usefulness]
+
+I will justify the “RAG + verification” design choice explicitly in my demo narrative: RAG is intended to improve accuracy/credibility by grounding generation in retrieved evidence, but groundedness studies show that even retrieval‑augmented long‑form generation can contain a significant fraction of ungrounded sentences—so I will constrain the model and use factual templates for the final question. [5]
+
+Follow‑up question generation approach I will use
+
+I will use “deterministic topic selection + controlled realisation”:
+
+I will never let the model freely choose what to ask about; instead, the gap engine outputs a top attribute $a^\*$ (and optionally a second attribute if the first answer indicates uncertainty).
+
+I will generate the final question text from a neutral template library, then optionally apply an LLM rewrite limited to tone/localisation (en‑GB wording), with a strict schema output. I will incorporate ideas from conversational survey research: Ge et al. define a knowledge‑driven follow‑up question generation task and propose reference‑free “Gricean‑inspired” evaluation metrics for clarity/coherence/informativeness, which I can adapt as offline checks (e.g., flag questions that are too vague or not answerable). [6]
+
+Voice capture MVP I will demo and why transcript confirmation is non‑negotiable
+
+I will implement a simple voice capture flow: “tap mic → record → transcribe → confirm → submit”.
+
+This is not only good UX; it is methodological risk control. SurveyPractice research on ASR in web surveys shows that ASR transcription errors can partially change responses and that background noise can significantly impair ASR performance, so confirmation/correction is the fastest safeguard. [7] I will use Whisper as a practical baseline for robust speech recognition and cite the underlying Whisper paper as my technical foundation. [8]
+
+The MVP demo I will deliver
+
+I will demo three “judge‑visible” artefacts:
+
+I will demo the review flow with a follow‑up card inserted at the end. The card will ask one targeted question with a “Skip” button and voice/text choice.
+
+I will demo the explainability panel: “Why am I being asked?” will show staleness or contradiction evidence (e.g., “few mentions in last 24 months”; “parking availability complaints”). This defends against “generic chatbot” critiques and shows groundedness.
+
+I will demo a property facts card preview that shows exactly which field is being updated (value, timestamp, confidence). This makes the benefit tangible in under 10 seconds.
+
+Prioritised product concept portfolio tailored to this dataset
+
+I will present 8 end‑to‑end product concepts as variations on the same core engine, each chosen to be demoable using the dataset’s structure (amenity lists + policies + time‑stamped reviews). fileciteturn1file0
+
+Product concepts table
+
+Priority
+
+Product concept
+
+Target users
+
+Value proposition (hackathon‑friendly)
+
+Key features (end‑to‑end)
+
+Suggested tech stack
+
+MVP days
+
+Key risks and mitigations
+
+Highest
+
+GapSense Micro‑Follow‑Ups
+
+Travellers; future travellers
+
+I will ask the single most useful question by detecting a missing or under‑evidenced hotel fact from Description_PROC vs review evidence.
+
+Build per‑property attribute catalogue; extract evidence from reviews; score missingness/staleness; ask 1 question; update facts card.
+
+Next.js/React; FastAPI; Postgres/SQLite; embeddings + FAISS; LLM for constrained rewrite; optional ABSA model.
+
+2–3
+
+Hallucinated/irrelevant questions → deterministic topic choice + templates + RAG grounding. RAG can still be ungrounded, so I will verify schema and keep wording template‑based. [5]
+
+High
+
+StaleCheck Policy Reconfirmation
+
+Travellers; trust & quality
+
+I will refresh stale operational policies (check‑in/out, pets, children/extra beds) with one reconfirmation question.
+
+Staleness clock per policy field; ask “Is this still accurate during your stay?”; store last‑confirmed timestamp.
+
+Same as above; minimal ML required.
+
+1–2
+
+Users unsure → add “Not sure” and keep policies to observable ones; avoid sensitive policies unless high value.
+
+High
+
+Contradiction Resolver
+
+Travellers; trust & quality
+
+I will resolve conflicting signals across reviews (e.g., “parking is free” vs “parking availability is limited”) with one disambiguation question.
+
+Contradiction detection (entropy or NLI); ask forced‑choice + “depends/not sure”; update confidence distribution.
+
+NLI model (e.g., DeBERTaV3 for inference tasks) + lightweight clustering; evidence store. [9]
+
+2–3
+
+False contradictions (context/season) → time‑bounded phrasing (“during your stay”), add “depends”. Leading wording can sway answers, so I will keep symmetrical wording. [10]
+
+High
+
+Voice‑First Micro‑Interview with Structured Updates
+
+Travellers (mobile); accessibility users
+
+I will reduce friction with voice, but keep data quality by transcript confirmation and structured extraction.
+
+Voice record; ASR; highlight uncertainty; confirm transcript; extract “value + qualifier”; update facts card.
+
+Web audio capture; Whisper/ASR; extraction model; validation UI. [11]
+
+2–4
+
+ASR errors and “changed meaning” → transcript confirmation and easy edit; noise warning; fall back to text. [7]
+
+Medium‑high
+
+Review‑Aware Clarifier
+
+Travellers
+
+I will use the user’s review text to ask one missing detail that makes the review actionable (slot filling).
+
+ABSA detects aspect mentioned; ask one follow‑up that fills a slot (e.g., “Where was noise worst?”); map to structured field.
+
+ABSA baseline + optional hospitality ABSA dataset inspiration (HOSSemEval‑EB23). [12]
+
+2–3
+
+Incorrect aspect detection → confidence thresholds, safe fallback to GapSense; keep question optional.
+
+Medium‑high
+
+Amenity Status Board (“Last confirmed”)
+
+Future travellers; internal ops
+
+I will turn micro‑answers into timestamped “last confirmed” badges for key amenities.
+
+Evidence store with provenance; confidence aggregation across answers; show “last confirmed” per amenity (Wi‑Fi, parking, pool).
+
+Postgres; simple aggregation; UI card.
+
+2–3
+
+Overconfidence from few answers → conservative priors and show “unverified” until multiple confirms.
+
+Medium
+
+Question Optimisation Lab (A/B + learning‑to‑rank)
+
+Internal product team; judges
+
+I will prove my system improves by measuring response rates and usefulness and iterating question variants.
+
+A/B variants per attribute; track response/skip/time; compute “utility score” and feed into ranker.
+
+Feature flag + analytics; simple dashboard.
+
+2–4
+
+Scope creep → keep to 1–2 metrics and 2 variants; show a tiny dashboard. Survey question assessment work motivates instrumented evaluation. [13]
+
+Medium
+
+Safety‑First Smart Survey Guardrails
+
+Platform and security stakeholders
+
+I will make the system safe enough to trust: bias checks, prompt‑injection hardening, groundedness checks.
+
+Prompt separation; schema validation; “data not instructions” handling; bias‑sensitive template lints; injection tests.
+
+OWASP‑aligned defences; structured outputs; logging. [14]
+
+1–2
+
+Adds complexity → implement only the most visible guardrails: schema validation + injection‑safe RAG + bias linting.
+
+How I will come up with the best survey questions
+
+I will treat “best question selection” as a constrained optimisation task: I must spend a budget of 1–2 questions to maximise information gain and downstream usefulness while minimising friction and risk.
+
+Principles I will enforce
+
+I will enforce that every question is:
+
+Answerable and specific (“Was free parking available on‑site during your stay?”) rather than vague (“How was parking?”).
+
+Time‑bounded (“during your stay”) to reduce contradiction ambiguity.
+
+Non‑leading and neutral; leading questions can sway responses, so I will avoid suggestive adjectives and asymmetric options. [15]
+
+Grounded in evidence, not model imagination. RAG can help supply relevant evidence, but groundedness studies show retrieval does not guarantee faithfulness, so I will keep “topic selection” outside the LLM and validate outputs. [5]
+
+Algorithms I will implement, from simplest MVP to stronger variants
+
+Evidence extraction via ABSA and structured IE
+
+I will start with a baseline extractor (keywords + regex + negation patterns) because it produces visible progress in hours.
+
+I will then upgrade with ABSA / structured extraction if time allows. Hospitality‑domain ABSA resources such as HOSSemEval‑EB23 show that hospitality reviews can be annotated at aspect granularity, supporting the feasibility of aspect extraction for amenities and experience factors. [12]
+
+Contradiction detection via NLI + clustering
+
+I will represent candidate facts as short hypotheses (e.g., “Parking is available on‑site”, “Parking is limited”). I will classify review sentences against these hypotheses using an NLI model and aggregate into a distribution.
+
+DeBERTaV3 is a common modern backbone for NLU tasks and has been used widely for inference settings; I will cite it as my NLI‑capable model family. [9]
+
+Retrieval‑augmented generation for evidence‑backed phrasing
+
+I will use RAG to retrieve property context (amenity strings and policy text) and the most recent, most relevant review snippets for the selected attribute, then generate a question and a one‑sentence rationale.
+
+RAG surveys highlight motivations such as mitigating hallucinations and enabling continuous knowledge updates by integrating external sources. [4]
+
+However, I will explicitly guard against the known limitation that RAG outputs can remain partially ungrounded; groundedness studies in retrieval‑augmented long‑form generation show a non‑trivial fraction of sentences can be ungrounded even when answers are correct, so I will keep question content template‑locked and use the model mainly for rewriting and rationale summarisation. [16]
+
+Question selection as active learning and CAT under a micro‑budget
+
+I will implement a ranker that approximates expected information gain with a small set of interpretable terms.
+
+Active learning surveys provide a taxonomy of query strategies (uncertainty sampling, diversity sampling, cost‑aware selection) that maps cleanly to “which question should I ask next when I only get one shot?” [17]
+
+To increase rigour, I will reference CAT literature: CAT’s core idea is dynamic item selection to maximise measurement efficiency, and ML‑focused CAT surveys describe the selection algorithm as the heart of adaptivity. [18] I will optionally cite recent RL‑based item selection work as inspiration if I discuss future directions (not required for MVP). [19]
+
+The scoring function I will use in practice
+
+For each candidate question  about property  and attribute , I will compute:
+
+
+
+Where I will define:
+
+
+
+I will define Friction(q) as a small model of response burden: open‑ended > multi‑choice > yes/no; long reads > short; “requires memory” > “observable fact”.
+
+I will define Risk(q) to penalise: sensitive topics, leading wording, and high hallucination likelihood. This is where my bias and prompt‑injection guardrails come in.
+
+Evaluation metrics and workflow I will present to judges
+
+I will evaluate question quality both offline and in the live demo:
+
+Offline, I will adapt conversational‑survey research metrics (clarity/coherence/informativeness) to automatically lint questions; Ge et al. provide a principled basis for reference‑free evaluation of follow‑up questions. [20]
+
+For RAG, I will track retrieval relevance and generation faithfulness. RAG evaluation surveys (Auepora) describe evaluation dimensions across retrieval and generation, giving me vocabulary to justify my metrics. [21]
+
+For voice, I will track transcript correction rate and WER proxies; survey evidence shows meaning can change with ASR, making confirmation essential. [7]
+
+If I have time, I will borrow the mindset from ML‑assisted survey question assessment work: SurveyPractice’s CARI ML discussion frames ML pipelines as tools to flag poor‑performing questions during pilot/early fielding, motivating my “Question Optimisation Lab” component. [22]
+
+UI wireframes, flows, and data model
+
+Traveller review UI wireframe description I will build
+
+I will build a mobile‑first screen with a single micro‑survey card:
+
+The main review content stays standard (rating, title, free text). After the user finishes typing or taps “Next”, I will insert a card:
+
+Heading: “One quick question to help future travellers”
+
+Subheading: “We’re asking because parking details are unclear recently.”
+
+Question: one sentence, neutral, time‑bounded
+
+Answer control: Yes/No/Not sure (or a compact multiple choice)
+
+Optional: “Add detail (optional)”
+
+Always visible: “Skip”
+
+Voice toggle: microphone icon “Answer by voice”
+
+Voice flow I will build (with confirmation)
+
+I will implement:
+
+Record → ASR transcript
+
+Highlight low‑confidence segments (simple heuristic: show editable transcript)
+
+User confirms or edits → submit
+
+I will justify this design using survey‑methodology findings that ASR can mis‑transcribe and that noise affects ASR performance, and I will cite the Whisper paper as my ASR baseline. [11]
+
+User flow chart I will show in my presentation
+
+flowchart LR
+  A[Write review] --> B{Gap engine triggers?}
+  B -->|No| C[Submit review]
+  B -->|Yes| D[Ask follow-up #1<br/>text or voice]
+  D --> E{Answered?}
+  E -->|Skip| C
+  E -->|Text| F[Validate + normalise]
+  E -->|Voice| G[ASR + transcript confirm]
+  G --> F
+  F --> H{Need follow-up #2?}
+  H -->|No| I[Preview: property facts update]
+  H -->|Yes (max 1)| J[Ask follow-up #2]
+  J --> I
+  I --> C
+
+ER diagram for the minimal fact‑update system I will implement
+
+erDiagram
+  PROPERTY ||--o{ REVIEW : has
+  PROPERTY ||--o{ FACT_EVIDENCE : supported_by
+  PROPERTY ||--o{ QUESTION_INSTANCE : triggers
+  QUESTION_INSTANCE ||--o{ RESPONSE : collects
+
+  PROPERTY {
+    string eg_property_id
+    string city
+    string country
+    float guestrating_avg_expedia
+    float star_rating
+  }
+
+  REVIEW {
+    string review_id
+    string eg_property_id
+    date acquisition_date
+    string lob
+    string review_title
+    string review_text
+    string rating_json
+  }
+
+  FACT_EVIDENCE {
+    string evidence_id
+    string eg_property_id
+    string attribute_key
+    string proposed_value
+    float confidence
+    date evidence_date
+    string evidence_source
+  }
+
+  QUESTION_INSTANCE {
+    string question_id
+    string eg_property_id
+    string attribute_key
+    string question_text
+    string rationale
+    string variant_id
+    date asked_at
+  }
+
+  RESPONSE {
+    string response_id
+    string question_id
+    string modality
+    string raw_text
+    string normalised_value
+    float confidence
+  }
+
+Competitor and prototype comparison, and the source pack I will cite
+
+Comparison table I will include in my final deck
+
+Product / prototype
+
+What it does relevant to smart surveys
+
+What I will learn from it
+
+Gap I will exploit for hackathon differentiation
+
+Qualtrics ExpertReview
+
+Positions ExpertReview as a digital reviewer that measures survey element quality and recommends improvements. [23]
+
+Quality framing and research‑backed “why this helps” guidance. [23]
+
+It is survey‑authoring oriented; my demo is embedded micro‑surveys that update entity facts from review evidence.
+
+SurveyMonkey AI Survey Generator / Build with AI
+
+Generates surveys quickly, including bias checks; help docs describe “Build with AI” workflows. [24]
+
+Bias checking UI patterns and disciplined question generation. [24]
+
+It focuses on form creation; I focus on per‑property gap closure at the moment of review.
+
+Microsoft Copilot in Forms
+
+Generates a complete survey with ~5–15 questions from a prompt and supports rewriting/editing. [25]
+
+Strong “rewrite” affordance; structured question types. [26]
+
+Not constrained to 1–2 micro‑follow‑ups and not inherently driven by entity staleness/contradiction.
+
+Gemini in Google Forms
+
+“Help me create a form” from prompts and referenced Drive files. [27]
+
+File‑grounded authoring pattern; prompt + context references. [27]
+
+My hackathon system is live, evidence‑driven follow‑ups rather than authoring.
+
+Typeform AI
+
+AI‑assisted form building, personalised engagement narratives. [28]
+
+High‑polish conversational UX patterns. [28]
+
+Lacks explicit “why ask this now” evidence grounding; I will make that my differentiator.
+
+Jotform AI Form Builder
+
+AI form generation and AI features for creating forms quickly. [29]
+
+Rapid form scaffolding and template patterns. [30]
+
+Again, authoring‑centric; my product is the evidence‑to‑follow‑up loop inside a review.
+
+Conversational survey follow‑up research (Ge et al.)
+
+Defines follow‑up question generation for conversational surveys and introduces evaluation metrics for follow‑up quality. [20]
+
+Academic evaluation vocabulary (coherence, clarity, informativeness) I can cite in my judging narrative. [20]
+
+Research prototype; I will productise with strict 1–2 question constraints and structured property updates.
+
+Survey question assessment with ML (CARI ML)
+
+ML pipelines can flag poor‑performing questions during pilot/early fielding, complementing traditional methods. [22]
+
+Instrumentation mindset: measure question performance, not just generation. [22]
+
+I will integrate a tiny version: response rate + usefulness score to close the loop.
+
+Curated source pack I will cite in my write‑up and pitch deck
+
+I will cite 20 recent (≤5 years prioritised) primary sources and official docs:
+
+Ge et al., “What should I Ask: A Knowledge‑driven Approach for Follow‑up Questions Generation in Conversational Surveys” (arXiv). [20]
+
+ACL Anthology PDF/version record for the same paper. [31]
+
+Gao et al., “Retrieval‑Augmented Generation for Large Language Models: A Survey” (arXiv). [4]
+
+Stolfo, “Groundedness in Retrieval‑augmented Long‑form Generation: An Empirical Study” (arXiv). [16]
+
+NAACL Findings PDF for the groundedness paper. [32]
+
+Yu et al., “Evaluation of Retrieval‑Augmented Generation: A Survey” (Auepora) (arXiv). [33]
+
+Auepora PDF record (same evaluation survey). [34]
+
+Liu et al., “Survey of Computerized Adaptive Testing: A Machine Learning Perspective” (arXiv). [18]
+
+Zhang et al., “A Survey of Active Learning for Natural Language Processing” (ACL Anthology). [35]
+
+“A Survey of Active Learning for NLP” (arXiv version). [36]
+
+Wang et al., “An adaptive testing item selection strategy via a deep reinforcement learning approach” (Behaviour Research Methods). [19]
+
+Nguyen et al., “HOSSemEval‑EB23” hospitality ABSA dataset paper (Springer). [15]
+
+HOSSemEval‑EB23 dataset/code repository (official repo). [37]
+
+Meitinger et al., “Keep the noise down…” ASR in web survey voice recordings (SurveyPractice). [38]
+
+JSSAM advance article comparing ASR tools (Google STT, Whisper, Vosk) on voice answers in web surveys. [39]
+
+Whisper paper: “Robust Speech Recognition via Large‑Scale Weak Supervision” (OpenAI paper PDF). [40]
+
+Gallegos et al., “Bias and Fairness in Large Language Models: A Survey” (MIT/Computational Linguistics page). [41]
+
+OWASP GenAI Security Project: LLM01 Prompt Injection definition and risk framing (2025). [42]
+
+Benjamin et al., “Systematically Analyzing Prompt Injection Vulnerabilities in Diverse LLM Architectures” (arXiv 2024). [43]
+
+Qualtrics ExpertReview documentation (official) for survey quality framing. [23]
+
+My 48–72 hour hackathon build plan and “demo‑first” sequencing
+
+I will schedule work to ensure the demo works even if advanced ML fails. I will implement in layers: baseline extractor → gap scoring → UI → voice → explainability → polish.
+
+72‑hour plan I will follow
+
+gantt
+  title 72-hour smart-surveys hackathon plan (demo-first)
+  dateFormat  YYYY-MM-DD
+  axisFormat  %a %H:%M
+  excludes    weekends
+
+  section Day one
+  Parse dataset + build attribute taxonomy            :a1, 2026-04-14, 1d
+  Baseline evidence extraction (keywords/regex)       :a2, 2026-04-14, 1d
+  Implement gap scoring + ranker (missing/stale/contr):a3, 2026-04-14, 1d
+
+  section Day two
+  Traveller UI: follow-up card + skip + logging       :b1, 2026-04-15, 1d
+  Property facts card preview (before/after)          :b2, 2026-04-15, 1d
+  Voice capture + ASR + transcript confirmation       :b3, 2026-04-15, 1d
+
+  section Day three
+  RAG grounding for rationale + evidence snippets     :c1, 2026-04-16, 0.5d
+  Safety guardrails (schemas, injection hardening)    :c2, 2026-04-16, 0.5d
+  Demo script polish + failure-mode tests             :c3, 2026-04-16, 1d
+
+What I will prioritise to “win” in judging
+
+I will prioritise a story the judges can see: “We found a gap, we asked one question, and the property facts updated.” I will show this loop twice (two different gaps) rather than attempt to cover every attribute.
+
+I will prioritise explainability because it distinguishes “smart surveys” from “LLM chat”: I will show why a question was selected (staleness, contradiction, missingness) and cite how conversational survey research evaluates follow‑up quality. [20]
+
+I will prioritise safety and robustness because judges penalise demos that fail in edge cases: I will hard‑cap the system to 2 questions, keep templates, and implement prompt‑injection alignment following OWASP’s risk framing and recent prompt‑injection vulnerability evidence. [44]
+
+I will prioritise voice quality safeguards because they are both user‑valuable and research‑backed: transcript confirmation is consistent with survey findings on ASR error patterns. [7]
+
+
+
+[1] [4] [5] Retrieval-Augmented Generation for Large Language Models: A Survey
+
+https://arxiv.org/abs/2312.10997?utm_source=chatgpt.com
+
+[2] [7] [11] [38] Keep the noise down: On the performance of automatic speech recognition ...
+
+https://www.surveypractice.org/article/90388-keep-the-noise-down-on-the-performance-of-automatic-speech-recognition-of-voice-recordings-in-web-surveys?utm_source=chatgpt.com
+
+[3] [41] Bias and Fairness in Large Language Models: A Survey
+
+https://direct.mit.edu/coli/article/50/3/1097/121961/Bias-and-Fairness-in-Large-Language-Models-A?utm_source=chatgpt.com
+
+[6] [20] What should I Ask: A Knowledge-driven Approach for Follow-up Questions Generation in Conversational Surveys
+
+https://arxiv.org/abs/2205.10977?utm_source=chatgpt.com
+
+[8] Robust Speech Recognition via Large-Scale Weak Supervision
+
+https://arxiv.org/abs/2212.04356?utm_source=chatgpt.com
+
+[9] DeBERTaV3: Improving DeBERTa using ELECTRA-Style Pre-Training with Gradient-Disentangled Embedding Sharing
+
+https://arxiv.org/abs/2111.09543?utm_source=chatgpt.com
+
+[10] [12] [15] HOSSemEval-EB23: a robust dataset for aspect-based sentiment analysis ...
+
+https://link.springer.com/article/10.1007/s11042-024-19518-9?utm_source=chatgpt.com
+
+[13] [22] Applying Machine Learning to Survey Question Assessment
+
+https://www.surveypractice.org/article/95007-applying-machine-learning-to-survey-question-assessment?utm_source=chatgpt.com
+
+[14] [42] [44] LLM01:2025 Prompt Injection - OWASP Gen AI Security Project
+
+https://genai.owasp.org/llmrisk/llm01-prompt-injection/?utm_source=chatgpt.com
+
+[16] Groundedness in Retrieval-augmented Long-form Generation: An Empirical Study
+
+https://arxiv.org/abs/2404.07060?utm_source=chatgpt.com
+
+[17] [35] A Survey of Active Learning for Natural Language Processing
+
+https://aclanthology.org/2022.emnlp-main.414/?utm_source=chatgpt.com
+
+[18] Survey of Computerized Adaptive Testing: A Machine Learning Perspective
+
+https://arxiv.org/abs/2404.00712?utm_source=chatgpt.com
+
+[19] An adaptive testing item selection strategy via a deep reinforcement ...
+
+https://link.springer.com/article/10.3758/s13428-024-02498-x?utm_source=chatgpt.com
+
+[21] [33] Evaluation of Retrieval-Augmented Generation: A Survey
+
+https://arxiv.org/abs/2405.07437?utm_source=chatgpt.com
+
+[23] ExpertReview Functionality - Qualtrics
+
+https://www.qualtrics.com/support/survey-platform/survey-module/survey-checker/quality-iq-functionality/?utm_source=chatgpt.com
+
+[24] AI Survey Generator | SurveyMonkey
+
+https://www.surveymonkey.com/product/features/ai-survey-generator/?utm_source=chatgpt.com
+
+[25] Welcome to Copilot in Forms - Microsoft Support
+
+https://support.microsoft.com/en-us/office/welcome-to-copilot-in-forms-6a21bfbd-21b3-4e48-946c-7603b129521c?utm_source=chatgpt.com
+
+[26] Copilot in Forms: Continue writing and editing | Microsoft Community Hub
+
+https://techcommunity.microsoft.com/blog/microsoftformsblog/copilot-in-forms-continue-writing-and-editing/4151606?utm_source=chatgpt.com
+
+[27] Create a form with Gemini in Google Forms
+
+https://support.google.com/docs/answer/16346789?hl=en&utm_source=chatgpt.com
+
+[28] Typeform AI: Unlock the Future of Forms | Create Smarter Forms Today
+
+https://www.typeform.com/ai?utm_source=chatgpt.com
+
+[29] Jotform AI Form Generator
+
+https://www.jotform.com/ai/form-builder/?utm_source=chatgpt.com
+
+[30] How to Use Jotform AI
+
+https://www.jotform.com/help/how-to-use-jotform-ai/?utm_source=chatgpt.com
+
+[31] What should I Ask: A Knowledge-driven Approach for Follow-up Questions ...
+
+https://aclanthology.org/2023.paclic-1.12.pdf?utm_source=chatgpt.com
+
+[32] Groundedness in Retrieval-augmented Long-form Generation: An Empirical ...
+
+https://aclanthology.org/2024.findings-naacl.100.pdf?utm_source=chatgpt.com
+
+[34] arXiv:2405.07437v2 [cs.CL] 3 Jul 2024
+
+https://arxiv.org/pdf/2405.07437?utm_source=chatgpt.com
+
+[36] A Survey of Active Learning for Natural Language Processing
+
+https://arxiv.org/abs/2210.10109?utm_source=chatgpt.com
+
+[37] HOSSemEval-EB23/README.md at master - GitHub
+
+https://github.com/tramdoan93/HOSSemEval-EB23/blob/master/README.md?utm_source=chatgpt.com
+
+[39] Transcribing and Coding Voice Answers Obtained in Web Surveys ...
+
+https://academic.oup.com/jssam/advance-article/doi/10.1093/jssam/smaf028/8537214?utm_source=chatgpt.com
+
+[40] Robust Speech Recognition via Large-Scale Weak Supervision
+
+https://cdn.openai.com/papers/whisper.pdf?utm_source=chatgpt.com
+
+[43] Systematically Analyzing Prompt Injection Vulnerabilities in Diverse LLM Architectures
+
+https://arxiv.org/abs/2410.23308?utm_source=chatgpt.com

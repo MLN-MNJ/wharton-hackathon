@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls -lah /Users/chaitanyakakade/Downloads/Wharton_hackathon/*.json)",
+      "Bash(python3 -m json.tool)",
+      "Bash(python3:*)",
+      "Bash(chmod +x /Users/chaitanyakakade/Downloads/Wharton_hackathon/start.sh)",
+      "Bash(chmod -R +x /Users/chaitanyakakade/Downloads/Wharton_hackathon/gapquest-react-stl-2/node_modules/.bin/)",
+      "Bash(pip install:*)",
+      "Bash(python -c \"from langchain_community.memory import ConversationBufferMemory; print\\(''memory ok''\\)\")",
+      "Bash(python -c \"from langchain.chains import ConversationChain; print\\(''chain ok''\\)\")",
+      "Bash(python -c \"from langchain_core.prompts import PromptTemplate; print\\(''prompt ok''\\)\")",
+      "Bash(python -c \"from langchain.memory import ConversationBufferMemory; print\\(''ok''\\)\")",
+      "Bash(python -c \"from langchain.chains import ConversationChain; print\\(''ok''\\)\")",
+      "Bash(python -c \"from langchain_core.prompts import PromptTemplate; print\\(''ok''\\)\")",
+      "Bash(python -c \"import langchain; print\\(langchain.__version__\\)\")",
+      "Bash(pip show:*)",
+      "Bash(python -c \":*)",
+      "Bash(python -c \"from langchain_community.chat_message_histories import ChatMessageHistory; print\\(''ok''\\)\")",
+      "Bash(python -c \"from langchain_core.runnables import RunnableLambda; print\\(''ok''\\)\")",
+      "Bash(python -c \"import api_server; print\\(''imports ok''\\)\")",
+      "Bash(python -c \"import api_server; print\\(''ok''\\)\")",
+      "Bash(xattr -r -d com.apple.quarantine /Users/chaitanyakakade/Downloads/Wharton_hackathon/gapquest-react-stl-2/node_modules)",
+      "Bash(curl -s http://localhost:8507/api/health)",
+      "Bash(curl -s -X POST http://localhost:8507/api/chat/start -H \"Content-Type: application/json\" -d '{\"\"property_id\"\":\"\"hotel\"\",\"\"gap_id\"\":\"\"lobby\"\"}')",
+      "Bash(curl -s -X POST http://localhost:8507/api/chat/start -H \"Content-Type: application/json\" -d '{\"\"\"\"property_id\"\"\"\":\"\"\"\"hotel\"\"\"\",\"\"\"\"gap_id\"\"\"\":\"\"\"\"lobby\"\"\"\"}')",
+      "Bash(python -c \"import ast; ast.parse\\(open\\(''app.py''\\).read\\(\\)\\); print\\(''app.py OK''\\)\")",
+      "Bash(python -c \"import ast; ast.parse\\(open\\(''api_server.py''\\).read\\(\\)\\); print\\(''api_server.py OK''\\)\")"
+    ]
+  }
+}

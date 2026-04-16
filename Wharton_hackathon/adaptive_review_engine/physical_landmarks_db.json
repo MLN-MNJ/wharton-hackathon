@@ -1,0 +1,693 @@
+[
+  {
+    "eg_property_id": "110f01b8ae518a0ee41047bce5c22572988a435e10ead72dc1af793bba8ce0b0",
+    "location": {
+      "city": "Pompei",
+      "star_rating": ""
+    },
+    "buckets": [
+      {
+        "bucket_name": "Room & In-room Amenities",
+        "bounty_priority_score": 0.73,
+        "allocated_points": 100,
+        "frontend_name": "Bedrooms",
+        "static_question": "How comfortable was the bed and overall cleanliness during your stay?"
+      },
+      {
+        "bucket_name": "Dining & Bar",
+        "bounty_priority_score": 0.67,
+        "allocated_points": 50,
+        "frontend_name": "Dining",
+        "static_question": "What was your experience with the breakfast quality and dining service?"
+      },
+      {
+        "bucket_name": "Lobby & Services",
+        "bounty_priority_score": 0.88,
+        "allocated_points": 400,
+        "frontend_name": "Reception",
+        "static_question": "How friendly and helpful was the front desk staff during your visit?"
+      },
+      {
+        "bucket_name": "Property Facilities & General Condition",
+        "bounty_priority_score": 0.86,
+        "allocated_points": 150,
+        "frontend_name": "Facilities",
+        "static_question": "What can you share about the overall cleanliness and condition of the property?"
+      },
+      {
+        "bucket_name": "Location & Surroundings",
+        "bounty_priority_score": 0.87,
+        "allocated_points": 250,
+        "frontend_name": "Location",
+        "static_question": "How convenient was the location in relation to nearby attractions and amenities?"
+      },
+      {
+        "bucket_name": "Other",
+        "frontend_name": "Other",
+        "allocated_points": 25,
+        "static_question": "Is there anything else you'd like to share about the property?",
+        "bounty_priority_score": 0
+      },
+      {
+        "bucket_name": "Miscellaneous",
+        "frontend_name": "Miscellaneous",
+        "allocated_points": 25,
+        "static_question": "Do you have any miscellaneous details to add?",
+        "bounty_priority_score": 0
+      }
+    ]
+  },
+  {
+    "eg_property_id": "db38b19b897dbece3e34919c662b3fd66d23b615395d11fb69264dd3a9b17723",
+    "location": {
+      "city": "Broomfield",
+      "star_rating": "4.0"
+    },
+    "buckets": [
+      {
+        "bucket_name": "Room & In-room Amenities",
+        "bounty_priority_score": 1.0,
+        "allocated_points": 250,
+        "frontend_name": "Bedrooms",
+        "static_question": "How comfortable was the bed and overall cleanliness during your stay?"
+      },
+      {
+        "bucket_name": "Dining & Bars",
+        "bounty_priority_score": 0.74,
+        "allocated_points": 150,
+        "frontend_name": "Dining",
+        "static_question": "What did you think about the quality and availability of dining options?"
+      },
+      {
+        "bucket_name": "Pool, Spa & Fitness",
+        "bounty_priority_score": 1.36,
+        "allocated_points": 400,
+        "frontend_name": "Recreation",
+        "static_question": "How satisfying was your experience with the pool and fitness facilities?"
+      },
+      {
+        "bucket_name": "General Services & Common Areas",
+        "bounty_priority_score": 0.43,
+        "allocated_points": 100,
+        "frontend_name": "Services",
+        "static_question": "How would you rate the friendliness and efficiency of the staff and common areas?"
+      },
+      {
+        "bucket_name": "Other",
+        "frontend_name": "Additional Feedback",
+        "allocated_points": 25,
+        "static_question": "Is there anything else you'd like to share about the property?",
+        "bounty_priority_score": 0
+      },
+      {
+        "bucket_name": "Miscellaneous",
+        "frontend_name": "Miscellaneous",
+        "allocated_points": 25,
+        "static_question": "Do you have any miscellaneous details to add?",
+        "bounty_priority_score": 0
+      }
+    ]
+  },
+  {
+    "eg_property_id": "5f5a0cd8662f0ddf297f2d27358f680daab5d3ac22fd45a4e1c3c3ec2c101a12",
+    "location": {
+      "city": "Freudenstadt",
+      "star_rating": ""
+    },
+    "buckets": [
+      {
+        "bucket_name": "Room",
+        "bounty_priority_score": 0.75,
+        "allocated_points": 250,
+        "frontend_name": "Bedrooms",
+        "static_question": "How comfortable was the bed and overall cleanliness during your stay?"
+      },
+      {
+        "bucket_name": "Dining",
+        "bounty_priority_score": 0.75,
+        "allocated_points": 150,
+        "frontend_name": "Dining Area",
+        "static_question": "What did you think about the breakfast and meal quality at the dining area?"
+      },
+      {
+        "bucket_name": "Facilities & Recreation",
+        "bounty_priority_score": 2.0,
+        "allocated_points": 400,
+        "frontend_name": "Amenities",
+        "static_question": "How satisfied were you with the on-site recreational activities and facilities?"
+      },
+      {
+        "bucket_name": "Staff & Service",
+        "bounty_priority_score": 0.0,
+        "allocated_points": 50,
+        "frontend_name": "Service Quality",
+        "static_question": "How would you rate the friendliness and responsiveness of the staff during your stay?"
+      },
+      {
+        "bucket_name": "Location & Surroundings",
+        "bounty_priority_score": 0.17,
+        "allocated_points": 100,
+        "frontend_name": "Surroundings",
+        "static_question": "How would you describe the peacefulness and proximity to nearby attractions?"
+      },
+      {
+        "bucket_name": "Other",
+        "frontend_name": "Other",
+        "allocated_points": 25,
+        "static_question": "Is there anything else you'd like to share about the property?",
+        "bounty_priority_score": 0
+      },
+      {
+        "bucket_name": "Miscellaneous",
+        "frontend_name": "Miscellaneous",
+        "allocated_points": 25,
+        "static_question": "Do you have any miscellaneous details to add?",
+        "bounty_priority_score": 0
+      }
+    ]
+  },
+  {
+    "eg_property_id": "3b984f3ba8df55b2609a1e33fd694cf8407842e1d833c9b4d993b07fc83a2820",
+    "location": {
+      "city": "San Isidro de El General",
+      "star_rating": "3.5"
+    },
+    "buckets": [
+      {
+        "bucket_name": "Room",
+        "bounty_priority_score": 1.18,
+        "allocated_points": 250,
+        "frontend_name": "Bedrooms",
+        "static_question": "How comfortable was the bed and overall cleanliness during your stay?"
+      },
+      {
+        "bucket_name": "Restaurant & Bar",
+        "bounty_priority_score": 1.64,
+        "allocated_points": 400,
+        "frontend_name": "Dining",
+        "static_question": "What did you think of the breakfast quality and variety during your visit?"
+      },
+      {
+        "bucket_name": "Lobby & Services",
+        "bounty_priority_score": 0.16,
+        "allocated_points": 100,
+        "frontend_name": "Lobby",
+        "static_question": "How would you rate the friendliness and service quality of the staff you encountered?"
+      },
+      {
+        "bucket_name": "Property Facilities & Grounds",
+        "bounty_priority_score": 0.75,
+        "allocated_points": 150,
+        "frontend_name": "Facilities",
+        "static_question": "How convenient was the on-site parking and what did you think about the casino experience?"
+      },
+      {
+        "bucket_name": "Other",
+        "frontend_name": "Other",
+        "allocated_points": 25,
+        "static_question": "Is there anything else you'd like to share about the property?",
+        "bounty_priority_score": 0
+      },
+      {
+        "bucket_name": "Miscellaneous",
+        "frontend_name": "Miscellaneous",
+        "allocated_points": 25,
+        "static_question": "Do you have any miscellaneous details to add?",
+        "bounty_priority_score": 0
+      }
+    ]
+  },
+  {
+    "eg_property_id": "9a0043fd4258a1286db1e253ca591662b3aac849da12d0d4f67e08b8f59be65f",
+    "location": {
+      "city": "Bochum",
+      "star_rating": ""
+    },
+    "buckets": [
+      {
+        "bucket_name": "Room & Amenities",
+        "bounty_priority_score": 1.75,
+        "allocated_points": 250,
+        "frontend_name": "Bedrooms",
+        "static_question": "How comfortable was the bed and overall cleanliness during your stay?"
+      },
+      {
+        "bucket_name": "Food & Drink",
+        "bounty_priority_score": 1.74,
+        "allocated_points": 150,
+        "frontend_name": "Dining",
+        "static_question": "What did you think of the breakfast quality and restaurant experience?"
+      },
+      {
+        "bucket_name": "Service & Staff",
+        "bounty_priority_score": 1.4,
+        "allocated_points": 100,
+        "frontend_name": "Hospitality",
+        "static_question": "How friendly and accommodating was the staff during your visit?"
+      },
+      {
+        "bucket_name": "Property & Location",
+        "bounty_priority_score": 1.79,
+        "allocated_points": 400,
+        "frontend_name": "Facilities",
+        "static_question": "How would you rate the accessibility and overall condition of the property?"
+      },
+      {
+        "bucket_name": "Other",
+        "frontend_name": "Other",
+        "allocated_points": 25,
+        "static_question": "Is there anything else you'd like to share about the property?",
+        "bounty_priority_score": 0
+      },
+      {
+        "bucket_name": "Miscellaneous",
+        "frontend_name": "Miscellaneous",
+        "allocated_points": 25,
+        "static_question": "Do you have any miscellaneous details to add?",
+        "bounty_priority_score": 0
+      }
+    ]
+  },
+  {
+    "eg_property_id": "e52d67a758ce4ad0229aacc97e5dfe89984c384c51a70208f9e0cc65c9cd4676",
+    "location": {
+      "city": "Bangkok",
+      "star_rating": "3.0"
+    },
+    "buckets": [
+      {
+        "bucket_name": "Room & In-Room Amenities",
+        "bounty_priority_score": 1.07,
+        "allocated_points": 250,
+        "frontend_name": "Bedrooms",
+        "static_question": "How comfortable was the bed and overall cleanliness during your stay?"
+      },
+      {
+        "bucket_name": "Dining",
+        "bounty_priority_score": 1.35,
+        "allocated_points": 400,
+        "frontend_name": "Dining Area",
+        "static_question": "How would you rate the quality and service of the breakfast provided?"
+      },
+      {
+        "bucket_name": "Hotel Services & Common Areas",
+        "bounty_priority_score": 0.73,
+        "allocated_points": 150,
+        "frontend_name": "Lobby",
+        "static_question": "How friendly and helpful was the hotel staff during your visit?"
+      },
+      {
+        "bucket_name": "Location & Surroundings",
+        "bounty_priority_score": 0.35,
+        "allocated_points": 100,
+        "frontend_name": "Neighborhood",
+        "static_question": "How would you describe the ambiance and proximity to attractions around the property?"
+      },
+      {
+        "bucket_name": "Other",
+        "frontend_name": "Other",
+        "allocated_points": 25,
+        "static_question": "Is there anything else you'd like to share about the property?",
+        "bounty_priority_score": 0
+      },
+      {
+        "bucket_name": "Miscellaneous",
+        "frontend_name": "Miscellaneous",
+        "allocated_points": 25,
+        "static_question": "Do you have any miscellaneous details to add?",
+        "bounty_priority_score": 0
+      }
+    ]
+  },
+  {
+    "eg_property_id": "ff26cdda236b233f7c481f0e896814075ac6bed335e162e0ff01d5491343f838",
+    "location": {
+      "city": "Frisco",
+      "star_rating": "3.5"
+    },
+    "buckets": [
+      {
+        "bucket_name": "Room & In-Room Amenities",
+        "bounty_priority_score": 1.17,
+        "allocated_points": 100,
+        "frontend_name": "Bedrooms",
+        "static_question": "How comfortable was the bed and overall cleanliness during your stay?"
+      },
+      {
+        "bucket_name": "Dining & Bar",
+        "bounty_priority_score": 1.39,
+        "allocated_points": 150,
+        "frontend_name": "Dining",
+        "static_question": "What did you think of the dining options and food quality during your visit?"
+      },
+      {
+        "bucket_name": "Pool & Fitness",
+        "bounty_priority_score": 2.05,
+        "allocated_points": 400,
+        "frontend_name": "Wellness",
+        "static_question": "How would you rate the pool and fitness facilities during your stay?"
+      },
+      {
+        "bucket_name": "Lobby & General Services",
+        "bounty_priority_score": 1.48,
+        "allocated_points": 250,
+        "frontend_name": "Lobby",
+        "static_question": "How satisfied were you with the staff's service and the check-in process?"
+      },
+      {
+        "bucket_name": "Other",
+        "frontend_name": "Additional Info",
+        "allocated_points": 25,
+        "static_question": "Is there anything else you'd like to share about the property?",
+        "bounty_priority_score": 0
+      },
+      {
+        "bucket_name": "Miscellaneous",
+        "frontend_name": "Extras",
+        "allocated_points": 25,
+        "static_question": "Do you have any miscellaneous details to add?",
+        "bounty_priority_score": 0
+      }
+    ]
+  },
+  {
+    "eg_property_id": "fa014137b3ea9af6a90c0a86a1d099e46f7e56d6eb33db1ad1ec4bdac68c3caa",
+    "location": {
+      "city": "Monterey",
+      "star_rating": "2.5"
+    },
+    "buckets": [
+      {
+        "bucket_name": "Room Features",
+        "bounty_priority_score": 0.48,
+        "allocated_points": 150,
+        "frontend_name": "Bedrooms",
+        "static_question": "How comfortable was the bed and overall cleanliness during your stay?"
+      },
+      {
+        "bucket_name": "Dining & Bar",
+        "bounty_priority_score": 0.4,
+        "allocated_points": 100,
+        "frontend_name": "Dining",
+        "static_question": "How did you find the breakfast quality and evening reception offerings?"
+      },
+      {
+        "bucket_name": "Lobby & Guest Services",
+        "bounty_priority_score": 1.05,
+        "allocated_points": 400,
+        "frontend_name": "Lobby",
+        "static_question": "What was your experience with the staff's friendliness and the check-in process?"
+      },
+      {
+        "bucket_name": "Parking & Property Accessibility",
+        "bounty_priority_score": 0.25,
+        "allocated_points": 50,
+        "frontend_name": "Parking",
+        "static_question": "Was the parking convenient and easily accessible during your visit?"
+      },
+      {
+        "bucket_name": "Location & General Property",
+        "bounty_priority_score": 0.6,
+        "allocated_points": 250,
+        "frontend_name": "Location",
+        "static_question": "How would you rate the hotel's proximity to attractions and overall safety?"
+      },
+      {
+        "bucket_name": "Other",
+        "frontend_name": "Other",
+        "allocated_points": 25,
+        "static_question": "Is there anything else you'd like to share about the property?",
+        "bounty_priority_score": 0
+      },
+      {
+        "bucket_name": "Miscellaneous",
+        "frontend_name": "Miscellaneous",
+        "allocated_points": 25,
+        "static_question": "Do you have any miscellaneous details to add?",
+        "bounty_priority_score": 0
+      }
+    ]
+  },
+  {
+    "eg_property_id": "823fb2499b4e37d99acb65e7198e75965d6496fd1c579f976205c0e6179206df",
+    "location": {
+      "city": "Rome",
+      "star_rating": ""
+    },
+    "buckets": [
+      {
+        "bucket_name": "Room",
+        "bounty_priority_score": 1.37,
+        "allocated_points": 250,
+        "frontend_name": "Bedrooms",
+        "static_question": "How comfortable was the bed and overall cleanliness during your stay?"
+      },
+      {
+        "bucket_name": "Restaurant & Dining",
+        "bounty_priority_score": 1.35,
+        "allocated_points": 150,
+        "frontend_name": "Dining",
+        "static_question": "What did you think of the breakfast quality and variety offered here?"
+      },
+      {
+        "bucket_name": "Lobby & Services",
+        "bounty_priority_score": 0.8,
+        "allocated_points": 100,
+        "frontend_name": "Lobby",
+        "static_question": "How helpful were the staff during your check-in and throughout your stay?"
+      },
+      {
+        "bucket_name": "Gym & Fitness",
+        "bounty_priority_score": 2.5,
+        "allocated_points": 400,
+        "frontend_name": "Fitness Center",
+        "static_question": "How would you rate the availability and quality of the fitness center amenities?"
+      },
+      {
+        "bucket_name": "Other",
+        "frontend_name": "Other",
+        "allocated_points": 25,
+        "static_question": "Is there anything else you'd like to share about the property?",
+        "bounty_priority_score": 0
+      },
+      {
+        "bucket_name": "Miscellaneous",
+        "frontend_name": "Miscellaneous",
+        "allocated_points": 25,
+        "static_question": "Do you have any miscellaneous details to add?",
+        "bounty_priority_score": 0
+      }
+    ]
+  },
+  {
+    "eg_property_id": "a036cbe1d9fbf9cba088075d1b4d966ee871df55aa4a58ba0da23c116c499052",
+    "location": {
+      "city": "Mbombela",
+      "star_rating": "3.5"
+    },
+    "buckets": [
+      {
+        "bucket_name": "Guest Room",
+        "bounty_priority_score": 1.48,
+        "allocated_points": 400,
+        "frontend_name": "Bedrooms",
+        "static_question": "How comfortable was the bed and overall cleanliness during your stay?"
+      },
+      {
+        "bucket_name": "Dining & Bar",
+        "bounty_priority_score": 1.25,
+        "allocated_points": 250,
+        "frontend_name": "Dining",
+        "static_question": "How would you rate your breakfast experience and the restaurant ambiance?"
+      },
+      {
+        "bucket_name": "Lobby & Services",
+        "bounty_priority_score": 1.23,
+        "allocated_points": 150,
+        "frontend_name": "Lobby",
+        "static_question": "How friendly was the staff and how would you describe the lobby environment?"
+      },
+      {
+        "bucket_name": "Recreation & Outdoors",
+        "bounty_priority_score": 1.0,
+        "allocated_points": 100,
+        "frontend_name": "Recreation",
+        "static_question": "What was your experience with the pool and outdoor spaces?"
+      },
+      {
+        "bucket_name": "Other",
+        "frontend_name": "Other",
+        "allocated_points": 25,
+        "static_question": "Is there anything else you'd like to share about the property?",
+        "bounty_priority_score": 0
+      },
+      {
+        "bucket_name": "Miscellaneous",
+        "frontend_name": "Miscellaneous",
+        "allocated_points": 25,
+        "static_question": "Do you have any miscellaneous details to add?",
+        "bounty_priority_score": 0
+      }
+    ]
+  },
+  {
+    "eg_property_id": "3216b1b7885bffdb336265a8de7322ba0cd477cfb3d4f99d19acf488f76a1941",
+    "location": {
+      "city": "Bell Gardens",
+      "star_rating": "2.0"
+    },
+    "buckets": [
+      {
+        "bucket_name": "Room & In-Room Amenities",
+        "bounty_priority_score": 1.1,
+        "allocated_points": 250,
+        "frontend_name": "Bedrooms",
+        "static_question": "How comfortable was the bed and overall cleanliness during your stay?"
+      },
+      {
+        "bucket_name": "Lobby & Guest Services",
+        "bounty_priority_score": 1.05,
+        "allocated_points": 150,
+        "frontend_name": "Reception",
+        "static_question": "How did you find the professionalism and responsiveness of the staff?"
+      },
+      {
+        "bucket_name": "Property & Surroundings",
+        "bounty_priority_score": 1.05,
+        "allocated_points": 100,
+        "frontend_name": "Surroundings",
+        "static_question": "What did you think of the location and external environment of the property?"
+      },
+      {
+        "bucket_name": "Food & Dining",
+        "bounty_priority_score": 1.15,
+        "allocated_points": 400,
+        "frontend_name": "Dining",
+        "static_question": "How would you rate the breakfast service and on-site dining options available?"
+      },
+      {
+        "bucket_name": "Other",
+        "frontend_name": "Other",
+        "allocated_points": 25,
+        "static_question": "Is there anything else you'd like to share about the property?",
+        "bounty_priority_score": 0
+      },
+      {
+        "bucket_name": "Miscellaneous",
+        "frontend_name": "Miscellaneous",
+        "allocated_points": 25,
+        "static_question": "Do you have any miscellaneous details to add?",
+        "bounty_priority_score": 0
+      }
+    ]
+  },
+  {
+    "eg_property_id": "f2d8d9557208d58577e9df7ff34e42bf86fb5b10fdfae0c3040d14c374a2a2b9",
+    "location": {
+      "city": "New Smyrna Beach",
+      "star_rating": "2.0"
+    },
+    "buckets": [
+      {
+        "bucket_name": "Room & In-Room Amenities",
+        "bounty_priority_score": 1.3,
+        "allocated_points": 250,
+        "frontend_name": "Bedrooms",
+        "static_question": "How comfortable was the bed and overall cleanliness during your stay?"
+      },
+      {
+        "bucket_name": "Pool & Recreation",
+        "bounty_priority_score": 1.05,
+        "allocated_points": 150,
+        "frontend_name": "Pool Area",
+        "static_question": "What did you think of the pool cleanliness and hot tub availability?"
+      },
+      {
+        "bucket_name": "Property & Grounds",
+        "bounty_priority_score": 1.57,
+        "allocated_points": 400,
+        "frontend_name": "Property Grounds",
+        "static_question": "How would you rate the parking availability and overall property condition?"
+      },
+      {
+        "bucket_name": "Staff & Services",
+        "bounty_priority_score": 0.61,
+        "allocated_points": 100,
+        "frontend_name": "Reception",
+        "static_question": "How was your experience with staff availability and communication?"
+      },
+      {
+        "bucket_name": "Other",
+        "frontend_name": "Additional Info",
+        "allocated_points": 25,
+        "static_question": "Is there anything else you'd like to share about the property?",
+        "bounty_priority_score": 0
+      },
+      {
+        "bucket_name": "Miscellaneous",
+        "frontend_name": "Miscellaneous Details",
+        "allocated_points": 25,
+        "static_question": "Do you have any miscellaneous details to add?",
+        "bounty_priority_score": 0
+      }
+    ]
+  },
+  {
+    "eg_property_id": "7d027ef72c02eaa17af3c993fd5dba50d17b41a6280389a46c13c7e2c32a5b06",
+    "location": {
+      "city": "Ocala",
+      "star_rating": "2.5"
+    },
+    "buckets": [
+      {
+        "bucket_name": "Room/Guestroom",
+        "bounty_priority_score": 0.75,
+        "allocated_points": 100,
+        "frontend_name": "Bedrooms",
+        "static_question": "How comfortable was the bed and overall cleanliness during your stay?"
+      },
+      {
+        "bucket_name": "Food & Dining",
+        "bounty_priority_score": 0.83,
+        "allocated_points": 250,
+        "frontend_name": "Dining",
+        "static_question": "How would you rate the quality and variety of the breakfast options available?"
+      },
+      {
+        "bucket_name": "Pool & Fitness",
+        "bounty_priority_score": 1.5,
+        "allocated_points": 400,
+        "frontend_name": "Recreation",
+        "static_question": "How did you find the condition and availability of the pool and fitness facilities?"
+      },
+      {
+        "bucket_name": "Lobby & Services",
+        "bounty_priority_score": 0.83,
+        "allocated_points": 150,
+        "frontend_name": "Front Desk",
+        "static_question": "Was the staff service and access to parking satisfactory during your visit?"
+      },
+      {
+        "bucket_name": "Hotel Condition & Location",
+        "bounty_priority_score": 0.5,
+        "allocated_points": 50,
+        "frontend_name": "Hotel Overview",
+        "static_question": "How would you describe the overall condition and location convenience of the hotel?"
+      },
+      {
+        "bucket_name": "Other",
+        "frontend_name": "Other",
+        "allocated_points": 25,
+        "static_question": "Is there anything else you'd like to share about the property?",
+        "bounty_priority_score": 0
+      },
+      {
+        "bucket_name": "Miscellaneous",
+        "frontend_name": "Miscellaneous",
+        "allocated_points": 25,
+        "static_question": "Do you have any miscellaneous details to add?",
+        "bounty_priority_score": 0
+      }
+    ]
+  }
+]

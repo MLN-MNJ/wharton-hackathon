@@ -1,0 +1,95 @@
+# GapQuest: AI-Driven Property Review Engine
+## Project Summary & LLM Questionnaire Documentation
+Date: 2026-04-16
+
+### 1. Project Evolution
+The project evolved from a basic "Property Guide" prototype into a premium, state-of-the-art AI concierge and structured survey instrument for the Wharton Hack-AI-thon.
+
+Key Milestones:
+- 🏝️ **Adaptive Review Engine**: Transitioned to GPT-4o for high-quality conversational extraction.
+- 🏗️ **Data Architecture**: Implemented a hierarchical bucket-based data model (Landmarks -> Gaps -> Sub-features) with real-time database synchronization.
+- 📈 **Score Decay & Sentiment**: Implemented programmatic decay of gap/staleness scores and sentiment-to-rating conversion.
+- 🎨 **Premium UI**: Dark-gradient theme with gold accents, sidebar leaderboard cards, and real-time voice input integration.
+- 🎮 **Gamification**: Points system (+500 pts to +25 pts) based on the "bounty" value of missing data.
+- 🏢 **React Integration**: Ported the conversational logic into a high-end 3D React frontend with GLB models.
+
+---
+
+### 2. Conversational Persona Evolution
+The AI's personality was refined across multiple iterations based on user feedback:
+1. **Initial**: Warm, human-like concierge.
+2. **Refinement**: Professional but sympathetic.
+3. **Current (Survey-First)**: A professional, neutral survey assistant. Emotionally detached to ensure data quality and avoid "patronising" sympathy.
+
+---
+
+### 3. The "Rigorous Survey Science" Questionnaire
+The core logic for the LLM questionnaire is designed to minimize user friction while maximizing data extraction quality.
+
+#### 3.1. The 3-Step Flow
+1. **Step 0 (Static Seed)**: A property-specific starting question (e.g., "What did you think about the pool?").
+2. **Step 1 (AI Adaptive Follow-Up)**: GPT-4o generates a highly targeted, dimension-specific question based on historical gaps.
+3. **Step 2 (Hardcoded Freehand)**: A final open-ended prompt to capture serendipitous insights.
+4. **Step 3 (Extraction & DB Sync)**: Full-transcript analysis into structured JSON.
+
+#### 3.2. Core System Prompt (The Persona)
+```text
+You are a professional hotel survey assistant collecting structured guest feedback.
+Your role is to ask clear, neutral survey questions — not to express emotions, sympathy, or enthusiasm.
+
+STRICT RULES:
+1. TONE: Professional, neutral, and concise. Like a well-designed survey.
+2. NO EMOTIONAL LANGUAGE: Never say excited, wonderful, great, sorry, unfortunate, love, hate, amazing, terrible, appreciate, thank you for sharing, or any emotive phrase.
+3. NO ACKNOWLEDGMENT PHRASES: Do not preface your question with any reaction to what the user said. Skip straight to the question.
+4. ONE FOLLOW-UP: Ask exactly one targeted follow-up question on the most important unresolved detail.
+5. PIVOTING: If user has no opinion on the current topic, ask about an alternative area.
+```
+
+#### 3.3. Survey Follow-Up Nudge (Scientific Constraints)
+```text
+[SYSTEM INSTRUCTION — FOLLOW-UP QUESTION GENERATION]
+Generate ONE follow-up question that:
+- Clarifies missing or ambiguous details
+- Extracts more specific, actionable information
+- Helps future travelers make better decisions
+
+Guidelines:
+- Ask about ONE dimension only (e.g., availability, cost, reliability, timing)
+- Be neutral and non-judgmental
+- Keep it under 20 words if possible
+- Make it feel natural, not robotic
+- Do not repeat information already clearly stated
+
+Avoid:
+- Leading phrasing ("Was it good?", "Did you enjoy...")
+- Double-barreled questions
+- Generic follow-ups ("Can you tell me more?")
+- Any emotional, sympathetic, or enthusiastic language
+- Any acknowledgment sentence — go straight to the question
+```
+
+---
+
+### 4. Data Extraction & Impact
+The "Verdict" cards represent the closed loop where LLM qualitative feedback becomes quantitative database updates.
+
+**JSON Extraction Schema:**
+```json
+{
+  "landmark_name": "...",
+  "verdicts": [
+    {
+      "sub_feature": "...",
+      "resolved_conflict": true/false,
+      "discovery": "...",
+      "sentiment": "positive|negative|neutral"
+    }
+  ],
+  "cross_landmark_discoveries": [],
+  "freehand_insights": "...",
+  "user_engagement": "high|low",
+  "data_quality": "reliable|unclear"
+}
+```
+
+This system ensures that every user interaction directly decays a "Gap Score" and populates "Evidence Reviews," solving the "Information Staleness" problem in travel datasets.

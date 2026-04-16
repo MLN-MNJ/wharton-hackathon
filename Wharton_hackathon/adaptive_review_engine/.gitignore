@@ -1,0 +1,6 @@
+.env
+__pycache__/
+*.pyc
+new_bounties_db_backup_*.json
+physical_landmarks_db_backup_*.json
+gamified_responses_processed.json

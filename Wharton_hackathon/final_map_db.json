@@ -1,0 +1,1469 @@
+[
+  {
+    "eg_property_id": "110f01b8ae518a0ee41047bce5c22572988a435e10ead72dc1af793bba8ce0b0",
+    "buckets": [
+      "Room",
+      "Dining",
+      "Lobby",
+      "Facilities",
+      "Location",
+      "Other"
+    ],
+    "bounties": [
+      {
+        "bucket_name": "Room",
+        "amenity_name": "Cleanliness",
+        "sentiment_quality": "Mixed",
+        "allocated_points": 150,
+        "static_question": "How would you rate the cleanliness of the room during your stay?"
+      },
+      {
+        "bucket_name": "Room",
+        "amenity_name": "Bed Comfort",
+        "sentiment_quality": "Mixed",
+        "allocated_points": 150,
+        "static_question": "Did you find the bed and overall comfort of the room satisfactory?"
+      },
+      {
+        "bucket_name": "Room",
+        "amenity_name": "Room Size & Storage",
+        "sentiment_quality": "Poor",
+        "allocated_points": 150,
+        "static_question": "Was the room size and available storage adequate for your needs?"
+      },
+      {
+        "bucket_name": "Room",
+        "amenity_name": "AC Functionality",
+        "sentiment_quality": "Poor",
+        "allocated_points": 150,
+        "static_question": "How well did the air conditioning system work in your room?"
+      },
+      {
+        "bucket_name": "Room",
+        "amenity_name": "Bathroom Condition",
+        "sentiment_quality": "Poor",
+        "allocated_points": 150,
+        "static_question": "What was your impression of the bathroom's condition and facilities?"
+      },
+      {
+        "bucket_name": "Room",
+        "amenity_name": "Soundproofing",
+        "sentiment_quality": "Mixed",
+        "allocated_points": 150,
+        "static_question": "Did you find the room adequately soundproofed from outside noise?"
+      },
+      {
+        "bucket_name": "Dining",
+        "amenity_name": "Breakfast Quality",
+        "sentiment_quality": "Poor",
+        "allocated_points": 150,
+        "static_question": "How was the quality and variety of the breakfast offered?"
+      },
+      {
+        "bucket_name": "Dining",
+        "amenity_name": "Dining Hours",
+        "sentiment_quality": "Poor",
+        "allocated_points": 150,
+        "static_question": "Were the restaurant and bar operating hours convenient for you?"
+      },
+      {
+        "bucket_name": "Dining",
+        "amenity_name": "Dining Staff Service",
+        "sentiment_quality": "Poor",
+        "allocated_points": 150,
+        "static_question": "How was the service provided by the restaurant staff?"
+      },
+      {
+        "bucket_name": "Lobby",
+        "amenity_name": "Staff Friendliness",
+        "sentiment_quality": "Mixed",
+        "allocated_points": 150,
+        "static_question": "How friendly and helpful did you find the hotel staff?"
+      },
+      {
+        "bucket_name": "Lobby",
+        "amenity_name": "Guest Services",
+        "sentiment_quality": "Mixed",
+        "allocated_points": 150,
+        "static_question": "Did you utilize and find the other guest services, like shuttle or luggage storage, satisfactory?"
+      },
+      {
+        "bucket_name": "Lobby",
+        "amenity_name": "Property Signage",
+        "sentiment_quality": "Poor",
+        "allocated_points": 150,
+        "static_question": "Was the hotel's signage and overall identity clear and easy to find?"
+      },
+      {
+        "bucket_name": "Facilities",
+        "amenity_name": "Overall Condition",
+        "sentiment_quality": "Good",
+        "allocated_points": 150,
+        "static_question": "What was your overall impression of the property's cleanliness and condition?"
+      },
+      {
+        "bucket_name": "Facilities",
+        "amenity_name": "Common Area Wifi",
+        "sentiment_quality": "Poor",
+        "allocated_points": 150,
+        "static_question": "How well did the Wi-Fi perform in common areas of the hotel?"
+      },
+      {
+        "bucket_name": "Facilities",
+        "amenity_name": "Accessibility",
+        "sentiment_quality": "Poor",
+        "allocated_points": 150,
+        "static_question": "How was the property's accessibility, considering factors like elevators or ramps?"
+      },
+      {
+        "bucket_name": "Facilities",
+        "amenity_name": "Outdoor Areas",
+        "sentiment_quality": "Mixed",
+        "allocated_points": 150,
+        "static_question": "Did you enjoy and find the outdoor areas and grounds pleasant?"
+      },
+      {
+        "bucket_name": "Location",
+        "amenity_name": "Site Proximity",
+        "sentiment_quality": "Good",
+        "allocated_points": 150,
+        "static_question": "How convenient was the hotel's proximity to local sites like the ruins and train station?"
+      },
+      {
+        "bucket_name": "Location",
+        "amenity_name": "Nearby Dining & Shops",
+        "sentiment_quality": "Poor",
+        "allocated_points": 150,
+        "static_question": "What was your experience with the food and shopping options available nearby?"
+      },
+      {
+        "bucket_name": "Location",
+        "amenity_name": "Neighborhood Vibe",
+        "sentiment_quality": "Mixed",
+        "allocated_points": 150,
+        "static_question": "How would you describe the overall atmosphere and safety of the neighborhood?"
+      },
+      {
+        "bucket_name": "Other",
+        "amenity_name": "Other",
+        "sentiment_quality": "Unknown",
+        "allocated_points": 25,
+        "static_question": "Did any other specific facility or service significantly impact your stay?"
+      },
+      {
+        "bucket_name": "Other",
+        "amenity_name": "Miscellaneous",
+        "sentiment_quality": "Unknown",
+        "allocated_points": 25,
+        "static_question": "Is there anything else not explicitly covered here that you wish to review?"
+      }
+    ]
+  },
+  {
+    "eg_property_id": "db38b19b897dbece3e34919c662b3fd66d23b615395d11fb69264dd3a9b17723",
+    "buckets": [
+      "Room",
+      "Dining",
+      "Leisure",
+      "Services",
+      "Other"
+    ],
+    "bounties": [
+      {
+        "bucket_name": "Room",
+        "amenity_name": "Room Comfort & Quality",
+        "sentiment_quality": "Good",
+        "allocated_points": 150,
+        "static_question": "How satisfied were you with the overall comfort and quality of your room during your stay?"
+      },
+      {
+        "bucket_name": "Room",
+        "amenity_name": "In-room Devices",
+        "sentiment_quality": "Poor",
+        "allocated_points": 200,
+        "static_question": "Were the in-room devices, such as the phone and safe, fully functional?"
+      },
+      {
+        "bucket_name": "Room",
+        "amenity_name": "Room Cleanliness",
+        "sentiment_quality": "Good",
+        "allocated_points": 150,
+        "static_question": "How would you rate the cleanliness of your room?"
+      },
+      {
+        "bucket_name": "Dining",
+        "amenity_name": "Restaurant & Bar Quality",
+        "sentiment_quality": "Mixed",
+        "allocated_points": 150,
+        "static_question": "What was your experience with the quality and pricing of the on-site restaurants and bars?"
+      },
+      {
+        "bucket_name": "Dining",
+        "amenity_name": "Dining Hours & Availability",
+        "sentiment_quality": "Poor",
+        "allocated_points": 150,
+        "static_question": "Did you find the dining facilities' operating hours and availability convenient for your needs?"
+      },
+      {
+        "bucket_name": "Dining",
+        "amenity_name": "Dining Service Speed",
+        "sentiment_quality": "Poor",
+        "allocated_points": 150,
+        "static_question": "How would you describe the speed of service at the dining establishments, including the coffee shop and poolside bar?"
+      },
+      {
+        "bucket_name": "Leisure",
+        "amenity_name": "Pool Condition & Availability",
+        "sentiment_quality": "Poor",
+        "allocated_points": 200,
+        "static_question": "Were the pools well-maintained and readily available for use during your visit?"
+      },
+      {
+        "bucket_name": "Leisure",
+        "amenity_name": "Spa Booking",
+        "sentiment_quality": "Mixed",
+        "allocated_points": 150,
+        "static_question": "Were you able to easily book spa services during your stay, or did you encounter availability issues?"
+      },
+      {
+        "bucket_name": "Leisure",
+        "amenity_name": "Pool Type Preference",
+        "sentiment_quality": "Mixed",
+        "allocated_points": 150,
+        "static_question": "Did you have a preference for an indoor or outdoor pool, and did the hotel's offerings meet your expectations?"
+      },
+      {
+        "bucket_name": "Services",
+        "amenity_name": "Staff Service & Attitude",
+        "sentiment_quality": "Good",
+        "allocated_points": 150,
+        "static_question": "How was your experience with the hotel staff's service and attitude throughout your stay?"
+      },
+      {
+        "bucket_name": "Services",
+        "amenity_name": "Lobby & Common Areas",
+        "sentiment_quality": "Good",
+        "allocated_points": 150,
+        "static_question": "How comfortable and functional did you find the lobby and other common areas of the hotel?"
+      },
+      {
+        "bucket_name": "Services",
+        "amenity_name": "Shuttle & Parking",
+        "sentiment_quality": "Good",
+        "allocated_points": 150,
+        "static_question": "What was your experience with the shuttle and parking services provided by the hotel?"
+      },
+      {
+        "bucket_name": "Services",
+        "amenity_name": "Overall Property Cleanliness",
+        "sentiment_quality": "Poor",
+        "allocated_points": 150,
+        "static_question": "Aside from rooms and pools, how would you rate the overall cleanliness of the hotel property?"
+      },
+      {
+        "bucket_name": "Other",
+        "amenity_name": "Other",
+        "sentiment_quality": "Unknown",
+        "allocated_points": 25,
+        "static_question": "Did any other specific facility or service not mentioned above significantly impact your stay?"
+      },
+      {
+        "bucket_name": "Other",
+        "amenity_name": "Miscellaneous",
+        "sentiment_quality": "Unknown",
+        "allocated_points": 25,
+        "static_question": "Is there anything else not explicitly covered here that you wish to review or comment on?"
+      }
+    ]
+  },
+  {
+    "eg_property_id": "5f5a0cd8662f0ddf297f2d27358f680daab5d3ac22fd45a4e1c3c3ec2c101a12",
+    "buckets": [
+      "Room",
+      "Dining",
+      "Facilities",
+      "Service",
+      "Location",
+      "Other"
+    ],
+    "bounties": [
+      {
+        "bucket_name": "Room",
+        "amenity_name": "Room Comfort",
+        "sentiment_quality": "Good",
+        "allocated_points": 150,
+        "static_question": "How would you rate the comfort and design of your room, including the bed?"
+      },
+      {
+        "bucket_name": "Room",
+        "amenity_name": "Room View",
+        "sentiment_quality": "Mixed",
+        "allocated_points": 150,
+        "static_question": "Did you enjoy the view from your room or balcony?"
+      },
+      {
+        "bucket_name": "Room",
+        "amenity_name": "Room Quietness",
+        "sentiment_quality": "Mixed",
+        "allocated_points": 150,
+        "static_question": "Was your room sufficiently quiet and free from disturbances?"
+      },
+      {
+        "bucket_name": "Room",
+        "amenity_name": "In-room Amenities",
+        "sentiment_quality": "Poor",
+        "allocated_points": 150,
+        "static_question": "How well did in-room amenities like heating and internet perform during your stay?"
+      },
+      {
+        "bucket_name": "Dining",
+        "amenity_name": "Breakfast Quality",
+        "sentiment_quality": "Mixed",
+        "allocated_points": 150,
+        "static_question": "How was the quality and variety of the breakfast offering?"
+      },
+      {
+        "bucket_name": "Dining",
+        "amenity_name": "Meal Quality",
+        "sentiment_quality": "Mixed",
+        "allocated_points": 150,
+        "static_question": "What was your impression of the food quality (excluding breakfast)?"
+      },
+      {
+        "bucket_name": "Dining",
+        "amenity_name": "Dining Ambiance",
+        "sentiment_quality": "Mixed",
+        "allocated_points": 150,
+        "static_question": "Did you find the dining area to have a pleasant ambiance?"
+      },
+      {
+        "bucket_name": "Dining",
+        "amenity_name": "Dining Amenities",
+        "sentiment_quality": "Poor",
+        "allocated_points": 150,
+        "static_question": "How were specific dining amenities like barbecue options or buffet details?"
+      },
+      {
+        "bucket_name": "Facilities",
+        "amenity_name": "Parking",
+        "sentiment_quality": "Poor",
+        "allocated_points": 150,
+        "static_question": "How was the availability and experience with parking at the property?"
+      },
+      {
+        "bucket_name": "Facilities",
+        "amenity_name": "Recreation",
+        "sentiment_quality": "Poor",
+        "allocated_points": 150,
+        "static_question": "Did you enjoy the on-site recreational activities offered?"
+      },
+      {
+        "bucket_name": "Facilities",
+        "amenity_name": "Accessibility",
+        "sentiment_quality": "Poor",
+        "allocated_points": 150,
+        "static_question": "Were the property's accessibility features, like handrails or elevators, adequate?"
+      },
+      {
+        "bucket_name": "Service",
+        "amenity_name": "Staff Friendliness",
+        "sentiment_quality": "Good",
+        "allocated_points": 150,
+        "static_question": "How would you describe the friendliness and hospitality of the staff?"
+      },
+      {
+        "bucket_name": "Service",
+        "amenity_name": "Service Quality",
+        "sentiment_quality": "Good",
+        "allocated_points": 150,
+        "static_question": "How was the overall quality of service, including responsiveness and helpfulness?"
+      },
+      {
+        "bucket_name": "Location",
+        "amenity_name": "Location Proximity",
+        "sentiment_quality": "Mixed",
+        "allocated_points": 150,
+        "static_question": "Was the property's proximity to local attractions and towns convenient?"
+      },
+      {
+        "bucket_name": "Location",
+        "amenity_name": "Location Quietness",
+        "sentiment_quality": "Mixed",
+        "allocated_points": 150,
+        "static_question": "Did you find the property's surroundings to be peaceful and quiet?"
+      },
+      {
+        "bucket_name": "Location",
+        "amenity_name": "Property Views",
+        "sentiment_quality": "Mixed",
+        "allocated_points": 150,
+        "static_question": "How would you rate the views from the property or its surroundings?"
+      },
+      {
+        "bucket_name": "Other",
+        "amenity_name": "Other",
+        "sentiment_quality": "Unknown",
+        "allocated_points": 25,
+        "static_question": "Did any other specific facility or aspect impact your stay?"
+      },
+      {
+        "bucket_name": "Other",
+        "amenity_name": "Miscellaneous",
+        "sentiment_quality": "Unknown",
+        "allocated_points": 25,
+        "static_question": "Is there anything else not explicitly covered here that you wish to review?"
+      }
+    ]
+  },
+  {
+    "eg_property_id": "3b984f3ba8df55b2609a1e33fd694cf8407842e1d833c9b4d993b07fc83a2820",
+    "buckets": [
+      "Room",
+      "Dining",
+      "Lobby",
+      "Facilities",
+      "Other"
+    ],
+    "bounties": [
+      {
+        "bucket_name": "Room",
+        "amenity_name": "Room Comfort",
+        "sentiment_quality": "Mixed",
+        "allocated_points": 150,
+        "static_question": "How would you describe the overall comfort and condition of your room?"
+      },
+      {
+        "bucket_name": "Room",
+        "amenity_name": "In-room WiFi",
+        "sentiment_quality": "Poor",
+        "allocated_points": 250,
+        "static_question": "How was the internet speed and reliability in your room?"
+      },
+      {
+        "bucket_name": "Room",
+        "amenity_name": "Bathroom Condition",
+        "sentiment_quality": "Poor",
+        "allocated_points": 150,
+        "static_question": "What was your experience with the bathroom's condition and amenities?"
+      },
+      {
+        "bucket_name": "Room",
+        "amenity_name": "Room Noise",
+        "sentiment_quality": "Poor",
+        "allocated_points": 150,
+        "static_question": "How much did external noise affect your stay in the room?"
+      },
+      {
+        "bucket_name": "Dining",
+        "amenity_name": "Breakfast Quality",
+        "sentiment_quality": "Mixed",
+        "allocated_points": 150,
+        "static_question": "How was the quality and variety of the breakfast options?"
+      },
+      {
+        "bucket_name": "Dining",
+        "amenity_name": "Restaurant Food",
+        "sentiment_quality": "Good",
+        "allocated_points": 150,
+        "static_question": "Please share your experience with the restaurant's food quality."
+      },
+      {
+        "bucket_name": "Dining",
+        "amenity_name": "Dining Environment",
+        "sentiment_quality": "Good",
+        "allocated_points": 150,
+        "static_question": "Did you enjoy the ambiance and noise levels in the dining areas?"
+      },
+      {
+        "bucket_name": "Lobby",
+        "amenity_name": "Staff Service",
+        "sentiment_quality": "Good",
+        "allocated_points": 150,
+        "static_question": "How friendly and helpful were the hotel staff during your visit?"
+      },
+      {
+        "bucket_name": "Lobby",
+        "amenity_name": "Accessibility",
+        "sentiment_quality": "Unknown",
+        "allocated_points": 150,
+        "static_question": "Were the hotel's accessibility features adequate for your needs?"
+      },
+      {
+        "bucket_name": "Lobby",
+        "amenity_name": "Lobby Condition",
+        "sentiment_quality": "Good",
+        "allocated_points": 150,
+        "static_question": "What did you think of the lobby and common area's condition?"
+      },
+      {
+        "bucket_name": "Facilities",
+        "amenity_name": "Parking",
+        "sentiment_quality": "Poor",
+        "allocated_points": 150,
+        "static_question": "How convenient and sufficient was the on-site parking?"
+      },
+      {
+        "bucket_name": "Facilities",
+        "amenity_name": "Casino",
+        "sentiment_quality": "Mixed",
+        "allocated_points": 150,
+        "static_question": "What was your overall impression of the on-site casino?"
+      },
+      {
+        "bucket_name": "Facilities",
+        "amenity_name": "Hotel Modernity",
+        "sentiment_quality": "Mixed",
+        "allocated_points": 150,
+        "static_question": "How would you rate the hotel's renovation status and modernity?"
+      },
+      {
+        "bucket_name": "Facilities",
+        "amenity_name": "Location",
+        "sentiment_quality": "Mixed",
+        "allocated_points": 150,
+        "static_question": "How convenient and safe did you find the hotel's neighborhood?"
+      },
+      {
+        "bucket_name": "Other",
+        "amenity_name": "Other",
+        "sentiment_quality": "Unknown",
+        "allocated_points": 25,
+        "static_question": "Did any other specific facility impact your stay?"
+      },
+      {
+        "bucket_name": "Other",
+        "amenity_name": "Miscellaneous",
+        "sentiment_quality": "Unknown",
+        "allocated_points": 25,
+        "static_question": "Is there anything else not explicitly covered here that you wish to review?"
+      }
+    ]
+  },
+  {
+    "eg_property_id": "9a0043fd4258a1286db1e253ca591662b3aac849da12d0d4f67e08b8f59be65f",
+    "buckets": [
+      "Room",
+      "Dining",
+      "Service",
+      "Property"
+    ],
+    "bounties": [
+      {
+        "bucket_name": "Room",
+        "amenity_name": "Cleanliness (Room & Bathroom)",
+        "sentiment_quality": "Mixed",
+        "allocated_points": 150,
+        "static_question": "How would you rate the cleanliness of the room and bathroom during your stay?"
+      },
+      {
+        "bucket_name": "Room",
+        "amenity_name": "Bed Comfort",
+        "sentiment_quality": "Mixed",
+        "allocated_points": 150,
+        "static_question": "Did you find the bed comfortable and conducive to a good night's sleep?"
+      },
+      {
+        "bucket_name": "Room",
+        "amenity_name": "Room Condition/Features",
+        "sentiment_quality": "Poor",
+        "allocated_points": 200,
+        "static_question": "Were you satisfied with the condition and features of your room, including amenities and temperature?"
+      },
+      {
+        "bucket_name": "Dining",
+        "amenity_name": "Breakfast Quality & Variety",
+        "sentiment_quality": "Good",
+        "allocated_points": 150,
+        "static_question": "What was your impression of the quality and variety of the breakfast options?"
+      },
+      {
+        "bucket_name": "Dining",
+        "amenity_name": "Restaurant Experience",
+        "sentiment_quality": "Poor",
+        "allocated_points": 150,
+        "static_question": "How was your overall dining experience at the property's restaurant?"
+      },
+      {
+        "bucket_name": "Dining",
+        "amenity_name": "Breakfast Environment/Service",
+        "sentiment_quality": "Poor",
+        "allocated_points": 150,
+        "static_question": "Please describe the atmosphere and service during breakfast."
+      },
+      {
+        "bucket_name": "Service",
+        "amenity_name": "Friendliness/Hospitality",
+        "sentiment_quality": "Good",
+        "allocated_points": 150,
+        "static_question": "How friendly and welcoming did you find the staff and overall hospitality?"
+      },
+      {
+        "bucket_name": "Service",
+        "amenity_name": "Responsiveness/Flexibility",
+        "sentiment_quality": "Good",
+        "allocated_points": 150,
+        "static_question": "Did the staff respond promptly to your requests and show flexibility?"
+      },
+      {
+        "bucket_name": "Service",
+        "amenity_name": "Check-in/Reception Experience",
+        "sentiment_quality": "Mixed",
+        "allocated_points": 150,
+        "static_question": "How was your experience during check-in and with the reception staff?"
+      },
+      {
+        "bucket_name": "Property",
+        "amenity_name": "Accessibility & Building Features",
+        "sentiment_quality": "Unknown",
+        "allocated_points": 150,
+        "static_question": "Did you encounter any specific accessibility features or issues within the building?"
+      },
+      {
+        "bucket_name": "Property",
+        "amenity_name": "General Condition & Ambiance",
+        "sentiment_quality": "Poor",
+        "allocated_points": 200,
+        "static_question": "How would you describe the general condition and ambiance of the property?"
+      },
+      {
+        "bucket_name": "Property",
+        "amenity_name": "Location & Transport",
+        "sentiment_quality": "Mixed",
+        "allocated_points": 150,
+        "static_question": "How convenient was the property's location, and was public transport easily accessible?"
+      },
+      {
+        "bucket_name": "Property",
+        "amenity_name": "Parking",
+        "sentiment_quality": "Good",
+        "allocated_points": 150,
+        "static_question": "Was parking readily available and convenient during your stay?"
+      },
+      {
+        "bucket_name": "Other",
+        "amenity_name": "Other",
+        "sentiment_quality": "Unknown",
+        "allocated_points": 25,
+        "static_question": "Did any other specific facility or service impact your stay?"
+      },
+      {
+        "bucket_name": "Miscellaneous",
+        "amenity_name": "Miscellaneous",
+        "sentiment_quality": "Unknown",
+        "allocated_points": 25,
+        "static_question": "Is there anything else not explicitly covered here that you wish to review?"
+      }
+    ]
+  },
+  {
+    "eg_property_id": "e52d67a758ce4ad0229aacc97e5dfe89984c384c51a70208f9e0cc65c9cd4676",
+    "buckets": [
+      "Room",
+      "Dining",
+      "Facilities",
+      "Location",
+      "Other"
+    ],
+    "bounties": [
+      {
+        "bucket_name": "Room",
+        "amenity_name": "AC Performance",
+        "sentiment_quality": "Poor",
+        "allocated_points": 150,
+        "static_question": "How did the air conditioning perform during your stay, considering its age or noise?"
+      },
+      {
+        "bucket_name": "Room",
+        "amenity_name": "Window View",
+        "sentiment_quality": "Poor",
+        "allocated_points": 200,
+        "static_question": "What was your experience with the window and view from your room?"
+      },
+      {
+        "bucket_name": "Room",
+        "amenity_name": "Bathroom Condition",
+        "sentiment_quality": "Poor",
+        "allocated_points": 200,
+        "static_question": "How would you rate the design, condition, and cleanliness of the bathroom?"
+      },
+      {
+        "bucket_name": "Room",
+        "amenity_name": "Bed Comfort",
+        "sentiment_quality": "Good",
+        "allocated_points": 150,
+        "static_question": "How comfortable did you find the bed during your stay?"
+      },
+      {
+        "bucket_name": "Dining",
+        "amenity_name": "Breakfast Quality",
+        "sentiment_quality": "Good",
+        "allocated_points": 150,
+        "static_question": "How was the taste and variety of the breakfast options?"
+      },
+      {
+        "bucket_name": "Dining",
+        "amenity_name": "Breakfast Service",
+        "sentiment_quality": "Poor",
+        "allocated_points": 200,
+        "static_question": "Was breakfast readily available and clearly communicated during your stay?"
+      },
+      {
+        "bucket_name": "Facilities",
+        "amenity_name": "Staff Service",
+        "sentiment_quality": "Mixed",
+        "allocated_points": 150,
+        "static_question": "How friendly and helpful did you find the hotel staff?"
+      },
+      {
+        "bucket_name": "Facilities",
+        "amenity_name": "Elevator Access",
+        "sentiment_quality": "Poor",
+        "allocated_points": 150,
+        "static_question": "Were elevators available and convenient for moving around the property?"
+      },
+      {
+        "bucket_name": "Facilities",
+        "amenity_name": "Wi-Fi Quality",
+        "sentiment_quality": "Good",
+        "allocated_points": 150,
+        "static_question": "How reliable and fast was the Wi-Fi connection?"
+      },
+      {
+        "bucket_name": "Facilities",
+        "amenity_name": "Property Condition",
+        "sentiment_quality": "Mixed",
+        "allocated_points": 150,
+        "static_question": "What was your impression of the overall condition and cleanliness of the property?"
+      },
+      {
+        "bucket_name": "Location",
+        "amenity_name": "Local Proximity",
+        "sentiment_quality": "Good",
+        "allocated_points": 150,
+        "static_question": "How convenient was the hotel's proximity to local attractions and public transport?"
+      },
+      {
+        "bucket_name": "Location",
+        "amenity_name": "Neighborhood Vibe",
+        "sentiment_quality": "Good",
+        "allocated_points": 150,
+        "static_question": "How would you describe the ambiance and quietness of the surrounding neighborhood?"
+      },
+      {
+        "bucket_name": "Other",
+        "amenity_name": "Other",
+        "sentiment_quality": "Unknown",
+        "allocated_points": 25,
+        "static_question": "Did any other specific facility or aspect impact your stay?"
+      },
+      {
+        "bucket_name": "Other",
+        "amenity_name": "Miscellaneous",
+        "sentiment_quality": "Unknown",
+        "allocated_points": 25,
+        "static_question": "Is there anything else not explicitly covered here that you wish to review?"
+      }
+    ]
+  },
+  {
+    "eg_property_id": "ff26cdda236b233f7c481f0e896814075ac6bed335e162e0ff01d5491343f838",
+    "buckets": [
+      "Room",
+      "Dining",
+      "Wellness",
+      "Services",
+      "Other"
+    ],
+    "bounties": [
+      {
+        "bucket_name": "Room",
+        "amenity_name": "In-Room Appliances",
+        "sentiment_quality": "Poor",
+        "allocated_points": 200,
+        "static_question": "How useful were the in-room appliances like the fridge or microwave during your stay?"
+      },
+      {
+        "bucket_name": "Room",
+        "amenity_name": "Bathroom Cleanliness",
+        "sentiment_quality": "Mixed",
+        "allocated_points": 150,
+        "static_question": "What was your experience with the cleanliness and functionality of the bathroom?"
+      },
+      {
+        "bucket_name": "Room",
+        "amenity_name": "Bed Comfort",
+        "sentiment_quality": "Good",
+        "allocated_points": 150,
+        "static_question": "How comfortable were the beds and how did you find the room's decor?"
+      },
+      {
+        "bucket_name": "Dining",
+        "amenity_name": "Restaurant Quality",
+        "sentiment_quality": "Mixed",
+        "allocated_points": 150,
+        "static_question": "What was your impression of the food quality and value at the hotel restaurant?"
+      },
+      {
+        "bucket_name": "Dining",
+        "amenity_name": "Room Service",
+        "sentiment_quality": "Poor",
+        "allocated_points": 150,
+        "static_question": "Did you find the room service options and availability satisfactory?"
+      },
+      {
+        "bucket_name": "Dining",
+        "amenity_name": "Breakfast Options",
+        "sentiment_quality": "Mixed",
+        "allocated_points": 150,
+        "static_question": "How were the breakfast options and did you find the inclusions met your expectations?"
+      },
+      {
+        "bucket_name": "Wellness",
+        "amenity_name": "Fitness Center",
+        "sentiment_quality": "Unknown",
+        "allocated_points": 150,
+        "static_question": "How were the features and equipment in the fitness center?"
+      },
+      {
+        "bucket_name": "Wellness",
+        "amenity_name": "Outdoor Pool",
+        "sentiment_quality": "Poor",
+        "allocated_points": 150,
+        "static_question": "What was your experience with the outdoor pool access and its operating season?"
+      },
+      {
+        "bucket_name": "Services",
+        "amenity_name": "Staff Service",
+        "sentiment_quality": "Mixed",
+        "allocated_points": 150,
+        "static_question": "How would you rate the staff's responsiveness and their ability to solve problems?"
+      },
+      {
+        "bucket_name": "Services",
+        "amenity_name": "Check-in/out",
+        "sentiment_quality": "Good",
+        "allocated_points": 150,
+        "static_question": "How efficient and smooth was your check-in and check-out process?"
+      },
+      {
+        "bucket_name": "Other",
+        "amenity_name": "Other",
+        "sentiment_quality": "Unknown",
+        "allocated_points": 25,
+        "static_question": "Did any other specific facility or service impact your stay?"
+      },
+      {
+        "bucket_name": "Other",
+        "amenity_name": "Miscellaneous",
+        "sentiment_quality": "Unknown",
+        "allocated_points": 25,
+        "static_question": "Is there anything else not explicitly covered here that you wish to review?"
+      }
+    ]
+  },
+  {
+    "eg_property_id": "fa014137b3ea9af6a90c0a86a1d099e46f7e56d6eb33db1ad1ec4bdac68c3caa",
+    "buckets": [
+      "Room",
+      "Dining",
+      "Lobby",
+      "Access",
+      "Location",
+      "Other"
+    ],
+    "bounties": [
+      {
+        "bucket_name": "Room",
+        "amenity_name": "Room Cleanliness",
+        "sentiment_quality": "Good",
+        "allocated_points": 150,
+        "static_question": "How would you rate the cleanliness of your room during your stay?"
+      },
+      {
+        "bucket_name": "Room",
+        "amenity_name": "Room Comfort/Condition",
+        "sentiment_quality": "Mixed",
+        "allocated_points": 150,
+        "static_question": "Was your room comfortable and in good condition?"
+      },
+      {
+        "bucket_name": "Room",
+        "amenity_name": "Room Noise Insulation",
+        "sentiment_quality": "Poor",
+        "allocated_points": 250,
+        "static_question": "How effective was the room's noise insulation during your stay?"
+      },
+      {
+        "bucket_name": "Room",
+        "amenity_name": "Bed & Pillow Quality",
+        "sentiment_quality": "Good",
+        "allocated_points": 150,
+        "static_question": "Did you find the bed and pillow quality to your satisfaction?"
+      },
+      {
+        "bucket_name": "Dining",
+        "amenity_name": "Breakfast Quality/Variety",
+        "sentiment_quality": "Good",
+        "allocated_points": 150,
+        "static_question": "How was the quality and variety of the breakfast provided?"
+      },
+      {
+        "bucket_name": "Dining",
+        "amenity_name": "Evening Reception (Wine/Cheese)",
+        "sentiment_quality": "Good",
+        "allocated_points": 150,
+        "static_question": "Did you enjoy the evening reception with wine and cheese?"
+      },
+      {
+        "bucket_name": "Lobby",
+        "amenity_name": "Staff Friendliness/Helpfulness",
+        "sentiment_quality": "Mixed",
+        "allocated_points": 150,
+        "static_question": "How friendly and helpful did you find the hotel staff?"
+      },
+      {
+        "bucket_name": "Lobby",
+        "amenity_name": "Check-in Experience",
+        "sentiment_quality": "Mixed",
+        "allocated_points": 150,
+        "static_question": "How smooth and efficient was your check-in experience?"
+      },
+      {
+        "bucket_name": "Access",
+        "amenity_name": "Parking Availability/Ease",
+        "sentiment_quality": "Good",
+        "allocated_points": 150,
+        "static_question": "Was parking readily available and easy to use at the property?"
+      },
+      {
+        "bucket_name": "Access",
+        "amenity_name": "Stair/Elevator Access",
+        "sentiment_quality": "Poor",
+        "allocated_points": 200,
+        "static_question": "Did you find the stair and elevator access convenient for your needs?"
+      },
+      {
+        "bucket_name": "Location",
+        "amenity_name": "Walkability to Attractions",
+        "sentiment_quality": "Good",
+        "allocated_points": 150,
+        "static_question": "How convenient was the property's walkability to local attractions?"
+      },
+      {
+        "bucket_name": "Location",
+        "amenity_name": "Neighborhood Safety",
+        "sentiment_quality": "Good",
+        "allocated_points": 150,
+        "static_question": "Did you feel safe and secure in the hotel's neighborhood?"
+      },
+      {
+        "bucket_name": "Location",
+        "amenity_name": "Overall Hotel Condition/Vibe",
+        "sentiment_quality": "Poor",
+        "allocated_points": 150,
+        "static_question": "What was your overall impression of the hotel's condition and atmosphere?"
+      },
+      {
+        "bucket_name": "Other",
+        "amenity_name": "Other",
+        "sentiment_quality": "Unknown",
+        "allocated_points": 25,
+        "static_question": "Did any other specific facility or service impact your stay?"
+      },
+      {
+        "bucket_name": "Other",
+        "amenity_name": "Miscellaneous",
+        "sentiment_quality": "Unknown",
+        "allocated_points": 25,
+        "static_question": "Is there anything else not explicitly covered here that you wish to review?"
+      }
+    ]
+  },
+  {
+    "eg_property_id": "823fb2499b4e37d99acb65e7198e75965d6496fd1c579f976205c0e6179206df",
+    "buckets": [
+      "Room",
+      "Dining",
+      "Lobby",
+      "Fitness",
+      "Other"
+    ],
+    "bounties": [
+      {
+        "bucket_name": "Room",
+        "amenity_name": "In-Room Beverages",
+        "sentiment_quality": "Poor",
+        "allocated_points": 250,
+        "static_question": "Were the in-room beverage amenities, such as coffee makers or bottled water, satisfactory during your stay?"
+      },
+      {
+        "bucket_name": "Room",
+        "amenity_name": "Room Comfort & Design",
+        "sentiment_quality": "Mixed",
+        "allocated_points": 150,
+        "static_question": "How would you describe the overall comfort, design, and specific features of your room, including the bathroom?"
+      },
+      {
+        "bucket_name": "Room",
+        "amenity_name": "Room Cleanliness",
+        "sentiment_quality": "Good",
+        "allocated_points": 150,
+        "static_question": "How was the cleanliness of your room and its facilities during your visit?"
+      },
+      {
+        "bucket_name": "Dining",
+        "amenity_name": "Breakfast Quality",
+        "sentiment_quality": "Mixed",
+        "allocated_points": 200,
+        "static_question": "What was your impression of the breakfast quality and variety offered at the hotel?"
+      },
+      {
+        "bucket_name": "Dining",
+        "amenity_name": "Bar & Restaurant",
+        "sentiment_quality": "Good",
+        "allocated_points": 150,
+        "static_question": "How would you rate the service and atmosphere of the hotel's bar and restaurant facilities?"
+      },
+      {
+        "bucket_name": "Lobby",
+        "amenity_name": "Staff Service",
+        "sentiment_quality": "Good",
+        "allocated_points": 150,
+        "static_question": "Did you find the hotel staff to be friendly, helpful, and accommodating throughout your stay?"
+      },
+      {
+        "bucket_name": "Lobby",
+        "amenity_name": "Hotel Facilities",
+        "sentiment_quality": "Good",
+        "allocated_points": 150,
+        "static_question": "Were the general hotel facilities, including accessibility and services like luggage storage or taxi arrangements, convenient and well-maintained?"
+      },
+      {
+        "bucket_name": "Fitness",
+        "amenity_name": "Fitness Center",
+        "sentiment_quality": "Unknown",
+        "allocated_points": 150,
+        "static_question": "Did you utilize the fitness center, and if so, how would you describe its availability and quality?"
+      },
+      {
+        "bucket_name": "Other",
+        "amenity_name": "Other",
+        "sentiment_quality": "Unknown",
+        "allocated_points": 25,
+        "static_question": "Did any other specific aspect or facility significantly impact your stay?"
+      },
+      {
+        "bucket_name": "Other",
+        "amenity_name": "Miscellaneous",
+        "sentiment_quality": "Unknown",
+        "allocated_points": 25,
+        "static_question": "Is there anything else not explicitly covered here that you wish to review or highlight?"
+      }
+    ]
+  },
+  {
+    "eg_property_id": "a036cbe1d9fbf9cba088075d1b4d966ee871df55aa4a58ba0da23c116c499052",
+    "buckets": [
+      "Room",
+      "Dining",
+      "Facilities",
+      "Recreation",
+      "Other"
+    ],
+    "bounties": [
+      {
+        "bucket_name": "Room",
+        "amenity_name": "Room Decor",
+        "sentiment_quality": "Poor",
+        "allocated_points": 200,
+        "static_question": "What was your impression of the room's appearance and decor?"
+      },
+      {
+        "bucket_name": "Room",
+        "amenity_name": "In-room Internet",
+        "sentiment_quality": "Poor",
+        "allocated_points": 250,
+        "static_question": "How was the internet connectivity and speed within your room?"
+      },
+      {
+        "bucket_name": "Room",
+        "amenity_name": "Room Cleanliness",
+        "sentiment_quality": "Poor",
+        "allocated_points": 150,
+        "static_question": "How clean and comfortable did you find your room?"
+      },
+      {
+        "bucket_name": "Room",
+        "amenity_name": "Room Accessibility",
+        "sentiment_quality": "Unknown",
+        "allocated_points": 150,
+        "static_question": "Were there any specific accessibility features in the room that were helpful or missing?"
+      },
+      {
+        "bucket_name": "Dining",
+        "amenity_name": "Breakfast Quality",
+        "sentiment_quality": "Mixed",
+        "allocated_points": 150,
+        "static_question": "Could you describe your breakfast experience and its quality?"
+      },
+      {
+        "bucket_name": "Dining",
+        "amenity_name": "Restaurant Ambiance",
+        "sentiment_quality": "Poor",
+        "allocated_points": 150,
+        "static_question": "How was the condition and ambiance of the hotel's restaurant?"
+      },
+      {
+        "bucket_name": "Facilities",
+        "amenity_name": "Staff Service",
+        "sentiment_quality": "Good",
+        "allocated_points": 150,
+        "static_question": "How would you rate the helpfulness and friendliness of the hotel staff?"
+      },
+      {
+        "bucket_name": "Facilities",
+        "amenity_name": "Property Condition",
+        "sentiment_quality": "Mixed",
+        "allocated_points": 150,
+        "static_question": "What was your overall impression of the property's general condition?"
+      },
+      {
+        "bucket_name": "Facilities",
+        "amenity_name": "Lobby Internet",
+        "sentiment_quality": "Good",
+        "allocated_points": 150,
+        "static_question": "How was the internet connectivity in the lobby area?"
+      },
+      {
+        "bucket_name": "Recreation",
+        "amenity_name": "Pool Condition",
+        "sentiment_quality": "Unknown",
+        "allocated_points": 150,
+        "static_question": "Could you describe the condition and availability of the pool?"
+      },
+      {
+        "bucket_name": "Recreation",
+        "amenity_name": "Outdoor Space",
+        "sentiment_quality": "Unknown",
+        "allocated_points": 150,
+        "static_question": "What was your experience with the hotel's outdoor spaces?"
+      },
+      {
+        "bucket_name": "Other",
+        "amenity_name": "Other",
+        "sentiment_quality": "Unknown",
+        "allocated_points": 25,
+        "static_question": "Did any other specific facility or service impact your stay?"
+      },
+      {
+        "bucket_name": "Other",
+        "amenity_name": "Miscellaneous",
+        "sentiment_quality": "Unknown",
+        "allocated_points": 25,
+        "static_question": "Is there anything else not explicitly covered here that you wish to review?"
+      }
+    ]
+  },
+  {
+    "eg_property_id": "3216b1b7885bffdb336265a8de7322ba0cd477cfb3d4f99d19acf488f76a1941",
+    "buckets": [
+      "Room",
+      "Lobby",
+      "Property",
+      "Dining",
+      "Other"
+    ],
+    "bounties": [
+      {
+        "bucket_name": "Room",
+        "amenity_name": "Room Cleanliness",
+        "sentiment_quality": "Poor",
+        "allocated_points": 200,
+        "static_question": "How was the cleanliness and overall condition of your room?"
+      },
+      {
+        "bucket_name": "Room",
+        "amenity_name": "Bed Quality & Pests",
+        "sentiment_quality": "Poor",
+        "allocated_points": 200,
+        "static_question": "Did you find the bed comfortable, and were there any issues with pests?"
+      },
+      {
+        "bucket_name": "Room",
+        "amenity_name": "In-Room Noise",
+        "sentiment_quality": "Poor",
+        "allocated_points": 150,
+        "static_question": "How were the noise levels experienced within your room?"
+      },
+      {
+        "bucket_name": "Lobby",
+        "amenity_name": "Staff & Service",
+        "sentiment_quality": "Mixed",
+        "allocated_points": 150,
+        "static_question": "How would you rate the professionalism and responsiveness of the hotel staff?"
+      },
+      {
+        "bucket_name": "Lobby",
+        "amenity_name": "Laundry & Business",
+        "sentiment_quality": "Unknown",
+        "allocated_points": 150,
+        "static_question": "Did you utilize the laundry or business services, and what was your experience?"
+      },
+      {
+        "bucket_name": "Property",
+        "amenity_name": "Location & Surroundings",
+        "sentiment_quality": "Mixed",
+        "allocated_points": 150,
+        "static_question": "How convenient was the hotel's location and what was your impression of the external environment?"
+      },
+      {
+        "bucket_name": "Property",
+        "amenity_name": "Accessibility",
+        "sentiment_quality": "Unknown",
+        "allocated_points": 150,
+        "static_question": "Were the accessibility features of the property adequate for your needs?"
+      },
+      {
+        "bucket_name": "Dining",
+        "amenity_name": "Breakfast Service",
+        "sentiment_quality": "Mixed",
+        "allocated_points": 150,
+        "static_question": "How was your experience with the breakfast service provided?"
+      },
+      {
+        "bucket_name": "Dining",
+        "amenity_name": "On-site Dining",
+        "sentiment_quality": "Unknown",
+        "allocated_points": 150,
+        "static_question": "Did you use any on-site dining options, and what was your impression?"
+      },
+      {
+        "bucket_name": "Other",
+        "amenity_name": "Other",
+        "sentiment_quality": "Unknown",
+        "allocated_points": 25,
+        "static_question": "Did any other specific facility impact your stay?"
+      },
+      {
+        "bucket_name": "Other",
+        "amenity_name": "Miscellaneous",
+        "sentiment_quality": "Unknown",
+        "allocated_points": 25,
+        "static_question": "Is there anything else not explicitly covered here that you wish to review?"
+      }
+    ]
+  },
+  {
+    "eg_property_id": "f2d8d9557208d58577e9df7ff34e42bf86fb5b10fdfae0c3040d14c374a2a2b9",
+    "buckets": [
+      "Room",
+      "Pool",
+      "Property",
+      "Staff"
+    ],
+    "bounties": [
+      {
+        "bucket_name": "Room",
+        "amenity_name": "Room Cleanliness",
+        "sentiment_quality": "Poor",
+        "allocated_points": 200,
+        "static_question": "How was the cleanliness and overall condition of your room?"
+      },
+      {
+        "bucket_name": "Room",
+        "amenity_name": "Bed Comfort",
+        "sentiment_quality": "Poor",
+        "allocated_points": 150,
+        "static_question": "Did you find the beds comfortable during your stay?"
+      },
+      {
+        "bucket_name": "Room",
+        "amenity_name": "AC/Heater",
+        "sentiment_quality": "Poor",
+        "allocated_points": 150,
+        "static_question": "How well did the air conditioning and heating system work in your room?"
+      },
+      {
+        "bucket_name": "Pool",
+        "amenity_name": "Pool Cleanliness",
+        "sentiment_quality": "Good",
+        "allocated_points": 150,
+        "static_question": "What was your experience with the pool's cleanliness and size?"
+      },
+      {
+        "bucket_name": "Pool",
+        "amenity_name": "Hot Tub",
+        "sentiment_quality": "Poor",
+        "allocated_points": 150,
+        "static_question": "Was a hot tub available and in good condition during your visit?"
+      },
+      {
+        "bucket_name": "Property",
+        "amenity_name": "Parking",
+        "sentiment_quality": "Poor",
+        "allocated_points": 150,
+        "static_question": "How was the parking availability and management at the property?"
+      },
+      {
+        "bucket_name": "Property",
+        "amenity_name": "Property Condition",
+        "sentiment_quality": "Poor",
+        "allocated_points": 150,
+        "static_question": "What was your impression of the property's overall condition and age?"
+      },
+      {
+        "bucket_name": "Property",
+        "amenity_name": "Accessibility",
+        "sentiment_quality": "Unknown",
+        "allocated_points": 150,
+        "static_question": "How convenient was the accessibility (elevators/stairs) during your stay?"
+      },
+      {
+        "bucket_name": "Staff",
+        "amenity_name": "Staff Communication",
+        "sentiment_quality": "Poor",
+        "allocated_points": 150,
+        "static_question": "How would you describe the staff's availability and communication?"
+      },
+      {
+        "bucket_name": "Other",
+        "amenity_name": "Other",
+        "sentiment_quality": "Unknown",
+        "allocated_points": 25,
+        "static_question": "Did any other specific facility impact your stay?"
+      },
+      {
+        "bucket_name": "Other",
+        "amenity_name": "Miscellaneous",
+        "sentiment_quality": "Unknown",
+        "allocated_points": 25,
+        "static_question": "Is there anything else not explicitly covered here that you wish to review?"
+      }
+    ]
+  },
+  {
+    "eg_property_id": "7d027ef72c02eaa17af3c993fd5dba50d17b41a6280389a46c13c7e2c32a5b06",
+    "buckets": [
+      "Room",
+      "Dining",
+      "Facilities",
+      "Lobby",
+      "Overall",
+      "Other"
+    ],
+    "bounties": [
+      {
+        "bucket_name": "Room",
+        "amenity_name": "Noise Levels",
+        "sentiment_quality": "Poor",
+        "allocated_points": 150,
+        "static_question": "How quiet was your room, and were there any disruptive noises?"
+      },
+      {
+        "bucket_name": "Room",
+        "amenity_name": "Amenities Functionality/Condition",
+        "sentiment_quality": "Poor",
+        "allocated_points": 150,
+        "static_question": "Were the in-room amenities, such as the TV, Wi-Fi, and HVAC, in good working condition?"
+      },
+      {
+        "bucket_name": "Room",
+        "amenity_name": "Bathroom Configuration/Accessibility",
+        "sentiment_quality": "Poor",
+        "allocated_points": 150,
+        "static_question": "How functional and comfortable was the bathroom in your room?"
+      },
+      {
+        "bucket_name": "Facilities",
+        "amenity_name": "Pool Availability/Condition",
+        "sentiment_quality": "Poor",
+        "allocated_points": 150,
+        "static_question": "Was the pool available and in good condition during your visit?"
+      },
+      {
+        "bucket_name": "Lobby",
+        "amenity_name": "Parking/Hotel Access",
+        "sentiment_quality": "Poor",
+        "allocated_points": 150,
+        "static_question": "How convenient was the parking and access to the hotel?"
+      },
+      {
+        "bucket_name": "Lobby",
+        "amenity_name": "Common Area Amenities/Cleanliness",
+        "sentiment_quality": "Poor",
+        "allocated_points": 150,
+        "static_question": "How were the cleanliness and amenities in the hotel's common areas?"
+      },
+      {
+        "bucket_name": "Room",
+        "amenity_name": "Cleanliness",
+        "sentiment_quality": "Mixed",
+        "allocated_points": 150,
+        "static_question": "How would you rate the cleanliness of your room during your stay?"
+      },
+      {
+        "bucket_name": "Lobby",
+        "amenity_name": "Staff Service/Responsiveness",
+        "sentiment_quality": "Mixed",
+        "allocated_points": 150,
+        "static_question": "How helpful and responsive were the hotel staff during your stay?"
+      },
+      {
+        "bucket_name": "Overall",
+        "amenity_name": "Overall Hotel Condition/Updates",
+        "sentiment_quality": "Mixed",
+        "allocated_points": 150,
+        "static_question": "What was your overall impression of the hotel's condition and recent updates?"
+      },
+      {
+        "bucket_name": "Facilities",
+        "amenity_name": "Fitness Center (Equipment/Availability)",
+        "sentiment_quality": "Unknown",
+        "allocated_points": 150,
+        "static_question": "How well-equipped and available was the fitness center?"
+      },
+      {
+        "bucket_name": "Dining",
+        "amenity_name": "Breakfast Quality/Variety",
+        "sentiment_quality": "Good",
+        "allocated_points": 150,
+        "static_question": "How was the quality and variety of the breakfast offered?"
+      },
+      {
+        "bucket_name": "Dining",
+        "amenity_name": "Complimentary Perks",
+        "sentiment_quality": "Good",
+        "allocated_points": 150,
+        "static_question": "Did you enjoy any complimentary perks, such as snacks or drinks, provided by the hotel?"
+      },
+      {
+        "bucket_name": "Dining",
+        "amenity_name": "Dining Area Staff Service",
+        "sentiment_quality": "Good",
+        "allocated_points": 150,
+        "static_question": "How was the service provided by the staff in the dining area?"
+      },
+      {
+        "bucket_name": "Overall",
+        "amenity_name": "Location Convenience/Accessibility",
+        "sentiment_quality": "Good",
+        "allocated_points": 150,
+        "static_question": "How convenient was the hotel's location for your travel needs and local attractions?"
+      },
+      {
+        "bucket_name": "Other",
+        "amenity_name": "Other",
+        "sentiment_quality": "Unknown",
+        "allocated_points": 25,
+        "static_question": "Did any other specific facility impact your stay?"
+      },
+      {
+        "bucket_name": "Other",
+        "amenity_name": "Miscellaneous",
+        "sentiment_quality": "Unknown",
+        "allocated_points": 25,
+        "static_question": "Is there anything else not explicitly covered here that you wish to review?"
+      }
+    ]
+  }
+]

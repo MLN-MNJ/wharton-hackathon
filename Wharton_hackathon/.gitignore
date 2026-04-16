@@ -1,0 +1,49 @@
+# ── Python ──────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.venv/
+venv/
+env/
+
+# Session state (runtime, not source)
+_sessions.pkl
+
+# Auto-generated backups
+adaptive_review_engine/*_backup_*.json
+
+# ── Node / React ─────────────────────────────────────────
+node_modules/
+gapquest-react-stl-2/node_modules/
+dist/
+.vite/
+
+# ── API Keys & Secrets ───────────────────────────────────
+.env
+.env.*
+!.env.example
+*.key
+
+# ── OS / Editor ──────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# ── Large 3D model files ─────────────────────────────────
+*.stl
+*.glb
+*.obj
+
+# ── Misc build artefacts ─────────────────────────────────
+*.log
+*.tmp
+*.bak

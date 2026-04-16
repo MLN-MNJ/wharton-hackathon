@@ -1,0 +1,2910 @@
+[
+  {
+    "eg_property_id": "110f01b8ae518a0ee41047bce5c22572988a435e10ead72dc1af793bba8ce0b0",
+    "location": {
+      "city": "Pompei",
+      "star_rating": ""
+    },
+    "buckets": [
+      {
+        "bucket_name": "Room & In-room Amenities",
+        "mapped_amenities": [
+          "ac",
+          "tv",
+          "internet",
+          "housekeeping",
+          "no_smoking"
+        ],
+        "sub_features": [
+          {
+            "sub_feature_name": "Cleanliness",
+            "gap_score": 0.1,
+            "ambiguity_score": 0.1,
+            "staleness_score": 0.05,
+            "allocated_points": 50,
+            "evidence_reviews": [
+              "hotel very clean",
+              "hotel was spotless too",
+              "migliorare la pulizia"
+            ]
+          },
+          {
+            "sub_feature_name": "Bed & Comfort",
+            "gap_score": 0.3,
+            "ambiguity_score": 0.7,
+            "staleness_score": 0.1,
+            "allocated_points": 50,
+            "evidence_reviews": [
+              "qualit\u00e0 del materasso",
+              "very comfortable bed",
+              "lumpy beds and pillows",
+              "la literie est tr\u00e8s mauvaise"
+            ]
+          },
+          {
+            "sub_feature_name": "Size & Storage",
+            "gap_score": 0.2,
+            "ambiguity_score": 0.1,
+            "staleness_score": 0.1,
+            "allocated_points": 50,
+            "evidence_reviews": [
+              "le camere sono piccole senza un armadio e fredde",
+              "zimmer u bad sehr klein, kaum f\u00fcr wohlbeleibte geeignet. kein schrank",
+              "rooms not large"
+            ]
+          },
+          {
+            "sub_feature_name": "AC Functionality",
+            "gap_score": 0.4,
+            "ambiguity_score": 0.6,
+            "staleness_score": 0.1,
+            "allocated_points": 50,
+            "evidence_reviews": [
+              "the ac did not work. room remained hot.",
+              "here too ac fan did not work.",
+              "the a/c works, but it does not go low enough.",
+              "aircond worked fine"
+            ]
+          },
+          {
+            "sub_feature_name": "Bathroom Condition",
+            "gap_score": 0.5,
+            "ambiguity_score": 0.2,
+            "staleness_score": 0.1,
+            "allocated_points": 50,
+            "evidence_reviews": [
+              "gutter smell in bathroom was nauseating. mold in bathroom.",
+              "il bagno molto piccolo"
+            ]
+          },
+          {
+            "sub_feature_name": "Soundproofing",
+            "gap_score": 0.6,
+            "ambiguity_score": 0.8,
+            "staleness_score": 0.1,
+            "allocated_points": 100,
+            "evidence_reviews": [
+              "rooms could do with some sound proofing",
+              "das haus ist sehr hellh\u00f6rig, wir hatten nachbarn, die glaubten, das haus f\u00fcr sich alleine zu haben",
+              "the room and grounds were quiet"
+            ]
+          }
+        ]
+      },
+      {
+        "bucket_name": "Dining & Bar",
+        "mapped_amenities": [
+          "bar",
+          "restaurant",
+          "breakfast_included",
+          "free buffet breakfast"
+        ],
+        "sub_features": [
+          {
+            "sub_feature_name": "Breakfast Quality & Variety",
+            "gap_score": 0.1,
+            "ambiguity_score": 0.8,
+            "staleness_score": 0.05,
+            "allocated_points": 50,
+            "evidence_reviews": [
+              "breakfast and espresso were wonderful",
+              "breakfast was adequate but not the best",
+              "la colazione meglio non parlarne.",
+              "fr\u00fchst\u00fcck f\u00fcr deutsche gewohnheiten mit t\u00e4gl. selbe 2 sorten wurst",
+              "breakfast very basic, continental",
+              "breakfast was v disappointing: only a few sweet pastries, cornflakes, really woeful coffee and plastic cheese",
+              "gluten free and when i asked them i was well catered for."
+            ]
+          },
+          {
+            "sub_feature_name": "Restaurant/Bar Operating Hours",
+            "gap_score": 0.1,
+            "ambiguity_score": 0.1,
+            "staleness_score": 0.05,
+            "allocated_points": 50,
+            "evidence_reviews": [
+              "describes itself as having a restaurant but it was never open after 6pm",
+              "closet food sources close as soon as pompeii closes so nothing close to eat.",
+              "most nearby restaurants close at 6:00 pm"
+            ]
+          },
+          {
+            "sub_feature_name": "Restaurant Staff Service",
+            "gap_score": 0.6,
+            "ambiguity_score": 0.3,
+            "staleness_score": 0.2,
+            "allocated_points": 50,
+            "evidence_reviews": [
+              "der service im restaurant ist ausbauf\u00e4hig.",
+              "one of the wait staff seemed surly... appeared to be some kind of staff conflict",
+              "die \u201cdamen\u201d im fr\u00fchst\u00fccksraum im restaurant gegen\u00fcber sind bis zur grenze der unh\u00f6flichkeit gleichg\u00fcltig und nicht sehr service orientiert."
+            ]
+          }
+        ]
+      },
+      {
+        "bucket_name": "Lobby & Services",
+        "mapped_amenities": [
+          "frontdesk_24_hour"
+        ],
+        "sub_features": [
+          {
+            "sub_feature_name": "Staff Friendliness & Helpfulness",
+            "gap_score": 0.1,
+            "ambiguity_score": 0.4,
+            "staleness_score": 0.05,
+            "allocated_points": 50,
+            "evidence_reviews": [
+              "staff was very kind and helpful",
+              "day reception staff kind and friendly, night staff talk no english and were rude",
+              "the front desk guy spoke great english and was a huge reservoir of advice",
+              "a staffed, friendly, and helpful front desk",
+              "staff wonderful!"
+            ]
+          },
+          {
+            "sub_feature_name": "Other Guest Services (Shuttle, Luggage, Calls)",
+            "gap_score": 0.7,
+            "ambiguity_score": 0.5,
+            "staleness_score": 0.2,
+            "allocated_points": 100,
+            "evidence_reviews": [
+              "la navette a \u00e9t\u00e9 oubli\u00e9e",
+              "we asked for an early morning call which we did not get",
+              "let us store our luggage while we visited pompeii",
+              "quick response time for any requests",
+              "ci ha concesso di ritardare il check-out di un paio d'ore senza costi aggiuntivi."
+            ]
+          },
+          {
+            "sub_feature_name": "Property Signage & Identity",
+            "gap_score": 0.5,
+            "ambiguity_score": 0.1,
+            "staleness_score": 0.1,
+            "allocated_points": 50,
+            "evidence_reviews": [
+              "this is part of a camp ground.",
+              "finding the hotel is very confusing. you must go into a campground and then you see the small hotel. the hotel needs to improve their signs",
+              "hotel (camping) |MASK|"
+            ]
+          }
+        ]
+      },
+      {
+        "bucket_name": "Property Facilities & General Condition",
+        "mapped_amenities": [
+          "outdoor_space",
+          "internet"
+        ],
+        "sub_features": [
+          {
+            "sub_feature_name": "Overall Cleanliness & Condition",
+            "gap_score": 0.1,
+            "ambiguity_score": 0.1,
+            "staleness_score": 0.05,
+            "allocated_points": 50,
+            "evidence_reviews": [
+              "hotel very clean",
+              "one of the cleanest places we stayed on our trip.",
+              "facilities were clean and in good repair",
+              "l h\u00f4tel est tr\u00e8s bien r\u00e9nov\u00e9 r\u00e9cemment",
+              "spotless, quiet"
+            ]
+          },
+          {
+            "sub_feature_name": "Wifi Performance (Common Areas)",
+            "gap_score": 0.8,
+            "ambiguity_score": 0.1,
+            "staleness_score": 0.15,
+            "allocated_points": 50,
+            "evidence_reviews": [
+              "the internet in the rooms is poor but adequate if you go into the corridor near the router.",
+              "wifi is only functional in the lobby area."
+            ]
+          },
+          {
+            "sub_feature_name": "Accessibility (No Elevators)",
+            "gap_score": 1.0,
+            "ambiguity_score": 0.0,
+            "staleness_score": 1.0,
+            "allocated_points": 150,
+            "evidence_reviews": []
+          },
+          {
+            "sub_feature_name": "Outdoor Areas/Grounds",
+            "gap_score": 0.7,
+            "ambiguity_score": 0.4,
+            "staleness_score": 0.15,
+            "allocated_points": 100,
+            "evidence_reviews": [
+              "area around hotel all shuts at 5pm and a walk down hill to main town around 2 miles.\n dirty area",
+              "am rande eines h\u00fcbschen campingplatzes, ges\u00e4umt von orangenb\u00e4umen.",
+              "the room and grounds were quiet",
+              "limited outside areas to sit."
+            ]
+          }
+        ]
+      },
+      {
+        "bucket_name": "Location & Surroundings",
+        "mapped_amenities": [
+          "shopping"
+        ],
+        "sub_features": [
+          {
+            "sub_feature_name": "Proximity to Sites (Ruins/Train)",
+            "gap_score": 0.05,
+            "ambiguity_score": 0.05,
+            "staleness_score": 0.05,
+            "allocated_points": 0,
+            "evidence_reviews": [
+              "you are literally at the entrance to pompeii. the train station is across the street.",
+              "excellent location for walking to |MASK| ruins. nice walk to downtown area & train station.",
+              "hotel |MASK| is in the perfect position to access the pompeii archeological site. it is also 100m from the train line",
+              "right by the train station and walking distance to the ruins."
+            ]
+          },
+          {
+            "sub_feature_name": "Nearby Food & Shopping Options",
+            "gap_score": 0.1,
+            "ambiguity_score": 0.7,
+            "staleness_score": 0.05,
+            "allocated_points": 50,
+            "evidence_reviews": [
+              "area around hotel all shuts at 5pm and a walk down hill to main town around 2 miles.",
+              "closet food sources close as soon as pompeii closes so nothing close to eat.",
+              "beaucoup de restaurants a proximit\u00e9",
+              "unfortunately, most nearby restaurants close at 6:00 pm",
+              "eating in the nearby restaurants was very expensive"
+            ]
+          },
+          {
+            "sub_feature_name": "Neighborhood Vibe",
+            "gap_score": 0.8,
+            "ambiguity_score": 0.5,
+            "staleness_score": 0.3,
+            "allocated_points": 100,
+            "evidence_reviews": [
+              "dirty area but good for a quick visit to pompaii.",
+              "area appears unsafe due to shared camping grounds.",
+              "ruhige gelegen und auch der parkplatz sowie der campingplatz sind stets ruhig."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "eg_property_id": "db38b19b897dbece3e34919c662b3fd66d23b615395d11fb69264dd3a9b17723",
+    "location": {
+      "city": "Broomfield",
+      "star_rating": "4.0"
+    },
+    "buckets": [
+      {
+        "bucket_name": "Room & In-room Amenities",
+        "mapped_amenities": [
+          "ac",
+          "crib",
+          "housekeeping",
+          "internet",
+          "microwave",
+          "no_smoking",
+          "room_service",
+          "tv",
+          "thin carpet in room",
+          "visual fire alarm"
+        ],
+        "sub_features": [
+          {
+            "sub_feature_name": "Room Comfort & Quality",
+            "gap_score": 0.2,
+            "ambiguity_score": 0.0,
+            "staleness_score": 0.8,
+            "allocated_points": 50,
+            "evidence_reviews": [
+              "rooms were very clean, comfy and had needed amenities.",
+              "enjoyed the room.",
+              "the room was spacious, clean and had a great view.",
+              "room was clean and comfortable. robes are a nice touch."
+            ]
+          },
+          {
+            "sub_feature_name": "In-room Device Functionality (Phone/Safe)",
+            "gap_score": 0.8,
+            "ambiguity_score": 0.6,
+            "staleness_score": 0.8,
+            "allocated_points": 100,
+            "evidence_reviews": [
+              "safe & phone in room didn\u2019t work"
+            ]
+          },
+          {
+            "sub_feature_name": "Room Cleanliness",
+            "gap_score": 0.0,
+            "ambiguity_score": 0.1,
+            "staleness_score": 0.4,
+            "allocated_points": 0,
+            "evidence_reviews": [
+              "roomcleanliness\": 5.0",
+              "roomcleanliness\": 4.0",
+              "rooms were very clean",
+              "room was spacious, clean"
+            ]
+          }
+        ]
+      },
+      {
+        "bucket_name": "Dining & Bars",
+        "mapped_amenities": [
+          "bar",
+          "breakfast_available",
+          "restaurant",
+          "poolside bar",
+          "coffee shop/cafe",
+          "room service",
+          "wheelchair-accessible restaurant"
+        ],
+        "sub_features": [
+          {
+            "sub_feature_name": "Restaurant/Bar Quality & Price",
+            "gap_score": 0.3,
+            "ambiguity_score": 0.5,
+            "staleness_score": 0.7,
+            "allocated_points": 50,
+            "evidence_reviews": [
+              "good food good booze",
+              "the service and restaurants were top notch.",
+              "a little pricey dinner in the maritage.",
+              "you can eat a nice breakfast that won't break the bank, a nice dinner and drink at a very fun restaurant/bar",
+              "sunday breakfast in restaurant was excellent"
+            ]
+          },
+          {
+            "sub_feature_name": "Dining Hours & Availability",
+            "gap_score": 0.7,
+            "ambiguity_score": 0.8,
+            "staleness_score": 0.8,
+            "allocated_points": 200,
+            "evidence_reviews": [
+              "no dining for breakfast or lunch.",
+              "restaurant needs to be open later."
+            ]
+          },
+          {
+            "sub_feature_name": "Dining Service Speed",
+            "gap_score": 0.9,
+            "ambiguity_score": 0.5,
+            "staleness_score": 0.2,
+            "allocated_points": 100,
+            "evidence_reviews": [
+              "service was very slow at pool, coffee shop, etc."
+            ]
+          }
+        ]
+      },
+      {
+        "bucket_name": "Pool, Spa & Fitness",
+        "mapped_amenities": [
+          "hot_tub",
+          "outdoor_space",
+          "pool",
+          "fitness_equipment",
+          "spa",
+          "toys",
+          "golf course",
+          "golf driving range",
+          "pool access ramp on site",
+          "pool hoist on site",
+          "wheelchair-accessible fitness center",
+          "wheelchair-accessible pool"
+        ],
+        "sub_features": [
+          {
+            "sub_feature_name": "Pool Availability & Maintenance",
+            "gap_score": 0.3,
+            "ambiguity_score": 0.9,
+            "staleness_score": 0.5,
+            "allocated_points": 200,
+            "evidence_reviews": [
+              "pool wasn\u2019t tended to very well.",
+              "they advertise 2 pools and the whole week we were there only one pool was open to the public as appearantly they put too much chemicals in the pool.",
+              "the other pool is quite small and was absolutely packed with young kids.",
+              "the pools are fantastic",
+              "hot tub and pool could use more cleaning."
+            ]
+          },
+          {
+            "sub_feature_name": "Spa Booking & Availability",
+            "gap_score": 0.8,
+            "ambiguity_score": 0.7,
+            "staleness_score": 0.8,
+            "allocated_points": 150,
+            "evidence_reviews": [
+              "then we tried to book a massage and they told us they were booked out the 4 days we were there!",
+              "i loved the spa on property."
+            ]
+          },
+          {
+            "sub_feature_name": "Pool Type (Indoor/Outdoor preference)",
+            "gap_score": 0.9,
+            "ambiguity_score": 0.5,
+            "staleness_score": 0.4,
+            "allocated_points": 50,
+            "evidence_reviews": [
+              "just wish the pool was indoors."
+            ]
+          }
+        ]
+      },
+      {
+        "bucket_name": "General Services & Common Areas",
+        "mapped_amenities": [
+          "business_services",
+          "elevator",
+          "frontdesk_24_hour",
+          "free_parking",
+          "laundry",
+          "assistive listening devices available",
+          "phone accessibility kit",
+          "elevator door width (inches): 36",
+          "stair-free path to entrance",
+          "well-lit path to entrance",
+          "wheelchair accessible (may have limitations)",
+          "wheelchair-accessible concierge desk",
+          "wheelchair-accessible lounge",
+          "wheelchair-accessible public washroom",
+          "wheelchairs available on site"
+        ],
+        "sub_features": [
+          {
+            "sub_feature_name": "Staff Service & Attitude",
+            "gap_score": 0.0,
+            "ambiguity_score": 0.0,
+            "staleness_score": 0.0,
+            "allocated_points": 0,
+            "evidence_reviews": [
+              "the staff were super friendly and helpful.",
+              "awesome staff",
+              "amazing staff at check in and check out, in the tap room and also the meritage. above courteous compared to other hotels",
+              "the staff was super friendly and accommodating! we had a stressful travel day and they made sure to take great care of us and our dogs!"
+            ]
+          },
+          {
+            "sub_feature_name": "Lobby & Common Areas Ambiance/Functionality",
+            "gap_score": 0.2,
+            "ambiguity_score": 0.0,
+            "staleness_score": 0.8,
+            "allocated_points": 0,
+            "evidence_reviews": [
+              "the entire hotel property provides lots of large spaces for hanging out or entertaining large groups of people. the spaces are nicely designed",
+              "i loved the lobby area with fireplace, cozy and quiet rooms"
+            ]
+          },
+          {
+            "sub_feature_name": "Shuttle & Parking Services",
+            "gap_score": 0.4,
+            "ambiguity_score": 0.0,
+            "staleness_score": 0.8,
+            "allocated_points": 0,
+            "evidence_reviews": [
+              "they offered to pull up my car for me and had the scraper to borrow to clean the car.",
+              "the shuttle was very convenient and the driver was super-friendly and helpful."
+            ]
+          },
+          {
+            "sub_feature_name": "Overall Property Cleanliness (Excl. Room/Pool)",
+            "gap_score": 0.9,
+            "ambiguity_score": 0.5,
+            "staleness_score": 0.2,
+            "allocated_points": 100,
+            "evidence_reviews": [
+              "carpet in hotel was disgusting."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "eg_property_id": "5f5a0cd8662f0ddf297f2d27358f680daab5d3ac22fd45a4e1c3c3ec2c101a12",
+    "location": {
+      "city": "Freudenstadt",
+      "star_rating": ""
+    },
+    "buckets": [
+      {
+        "bucket_name": "Room",
+        "mapped_amenities": [
+          "heater",
+          "internet",
+          "no_smoking"
+        ],
+        "sub_features": [
+          {
+            "sub_feature_name": "Room comfort (bed/design)",
+            "gap_score": 0.0,
+            "ambiguity_score": 0.0,
+            "staleness_score": 0.0,
+            "allocated_points": 0,
+            "evidence_reviews": [
+              "bequemes bett im neu gestaltetes zimmer",
+              "modernes zimmer mit abgetrennter k\u00fcche und essbereich",
+              "das zimmer war unglaublich sch\u00f6n! gro\u00df und neu mit, viel holz und ein super bequemes bett."
+            ]
+          },
+          {
+            "sub_feature_name": "Room view/balcony",
+            "gap_score": 0.5,
+            "ambiguity_score": 0.0,
+            "staleness_score": 0.0,
+            "allocated_points": 50,
+            "evidence_reviews": [
+              "beautiful view from our room and balcony"
+            ]
+          },
+          {
+            "sub_feature_name": "Room quietness",
+            "gap_score": 0.5,
+            "ambiguity_score": 0.0,
+            "staleness_score": 0.0,
+            "allocated_points": 50,
+            "evidence_reviews": [
+              "sch\u00f6n ruhig"
+            ]
+          },
+          {
+            "sub_feature_name": "In-room amenities (heater/internet)",
+            "gap_score": 1.0,
+            "ambiguity_score": 0.0,
+            "staleness_score": 1.0,
+            "allocated_points": 200,
+            "evidence_reviews": []
+          }
+        ]
+      },
+      {
+        "bucket_name": "Dining",
+        "mapped_amenities": [
+          "barbecue",
+          "breakfast_available",
+          "restaurant",
+          "coffee shop/cafe",
+          "buffet breakfast"
+        ],
+        "sub_features": [
+          {
+            "sub_feature_name": "Breakfast offering/quality",
+            "gap_score": 0.0,
+            "ambiguity_score": 0.0,
+            "staleness_score": 0.0,
+            "allocated_points": 0,
+            "evidence_reviews": [
+              "\u00fcberschaubares fr\u00fchst\u00fcck ( nichr \u00fcberladen )",
+              "fr\u00fchst\u00fcck ebenfalls sehr toll und auf wunsch gab es auch sojamilch zum kaffee."
+            ]
+          },
+          {
+            "sub_feature_name": "Meal quality (other than breakfast)",
+            "gap_score": 0.5,
+            "ambiguity_score": 0.0,
+            "staleness_score": 0.0,
+            "allocated_points": 50,
+            "evidence_reviews": [
+              "deftiges essen",
+              "the food was delicious and the drinks were brilliant."
+            ]
+          },
+          {
+            "sub_feature_name": "Dining area ambiance",
+            "gap_score": 0.5,
+            "ambiguity_score": 0.0,
+            "staleness_score": 0.0,
+            "allocated_points": 50,
+            "evidence_reviews": [
+              "gem\u00fctliche gaststube"
+            ]
+          },
+          {
+            "sub_feature_name": "Specific dining amenities (barbecue/buffet details)",
+            "gap_score": 1.0,
+            "ambiguity_score": 0.0,
+            "staleness_score": 1.0,
+            "allocated_points": 150,
+            "evidence_reviews": []
+          }
+        ]
+      },
+      {
+        "bucket_name": "Facilities & Recreation",
+        "mapped_amenities": [
+          "free_parking",
+          "laundry",
+          "outdoor_space",
+          "toys",
+          "bowling alley",
+          "table tennis",
+          "handrails in stairways",
+          "this property does not have elevators"
+        ],
+        "sub_features": [
+          {
+            "sub_feature_name": "Parking availability/experience",
+            "gap_score": 1.0,
+            "ambiguity_score": 0.0,
+            "staleness_score": 1.0,
+            "allocated_points": 100,
+            "evidence_reviews": []
+          },
+          {
+            "sub_feature_name": "Recreational activities (on-site)",
+            "gap_score": 1.0,
+            "ambiguity_score": 0.0,
+            "staleness_score": 1.0,
+            "allocated_points": 100,
+            "evidence_reviews": []
+          },
+          {
+            "sub_feature_name": "Accessibility features (handrails/elevators)",
+            "gap_score": 1.0,
+            "ambiguity_score": 0.0,
+            "staleness_score": 1.0,
+            "allocated_points": 100,
+            "evidence_reviews": []
+          }
+        ]
+      },
+      {
+        "bucket_name": "Staff & Service",
+        "mapped_amenities": [],
+        "sub_features": [
+          {
+            "sub_feature_name": "Staff friendliness/hospitality",
+            "gap_score": 0.0,
+            "ambiguity_score": 0.0,
+            "staleness_score": 0.0,
+            "allocated_points": 50,
+            "evidence_reviews": [
+              "the hosts were very friendly, they gave us a nice and warm welcome.",
+              "sehr freundliche gastgeber",
+              "herzlicher empfang.",
+              "alle waren au\u00dfergew\u00f6hnlich freundlich und haben uns jeden wunsch erf\u00fcllt.",
+              "Incredible service from the delightful owners.",
+              "die gastgeber sind so warmherzig und aufmerksam"
+            ]
+          },
+          {
+            "sub_feature_name": "Quality of service (responsiveness/helpfulness)",
+            "gap_score": 0.0,
+            "ambiguity_score": 0.0,
+            "staleness_score": 0.0,
+            "allocated_points": 50,
+            "evidence_reviews": [
+              "they also gave us some advice about the activities in the region",
+              "grandiosem service!",
+              "haben uns jeden wunsch erf\u00fcllt.",
+              "Incredible service from the delightful owners."
+            ]
+          }
+        ]
+      },
+      {
+        "bucket_name": "Location & Surroundings",
+        "mapped_amenities": [],
+        "sub_features": [
+          {
+            "sub_feature_name": "Proximity to attractions/towns",
+            "gap_score": 0.0,
+            "ambiguity_score": 0.0,
+            "staleness_score": 0.0,
+            "allocated_points": 0,
+            "evidence_reviews": [
+              "many nice activities closeby because the accomodation is close to the black forrest.",
+              "nah an freudenstadt"
+            ]
+          },
+          {
+            "sub_feature_name": "Peacefulness/quietness",
+            "gap_score": 0.0,
+            "ambiguity_score": 0.0,
+            "staleness_score": 0.0,
+            "allocated_points": 0,
+            "evidence_reviews": [
+              "sch\u00f6n ruhig",
+              "ruhige gegend"
+            ]
+          },
+          {
+            "sub_feature_name": "Views from property",
+            "gap_score": 0.5,
+            "ambiguity_score": 0.0,
+            "staleness_score": 0.0,
+            "allocated_points": 50,
+            "evidence_reviews": [
+              "mit weitblick",
+              "beautiful view from our room"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "eg_property_id": "3b984f3ba8df55b2609a1e33fd694cf8407842e1d833c9b4d993b07fc83a2820",
+    "location": {
+      "city": "San Isidro de El General",
+      "star_rating": "3.5"
+    },
+    "buckets": [
+      {
+        "bucket_name": "Room",
+        "mapped_amenities": [
+          "ac",
+          "balcony",
+          "tv",
+          "housekeeping",
+          "no_smoking",
+          "internet",
+          "room_service"
+        ],
+        "sub_features": [
+          {
+            "sub_feature_name": "Room Condition & Comfort",
+            "gap_score": 0.7,
+            "ambiguity_score": 0.9,
+            "staleness_score": 0.4,
+            "allocated_points": 100,
+            "evidence_reviews": [
+              "the room was spacious and had good air conditioning. a little dated in places, but overall very good.",
+              "confortable para dormir.",
+              "hotel di medio livello con una sala giochi annessa. condizioni delle stanze migliorabili dalla porta che gigolava al wi-fi con qualche problema.",
+              "las habitaciones sencillas pero bien",
+              "needs new towels(they're wear off) , bathrooms renovation( facets, drains, shower handle, head shower) new bedding ( sheets and pillows cases had holes), new furniture and curtains( same since 2004) .",
+              "the room was small..bed very comfortable...bathroom adequate....some mismatched tiles...no smoke detectors...no fridge...",
+              "comfortable",
+              "the room was clean and spacious.",
+              "las habitaciones est\u00e1n en muy buen estado, amplias, limpias",
+              "the rooms are brand new and beautiful.",
+              "tr\u00e8s propre, confortable personnel courtois et avenant"
+            ]
+          },
+          {
+            "sub_feature_name": "In-room WiFi",
+            "gap_score": 0.9,
+            "ambiguity_score": 0.0,
+            "staleness_score": 0.45,
+            "allocated_points": 50,
+            "evidence_reviews": [
+              "there was no wifi in the room",
+              "el internet muy lento",
+              "wi-fi con qualche problema"
+            ]
+          },
+          {
+            "sub_feature_name": "Bathroom Amenities",
+            "gap_score": 0.9,
+            "ambiguity_score": 0.3,
+            "staleness_score": 0.4,
+            "allocated_points": 50,
+            "evidence_reviews": [
+              "the shower needed some hooks and shelves",
+              "beautiful bathroom and shower. a let down that there was no good water pressure.",
+              "bathrooms renovation( facets, drains, shower handle, head shower)",
+              "bathroom adequate....some mismatched tiles"
+            ]
+          },
+          {
+            "sub_feature_name": "Room Noise Levels",
+            "gap_score": 0.85,
+            "ambiguity_score": 0.8,
+            "staleness_score": 0.45,
+            "allocated_points": 100,
+            "evidence_reviews": [
+              "not as noisy as other people say.",
+              "it was a little bit noisy because a bar there is right in from of the room, crossing the street",
+              "si se percibe un poco de ruido externo",
+              "es sumamente ruidoso, el casino de la plata baja genera demasiada contaminaci\u00f3n s\u00f3nica, dormir no es lo mejor.",
+              "al estar tan c\u00e9ntrico hay ruido en la noche por los alrededores.",
+              "lo \u00fanico es que al estar tan c\u00e9ntrico hay ruido en la noche por los alrededores."
+            ]
+          }
+        ]
+      },
+      {
+        "bucket_name": "Restaurant & Bar",
+        "mapped_amenities": [
+          "bar",
+          "breakfast_included",
+          "restaurant",
+          "room_service",
+          "1 bar",
+          "1 restaurant",
+          "free continental breakfast available daily 7:00 am\u20139:00 am"
+        ],
+        "sub_features": [
+          {
+            "sub_feature_name": "Breakfast Quality & Variety",
+            "gap_score": 0.78,
+            "ambiguity_score": 0.35,
+            "staleness_score": 0.6,
+            "allocated_points": 50,
+            "evidence_reviews": [
+              "breakfast was a typical plate, plus fruit, toast and drinks; served in a bright dining room.",
+              "buen desayuno!",
+              "breakfast was great",
+              "desayuno muy rico.",
+              "d\u00e9jeuner compris",
+              "breakfast buffet was cold and not variety.",
+              "breakfast was very basic...there must be more fruit choices then pineapple and watermelon? food was cold...",
+              "breakfast was included."
+            ]
+          },
+          {
+            "sub_feature_name": "Restaurant Food Quality",
+            "gap_score": 0.95,
+            "ambiguity_score": 0.0,
+            "staleness_score": 0.65,
+            "allocated_points": 50,
+            "evidence_reviews": [
+              "the in-house restaurant had excellent and very affordable food",
+              "conica muy buena",
+              "el casino y el restaurante todo bien"
+            ]
+          },
+          {
+            "sub_feature_name": "Dining Environment & Noise",
+            "gap_score": 0.95,
+            "ambiguity_score": 0.0,
+            "staleness_score": 0.65,
+            "allocated_points": 50,
+            "evidence_reviews": [
+              "served in a bright dining room.",
+              "the restaurant had a very nice location!"
+            ]
+          }
+        ]
+      },
+      {
+        "bucket_name": "Lobby & Services",
+        "mapped_amenities": [
+          "business_services",
+          "elevator",
+          "frontdesk_24_hour",
+          "laundry",
+          "wheelchair accessible (may have limitations)",
+          "wheelchair-accessible registration desk",
+          "well-lit path to entrance"
+        ],
+        "sub_features": [
+          {
+            "sub_feature_name": "Staff Friendliness & Service Quality",
+            "gap_score": 0.4,
+            "ambiguity_score": 0.0,
+            "staleness_score": 0.4,
+            "allocated_points": 0,
+            "evidence_reviews": [
+              "staff on reception and at breakfast were very polite and welcoming.",
+              "excelente servicio y atenci\u00f3n",
+              "personal amable y colaborador, limpieza excelente!",
+              "muy buena atenci\u00f3n",
+              "appr\u00e9ci\u00e9 les conseils et l\u00e0 coop\u00e9ration du personnel de l'h\u00f4tel.",
+              "very friendly staff",
+              "lo mejor que tiene es la atenci\u00f3n del personal.",
+              "very nice service and clean place.",
+              "el personal de recepci\u00f3n sumamente amable, lo mismo del restaurante",
+              "el hotel sigue manteniendo la calidad en su servicio y personal",
+              "muy buen servicio",
+              "excellent staff but hotel outdated",
+              "personnel courtois et avenant",
+              "los anfitriones muy preocupados te colaboran en elnn bn parking",
+              "the staff are wonderful.",
+              "very nice hotel, close to convenient stores",
+              "everyone was great.",
+              "exc servicio, conica muy buena",
+              "la atenci\u00f3n de es excelente",
+              "very friendly staff.",
+              "staff was very nice.",
+              "front desk staff very nice and helpful."
+            ]
+          },
+          {
+            "sub_feature_name": "Accessibility Features",
+            "gap_score": 1.0,
+            "ambiguity_score": 0.0,
+            "staleness_score": 1.0,
+            "allocated_points": 100,
+            "evidence_reviews": []
+          },
+          {
+            "sub_feature_name": "Lobby/Common Area Condition",
+            "gap_score": 0.95,
+            "ambiguity_score": 0.0,
+            "staleness_score": 0.65,
+            "allocated_points": 50,
+            "evidence_reviews": [
+              "lobby very nice."
+            ]
+          }
+        ]
+      },
+      {
+        "bucket_name": "Property Facilities & Grounds",
+        "mapped_amenities": [
+          "outdoor_space",
+          "parking",
+          "elevator",
+          "casino"
+        ],
+        "sub_features": [
+          {
+            "sub_feature_name": "On-site Parking Capacity & Convenience",
+            "gap_score": 0.75,
+            "ambiguity_score": 0.8,
+            "staleness_score": 0.4,
+            "allocated_points": 100,
+            "evidence_reviews": [
+              "hotel parking only fits 3 cars.",
+              "private parking garage provided.",
+              "muy chico el parqueo",
+              "el parqueo es muy peque\u00f1o e incomodo.",
+              "el parqueo esta como a 150mts",
+              "they had a locked parking area",
+              "limitado por el parqueo (muy peque\u00f1o); pero los anfitriones muy preocupados te colaboran en elnn bn parking",
+              "gated parking.",
+              "parking inside hotel was very limited."
+            ]
+          },
+          {
+            "sub_feature_name": "Casino Experience & Noise",
+            "gap_score": 0.85,
+            "ambiguity_score": 0.95,
+            "staleness_score": 0.35,
+            "allocated_points": 100,
+            "evidence_reviews": [
+              "hotel di medio livello con una sala giochi annessa.",
+              "casino downstairs.",
+              "casino is a joke",
+              "el casino de la plata baja genera demasiada contaminaci\u00f3n s\u00f3nica, dormir no es lo mejor.",
+              "i\u2019m not a gambler so i cannot speak for the casino but the hotel is very nice.",
+              "el casino y el restaurante todo bien.",
+              "casino a friendly quiet place."
+            ]
+          },
+          {
+            "sub_feature_name": "Hotel Renovation Status & Modernity",
+            "gap_score": 0.8,
+            "ambiguity_score": 0.8,
+            "staleness_score": 0.45,
+            "allocated_points": 100,
+            "evidence_reviews": [
+              "a little dated in places, but overall very good.",
+              "un hotel en proceso de remodelaci\u00f3n",
+              "i really recommend some updates. . needs new towels...bathrooms renovation...new bedding...new furniture and curtains( same since 2004) .",
+              "beautiful building, nice staff, just need some love!",
+              "hotel di medio livello",
+              "the hotel is quirky and different.",
+              "old hotel and casino that was bought and remodeled by the same company that owns the fiesta casinos in costa rica.. the rooms are brand new and beautiful."
+            ]
+          },
+          {
+            "sub_feature_name": "Neighborhood/Location Safety & Convenience",
+            "gap_score": 0.6,
+            "ambiguity_score": 0.4,
+            "staleness_score": 0.5,
+            "allocated_points": 50,
+            "evidence_reviews": [
+              "the area was a little out of the centre, with a more local feel; but it felt as safe as any larger city would in the daytime and evening. 15 minutes walk to the bus stations.",
+              "good location, clean",
+              "muy buena atenci\u00f3n y ubicaci\u00f3n.",
+              "hotel bien situ\u0117 dans le centre de san isidro.",
+              "restaurants are in walking distance.",
+              "it's in a busy part of town",
+              "ubicado cerca del centro de la ciudad, cerca de buses a diferentes zonas",
+              "muy centrico.",
+              "muy c\u00e9ntrico, muy cerca de todo. si quieres tener todo a la mano es una muy buena opci\u00f3n.",
+              "the area around is a bit sketchy",
+              "muy centrico.",
+              "tr\u00e8s bien situ\u00e9!",
+              "an excellent, affordable hotel in downtown san isidro del general. it is walking distance too everything you would need.",
+              "close to convenient stores",
+              "al estar tan c\u00e9ntrico hay ruido en la noche por los alrededores.",
+              "central location to downtown."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "eg_property_id": "9a0043fd4258a1286db1e253ca591662b3aac849da12d0d4f67e08b8f59be65f",
+    "location": {
+      "city": "Bochum",
+      "star_rating": ""
+    },
+    "buckets": [
+      {
+        "bucket_name": "Room & Amenities",
+        "mapped_amenities": [
+          "housekeeping",
+          "internet",
+          "no_smoking",
+          "roomcleanliness",
+          "roomcomfort",
+          "roomamenitiesscore",
+          "roomquality"
+        ],
+        "sub_features": [
+          {
+            "sub_feature_name": "Cleanliness (Room & Bathroom)",
+            "gap_score": 0.1,
+            "ambiguity_score": 0.9,
+            "staleness_score": 0.66,
+            "allocated_points": 50,
+            "evidence_reviews": [
+              "zimmer war in einem sauberen und gepflegten zustand",
+              "clean",
+              "very clean",
+              "dusche war innen voll mit schimmel",
+              "handtuch genommen habe kamen mir etliche motten entgegen",
+              "sauberes sehr gepflegtes zimmer",
+              "unterkunft war sauber"
+            ]
+          },
+          {
+            "sub_feature_name": "Bed Comfort",
+            "gap_score": 0.2,
+            "ambiguity_score": 0.9,
+            "staleness_score": 0.77,
+            "allocated_points": 50,
+            "evidence_reviews": [
+              "comfortable beds",
+              "bett hat bei der kleinsten bewegung so geknarzt",
+              "tolles bett (modell strandkorb)",
+              "goed bed",
+              "matratze war zu d\u00fcnn",
+              "habe gut geschlafen"
+            ]
+          },
+          {
+            "sub_feature_name": "Room Condition/Features",
+            "gap_score": 0.1,
+            "ambiguity_score": 0.9,
+            "staleness_score": 0.71,
+            "allocated_points": 50,
+            "evidence_reviews": [
+              "no fridges in rooms",
+              "tv reception was poor",
+              "free mineral water",
+              "neu renoviertes zimmer",
+              "bad war sehr klein, nur mit einer sehr wackeligen faltt\u00fcr getrennt",
+              "duschkabine an der schr\u00e4gwand auch sehr klein",
+              "rooms are a little chilly this time of year though",
+              "kamer was erg koud, en de verlichting werkte aber nur half",
+              "w-lan ist sehr instabil"
+            ]
+          }
+        ]
+      },
+      {
+        "bucket_name": "Food & Drink",
+        "mapped_amenities": [
+          "breakfast_available",
+          "restaurant",
+          "1 restaurant",
+          "cooked-to-order breakfast available for a fee weekdays 6:30 am\u201310:00 am: eur 4.5-14 for adults and eur 4.5-14 for children"
+        ],
+        "sub_features": [
+          {
+            "sub_feature_name": "Breakfast Quality & Variety",
+            "gap_score": 0.1,
+            "ambiguity_score": 0.1,
+            "staleness_score": 0.92,
+            "allocated_points": 50,
+            "evidence_reviews": [
+              "ontbijt perfect",
+              "sehr gutes essen",
+              "auf wunsch wird sogar glutenfreies fr\u00fchst\u00fcck serviert!",
+              "fr\u00fchst\u00fcck gab es schon ab 7\u00b0\u00b0uhr bis 11\u00b0\u00b0uhr. es war reichhaltig, guter kaffee, frische br\u00f6chen usw."
+            ]
+          },
+          {
+            "sub_feature_name": "Restaurant Experience",
+            "gap_score": 0.7,
+            "ambiguity_score": 0.2,
+            "staleness_score": 0.67,
+            "allocated_points": 100,
+            "evidence_reviews": [
+              "also there used to be a very good restaurant downstairs which is now under different management and is much less appealing",
+              "unangenehmer geruch durch die gastst\u00e4tte im erdgescho\u00df"
+            ]
+          },
+          {
+            "sub_feature_name": "Breakfast Environment/Service",
+            "gap_score": 0.8,
+            "ambiguity_score": 0.8,
+            "staleness_score": 0.92,
+            "allocated_points": 200,
+            "evidence_reviews": [
+              "beim fr\u00fchst\u00fcck war es schon recht eklig, dass der hund die wurst vom tablett gezogen hat",
+              "fr\u00fchst\u00fcck bekam ich auf wunsch eine halbe stunde fr\u00fcher"
+            ]
+          }
+        ]
+      },
+      {
+        "bucket_name": "Service & Staff",
+        "mapped_amenities": [
+          "service",
+          "communication",
+          "laundry"
+        ],
+        "sub_features": [
+          {
+            "sub_feature_name": "Friendliness/Hospitality",
+            "gap_score": 0.0,
+            "ambiguity_score": 0.0,
+            "staleness_score": 0.8,
+            "allocated_points": 0,
+            "evidence_reviews": [
+              "mir hat der service gut gefallen",
+              "unterkunft ist so famili\u00e4r und man f\u00fchlt sich total willkommen !",
+              "groses lob an hotelwirtin, so eine nette person",
+              "very kind owner who takes a personal interest in her guests",
+              "friendly and helpful proprietor",
+              "die dame ist aber wirklich sehr nett",
+              "sehr freundliches personal die er voor zorgt dat je er helemaal thuis voelt",
+              "friendly staff",
+              "sehr freundliche zuvorkommende besitzerin",
+              "freundliches personal",
+              "super nettes personal",
+              "welcoming and just perfect",
+              "personal sehr freundlich",
+              "dame \u00e0 l'accueil tr\u00e8s sympa",
+              "die hotelinhaberin ist sehr liebevoll und herzlich",
+              "sehr liebevolle besitzerin",
+              "sehr freundliche und famili\u00e4re atmosph\u00e4re",
+              "das personal war sehr freundlich",
+              "sehr freundliche und zuvorkommende wirtin",
+              "das personal ist sehr freundlich und versucht jeden wunsch zu erf\u00fcllen",
+              "familien freundlich",
+              "supernett",
+              "freundlichkeit, offenheit und bem\u00fchtheit des personals!"
+            ]
+          },
+          {
+            "sub_feature_name": "Responsiveness/Flexibility",
+            "gap_score": 0.2,
+            "ambiguity_score": 0.0,
+            "staleness_score": 0.91,
+            "allocated_points": 0,
+            "evidence_reviews": [
+              "ist schnellstens auf alle w\u00fcnsche eingegangen",
+              "fr\u00fchst\u00fcck bekam ich auf wunsch eine halbe stunde fr\u00fcher",
+              "versucht jeden wunsch zu erf\u00fcllen",
+              "sich auf jeden w\u00fcnsch der g\u00e4ste zu erf\u00fcllen"
+            ]
+          },
+          {
+            "sub_feature_name": "Check-in/Reception Experience",
+            "gap_score": 0.6,
+            "ambiguity_score": 0.8,
+            "staleness_score": 0.88,
+            "allocated_points": 100,
+            "evidence_reviews": [
+              "der empfang war ungl\u00fccklich, weil an diesem tag ruhetag war",
+              "netter empfang",
+              "dame \u00e0 l'accueil tr\u00e8s sympa"
+            ]
+          }
+        ]
+      },
+      {
+        "bucket_name": "Property & Location",
+        "mapped_amenities": [
+          "free_parking",
+          "outdoor_space",
+          "bicycle rentals",
+          "this property does not have elevators",
+          "upper floors accessible by stairs only",
+          "well-lit path to entrance",
+          "if you have requests for specific accessibility needs, please contact the property using the information on the reservation confirmation received after booking. ",
+          "hotelcondition",
+          "convenienceoflocation",
+          "neighborhoodsatisfaction",
+          "location",
+          "ecofriendliness"
+        ],
+        "sub_features": [
+          {
+            "sub_feature_name": "Accessibility & Building Features",
+            "gap_score": 1.0,
+            "ambiguity_score": 0.0,
+            "staleness_score": 1.0,
+            "allocated_points": 250,
+            "evidence_reviews": []
+          },
+          {
+            "sub_feature_name": "General Condition & Ambiance",
+            "gap_score": 0.1,
+            "ambiguity_score": 0.7,
+            "staleness_score": 0.9,
+            "allocated_points": 50,
+            "evidence_reviews": [
+              "etwas in die jahre gekommen",
+              "in need of updating and refurbishing",
+              "wirkt das hotel d\u00fcster und staubig",
+              "nicht neu, etwas rustikal, aber angenehm",
+              "unangenehmer geruch durch die gastst\u00e4tte im erdgescho\u00df",
+              "\u00fcberall teppichboden"
+            ]
+          },
+          {
+            "sub_feature_name": "Location & Transport",
+            "gap_score": 0.1,
+            "ambiguity_score": 0.8,
+            "staleness_score": 0.86,
+            "allocated_points": 0,
+            "evidence_reviews": [
+              "g\u00fcnstig gelegenes",
+              "gute anbindung an u-bahn",
+              "sehr gute verkehrsanbindung mit \u00f6vm",
+              "das hotel ist schlecht zu finden, da das \u00e4u\u00dfere mittlerweile ver\u00e4ndert hat",
+              "nur im navi etwas schwer zu finden",
+              "sehr gute lage",
+              "~25 min walking to centre"
+            ]
+          },
+          {
+            "sub_feature_name": "Parking",
+            "gap_score": 0.8,
+            "ambiguity_score": 0.0,
+            "staleness_score": 0.92,
+            "allocated_points": 150,
+            "evidence_reviews": [
+              "aureichend parkpl\u00e4tze"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "eg_property_id": "e52d67a758ce4ad0229aacc97e5dfe89984c384c51a70208f9e0cc65c9cd4676",
+    "location": {
+      "city": "Bangkok",
+      "star_rating": "3.0"
+    },
+    "buckets": [
+      {
+        "bucket_name": "Room & In-Room Amenities",
+        "mapped_amenities": [
+          "ac",
+          "tv",
+          "housekeeping",
+          "room comfort",
+          "bathroom",
+          "refrigerator"
+        ],
+        "sub_features": [
+          {
+            "sub_feature_name": "AC Performance & Noise",
+            "gap_score": 0.1,
+            "ambiguity_score": 0.7,
+            "staleness_score": 0.3,
+            "allocated_points": 150,
+            "evidence_reviews": [
+              "airconditioner too old(so i've got a sick)",
+              "h\u00f4tel tr\u00e8s bruyant \u00e0 cause des climatiseurs,ce qui enl\u00e8ve tout son charme)",
+              "our room was on |MASK| 2nd floor, no elevators so you do have to carry your luggage up flights. |MASK| air conditioner worked great, our room was nice and cold.",
+              "the ac saved us in april in bangkok!"
+            ]
+          },
+          {
+            "sub_feature_name": "Window Availability/View",
+            "gap_score": 0.4,
+            "ambiguity_score": 0.5,
+            "staleness_score": 0.6,
+            "allocated_points": 200,
+            "evidence_reviews": [
+              "they didnt mentioned without window room.",
+              "room. has no window which they advertise. fine for me.",
+              "\ub2e8 \ub098\ub294 \uac00\uc7a5 \uc800\ub834\ud55c \ubc29\uc744 \uc774\uc6a9\ud574 \ucc3d\ubb38\uc774 \uc5c6\ub2e4\ub294 \uac83 \ub9d0\uace0\ub294 \uc644\ubcbd\ud568."
+            ]
+          },
+          {
+            "sub_feature_name": "Bathroom Design & Condition",
+            "gap_score": 0.2,
+            "ambiguity_score": 0.6,
+            "staleness_score": 0.4,
+            "allocated_points": 100,
+            "evidence_reviews": [
+              "aolo el ba\u00f1o esta dentro de la regadera aupongo que por espacio.",
+              "the only thing that i didn\u2019t like was |MASK| toilet in |MASK| shower , but that is so popular in thailand \ud83e\udd17",
+              "el ba\u00f1o esta junto a la regadera, no hay separacion, es raro eso",
+              "the wet-room bathroom \u2014 |MASK| shower leaked and left |MASK| floor wet longer than ideal.",
+              "la porte de la salle de bain est dans un \u00e9tat moisie / crade"
+            ]
+          },
+          {
+            "sub_feature_name": "Bed Comfort",
+            "gap_score": 0.1,
+            "ambiguity_score": 0.1,
+            "staleness_score": 0.3,
+            "allocated_points": 0,
+            "evidence_reviews": [
+              "very clean an comfortable bed",
+              "i really enjoy |MASK| mattress, very comfortable!",
+              "ze hebben voor thaise begrippen zachte bedden en een keuze uit kussens",
+              "this hotel has |MASK| best bed",
+              "the beds were super comfortable"
+            ]
+          }
+        ]
+      },
+      {
+        "bucket_name": "Dining",
+        "mapped_amenities": [
+          "breakfast_available",
+          "continental breakfast"
+        ],
+        "sub_features": [
+          {
+            "sub_feature_name": "Breakfast Quality (Taste & Variety)",
+            "gap_score": 0.1,
+            "ambiguity_score": 0.1,
+            "staleness_score": 0.6,
+            "allocated_points": 50,
+            "evidence_reviews": [
+              "\uc870\uc2dd\ub3c4 \ud478\uc9d0\ud558\uace0 \ub9db\uc788\ub2e4.",
+              "desayuno delicioso",
+              "breakfast was delicious ( thai fried rice with egg for me was lovely)"
+            ]
+          },
+          {
+            "sub_feature_name": "Breakfast Service (Availability & Communication)",
+            "gap_score": 0.8,
+            "ambiguity_score": 0.9,
+            "staleness_score": 0.2,
+            "allocated_points": 300,
+            "evidence_reviews": [
+              "geen ontbijt maar vlakbij genoeg mogelijkenheden",
+              "breakfast was listed as an amenity but wasn\u2019t offered to us during check in. there was a cafe on |MASK| corner we used."
+            ]
+          }
+        ]
+      },
+      {
+        "bucket_name": "Hotel Services & Common Areas",
+        "mapped_amenities": [
+          "frontdesk_24_hour",
+          "internet",
+          "free_parking",
+          "elevators",
+          "staff attitude"
+        ],
+        "sub_features": [
+          {
+            "sub_feature_name": "Staff Friendliness & Helpfulness",
+            "gap_score": 0.1,
+            "ambiguity_score": 0.9,
+            "staleness_score": 0.2,
+            "allocated_points": 150,
+            "evidence_reviews": [
+              "\uc9c1\uc6d0\ub4e4\uc774 \uce5c\uc808\ud558\uace0",
+              "personal muy amable",
+              "staff was exceptional!",
+              "staff very nice and helpful",
+              "the staff is so friendly",
+              "premi\u00e8rement, l'arriv\u00e9e \u00e0 l'h\u00f4tel, la gardienne de prison qui est derri\u00e8re son comptoir, n'a pas r\u00e9pondu \u00e0 mon bonjour en thai, elle ne sourit pas et m'a dit trois mots sous forme d'interrogatoire you have booking ? (...) elle m'a donn\u00e9 la cl\u00e9 en disant second floor ... j'ai eu la folie de demander gentiment s'il serait possible d'avoir une aide pour monter mon gros sac car il n'y a pas d'ascenseur et pour seule r\u00e9ponse un no ! tr\u00e8s tr\u00e8s appuy\u00e8 !"
+            ]
+          },
+          {
+            "sub_feature_name": "Elevator Availability",
+            "gap_score": 0.0,
+            "ambiguity_score": 0.0,
+            "staleness_score": 0.1,
+            "allocated_points": 0,
+            "evidence_reviews": [
+              "this property does not have elevators",
+              "no elevators so you do have to carry your luggage up flights.",
+              "s'il serait possible d'avoir une aide pour monter mon gros sac car il n'y a pas d'ascenseur"
+            ]
+          },
+          {
+            "sub_feature_name": "Wi-Fi Reliability/Speed",
+            "gap_score": 0.2,
+            "ambiguity_score": 0.0,
+            "staleness_score": 0.7,
+            "allocated_points": 50,
+            "evidence_reviews": [
+              "internet excellent",
+              "wifi worked great."
+            ]
+          },
+          {
+            "sub_feature_name": "Property Overall Condition/Cleanliness",
+            "gap_score": 0.1,
+            "ambiguity_score": 0.4,
+            "staleness_score": 0.2,
+            "allocated_points": 0,
+            "evidence_reviews": [
+              "\uacb0\uc815\uc801\uc73c\ub85c \uc2e0\ucd95\uc774\ub77c \ub0b4\ubd80 \uc5c4\uccad \uae68\ub057\ud568.",
+              "l'hotel \u00e8 davvero molto bello, nuovo, arredamento impeccabile! la pulizia perfetta!",
+              "la chambre est bien d\u00e9fra\u00eechie, la porte de la salle de bain est dans un \u00e9tat moisie / crade"
+            ]
+          }
+        ]
+      },
+      {
+        "bucket_name": "Location & Surroundings",
+        "mapped_amenities": [
+          "outdoor_space",
+          "proximity to attractions",
+          "public transport access"
+        ],
+        "sub_features": [
+          {
+            "sub_feature_name": "Proximity to Attractions/Transport",
+            "gap_score": 0.0,
+            "ambiguity_score": 0.3,
+            "staleness_score": 0.1,
+            "allocated_points": 0,
+            "evidence_reviews": [
+              "\uce74\uc624\uc0b0\uc5d0\uc11c \ub3c4\ubcf4\ub85c 10\ubd84 \uc655\uad81\uc5d0\uc11c \ub3c4\ubcf4\ub85c 25\ubd84 \uac70\ub9ac",
+              "muy bien ubicado del area de los templos y khaosan road",
+              "walking distance to khaosan road and to |MASK| river, where one can take |MASK| boat and go to many places",
+              "just a bit far from |MASK| bts n mrt."
+            ]
+          },
+          {
+            "sub_feature_name": "Neighborhood Ambiance/Quietness",
+            "gap_score": 0.1,
+            "ambiguity_score": 0.1,
+            "staleness_score": 0.1,
+            "allocated_points": 0,
+            "evidence_reviews": [
+              "\ubc88\ud654\uac00\uc640\ub294 \uc57d\uac04 \ub5a8\uc5b4\uc838 \uc788\uc5b4 \uc219\uba74\uc744 \ucde8\ud560 \uc218 \uc788\ub2e4\ub294 \uc774\uc810\uc774 \uc788\ub2e4.",
+              "lekker rustig met alles op loopafstand",
+              "it is in a very quite place, with a little monastery nearby, but at |MASK| same time close to more busy areas with many dining options etc.",
+              "la zona \u00e8 molto piacevole e tranquilla, si trova in una traversa di samsaen road"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "eg_property_id": "ff26cdda236b233f7c481f0e896814075ac6bed335e162e0ff01d5491343f838",
+    "location": {
+      "city": "Frisco",
+      "star_rating": "3.5"
+    },
+    "buckets": [
+      {
+        "bucket_name": "Room & In-Room Amenities",
+        "mapped_amenities": [
+          "ac",
+          "crib",
+          "heater",
+          "housekeeping",
+          "no_smoking",
+          "tv",
+          "internet",
+          "room_service",
+          "bed",
+          "linens"
+        ],
+        "sub_features": [
+          {
+            "sub_feature_name": "In-Room Appliances (Fridge/Microwave)",
+            "gap_score": 0.95,
+            "ambiguity_score": 0.1,
+            "staleness_score": 0.53,
+            "allocated_points": 250,
+            "evidence_reviews": [
+              "loved everything except for the lack of a room fridge",
+              "room did not have a mini fridge or microwave"
+            ]
+          },
+          {
+            "sub_feature_name": "Bathroom Cleanliness & Functionality",
+            "gap_score": 0.5,
+            "ambiguity_score": 0.2,
+            "staleness_score": 0.18,
+            "allocated_points": 100,
+            "evidence_reviews": [
+              "the bathroom wasn't as clean as i like but it was fine.",
+              "room 314, bathroom flooding whenever the shower was used. at least 1/4 inch water covering the floor. unsafe to try and use toilet.",
+              "unique modern decor, beautiful bathrooms and toiletries",
+              "wonderful shower"
+            ]
+          },
+          {
+            "sub_feature_name": "Bed & Decor Comfort",
+            "gap_score": 0.875,
+            "ambiguity_score": 0.1,
+            "staleness_score": 0.06,
+            "allocated_points": 50,
+            "evidence_reviews": [
+              "comfortable room with a great bed and linens",
+              "nice new hotel good price good location clean rooms nice beds",
+              "unique modern decor",
+              "renovated room"
+            ]
+          }
+        ]
+      },
+      {
+        "bucket_name": "Dining & Bar",
+        "mapped_amenities": [
+          "bar",
+          "breakfast_available",
+          "restaurant",
+          "coffee/tea in common area(s)",
+          "cooked-to-order breakfast",
+          "room service available"
+        ],
+        "sub_features": [
+          {
+            "sub_feature_name": "Restaurant Food Quality & Value",
+            "gap_score": 0.9,
+            "ambiguity_score": 0.5,
+            "staleness_score": 0.28,
+            "allocated_points": 150,
+            "evidence_reviews": [
+              "food at the hotel was expensive.",
+              "dinner at the restaurant was amazing, staff was friendly.",
+              "breakfast was not included, but enjoyed a beautifully presented breakfast at the restaurant.",
+              "breakfast was delicious at the parlor and it is definitely a must have if you\u2019re staying longer than 1 night!"
+            ]
+          },
+          {
+            "sub_feature_name": "Room Service Availability",
+            "gap_score": 0.975,
+            "ambiguity_score": 0.1,
+            "staleness_score": 0.03,
+            "allocated_points": 100,
+            "evidence_reviews": [
+              "i was disappointed that there was no food service on sunday night. we were in town for a meet and did not get out until 9:45. it would have been nice to be able to order room service even if only a limited menu."
+            ]
+          },
+          {
+            "sub_feature_name": "Breakfast Options & Inclusions",
+            "gap_score": 0.925,
+            "ambiguity_score": 0.1,
+            "staleness_score": 0.37,
+            "allocated_points": 50,
+            "evidence_reviews": [
+              "breakfast was not included, but enjoyed a beautifully presented breakfast at the restaurant.",
+              "breakfast was delicious at the parlor",
+              "great facilities and breakfast!"
+            ]
+          }
+        ]
+      },
+      {
+        "bucket_name": "Pool & Fitness",
+        "mapped_amenities": [
+          "fitness_equipment",
+          "pool",
+          "24-hour fitness center",
+          "seasonal outdoor pool"
+        ],
+        "sub_features": [
+          {
+            "sub_feature_name": "Fitness Center Features",
+            "gap_score": 1.0,
+            "ambiguity_score": 1.0,
+            "staleness_score": 1.0,
+            "allocated_points": 100,
+            "evidence_reviews": []
+          },
+          {
+            "sub_feature_name": "Outdoor Pool Access & Seasonality",
+            "gap_score": 0.975,
+            "ambiguity_score": 0.1,
+            "staleness_score": 0.02,
+            "allocated_points": 50,
+            "evidence_reviews": [
+              "they only had an outdoor pool which isnt open during the winter months."
+            ]
+          }
+        ]
+      },
+      {
+        "bucket_name": "Lobby & General Services",
+        "mapped_amenities": [
+          "business_services",
+          "elevator",
+          "frontdesk_24_hour",
+          "grocery",
+          "laundry",
+          "assistive listening devices available",
+          "braille signage",
+          "wheelchair-accessible parking",
+          "wheelchair-accessible path of travel",
+          "free_parking"
+        ],
+        "sub_features": [
+          {
+            "sub_feature_name": "Staff Responsiveness & Problem Solving",
+            "gap_score": 0.925,
+            "ambiguity_score": 0.66,
+            "staleness_score": 0.26,
+            "allocated_points": 100,
+            "evidence_reviews": [
+              "staff were nice and helpful",
+              "i witnessed your staff handling conflict, with another guest, fantastically.",
+              "would not move us to another room."
+            ]
+          },
+          {
+            "sub_feature_name": "Check-in/Check-out Efficiency",
+            "gap_score": 0.95,
+            "ambiguity_score": 0.1,
+            "staleness_score": 0.06,
+            "allocated_points": 50,
+            "evidence_reviews": [
+              "great stay. great check in staff.",
+              "clean property, fast check-in"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "eg_property_id": "fa014137b3ea9af6a90c0a86a1d099e46f7e56d6eb33db1ad1ec4bdac68c3caa",
+    "location": {
+      "city": "Monterey",
+      "star_rating": "2.5"
+    },
+    "buckets": [
+      {
+        "bucket_name": "Room Features",
+        "mapped_amenities": [
+          "ac",
+          "crib",
+          "microwave",
+          "housekeeping",
+          "no_smoking"
+        ],
+        "sub_features": [
+          {
+            "sub_feature_name": "Room Cleanliness",
+            "gap_score": 0.0,
+            "ambiguity_score": 0.0,
+            "staleness_score": 0.0,
+            "allocated_points": 0,
+            "evidence_reviews": [
+              "roomcleanliness\": 5.0",
+              "very clean and great location",
+              "this place was very clean and comfortable",
+              "good clean hotel in monterey",
+              "clean convenient"
+            ]
+          },
+          {
+            "sub_feature_name": "Room Comfort/Condition",
+            "gap_score": 0.1,
+            "ambiguity_score": 0.3,
+            "staleness_score": 0.0,
+            "allocated_points": 50,
+            "evidence_reviews": [
+              "roomcomfort\": 4.0",
+              "room a bit old and dated.",
+              "this place was very clean and comfortable",
+              "beds were extremely comfortable"
+            ]
+          },
+          {
+            "sub_feature_name": "Room Noise Insulation",
+            "gap_score": 0.7,
+            "ambiguity_score": 0.0,
+            "staleness_score": 0.0,
+            "allocated_points": 150,
+            "evidence_reviews": [
+              "no insulation under door to room.",
+              "you can hear people walking in the rooms above. we were woken up very eay each day because it wasso noisy above us. we complained to the front desk but nothing changed."
+            ]
+          },
+          {
+            "sub_feature_name": "Bed & Pillow Quality",
+            "gap_score": 0.8,
+            "ambiguity_score": 0.0,
+            "staleness_score": 0.0,
+            "allocated_points": 100,
+            "evidence_reviews": [
+              "the beds were extremely comfortable with an excellent selection of pillows."
+            ]
+          }
+        ]
+      },
+      {
+        "bucket_name": "Dining & Bar",
+        "mapped_amenities": [
+          "breakfast_included",
+          "free buffet breakfast",
+          "free daily reception"
+        ],
+        "sub_features": [
+          {
+            "sub_feature_name": "Breakfast Quality/Variety",
+            "gap_score": 0.0,
+            "ambiguity_score": 0.1,
+            "staleness_score": 0.0,
+            "allocated_points": 50,
+            "evidence_reviews": [
+              "good breakfast",
+              "breakfast was decent",
+              "the continental breakfast was great",
+              "the morning breakfast was filling!",
+              "the breakfast spread was decent",
+              "loved the breakfast",
+              "breakfast was great and we enjoyed the wine tasting",
+              "the complementary breakfast had a wide variety of foods",
+              "excellent breakfast"
+            ]
+          },
+          {
+            "sub_feature_name": "Evening Reception (Wine/Cheese)",
+            "gap_score": 0.7,
+            "ambiguity_score": 0.0,
+            "staleness_score": 0.0,
+            "allocated_points": 100,
+            "evidence_reviews": [
+              "they had also a wine and cheese happy hour",
+              "we enjoyed the wine tasting in the evening."
+            ]
+          }
+        ]
+      },
+      {
+        "bucket_name": "Lobby & Guest Services",
+        "mapped_amenities": [
+          "frontdesk_24_hour",
+          "business_services",
+          "internet",
+          "laundry"
+        ],
+        "sub_features": [
+          {
+            "sub_feature_name": "Staff Friendliness/Helpfulness",
+            "gap_score": 0.0,
+            "ambiguity_score": 0.8,
+            "staleness_score": 0.0,
+            "allocated_points": 100,
+            "evidence_reviews": [
+              "service\": 5.0",
+              "the service at the desk was excellent",
+              "we appreciated the friendly and helpfulness of all property staff.",
+              "the guy who looks like a manager helped me a lot for parking",
+              "we complained to the front desk but nothing changed",
+              "rude staff",
+              "friendly and courteous staff.",
+              "jose ( hotel receptionist) gladly acceded to our request. he even went the extra mile to help my elderly mom to shift the luggages",
+              "staff was very helpful",
+              "everyone who worked there was very nice.",
+              "very cordial staff.",
+              "the staff was helpful and kind.",
+              "friendly staff.",
+              "have a great staff."
+            ]
+          },
+          {
+            "sub_feature_name": "Check-in Experience",
+            "gap_score": 0.3,
+            "ambiguity_score": 1.0,
+            "staleness_score": 0.0,
+            "allocated_points": 150,
+            "evidence_reviews": [
+              "we weren\u2019t allowed to check in early",
+              "we got there early and jose let us check in and said come back in 2 hours to get key to rm 107 on first floor. we came back and he said he did not say that and only room left was on third floor.",
+              "check in and out was easy.",
+              "we have requested for early check in and jose ( hotel receptionist) gladly acceded to our request."
+            ]
+          }
+        ]
+      },
+      {
+        "bucket_name": "Parking & Property Accessibility",
+        "mapped_amenities": [
+          "free_parking",
+          "wheelchair accessible (may have limitations)",
+          "wheelchair-accessible parking",
+          "wheelchair-accessible registration desk",
+          "wheelchair-accessible van parking",
+          "assistive listening devices available",
+          "braille signage"
+        ],
+        "sub_features": [
+          {
+            "sub_feature_name": "Parking Availability/Ease",
+            "gap_score": 0.0,
+            "ambiguity_score": 0.2,
+            "staleness_score": 0.0,
+            "allocated_points": 50,
+            "evidence_reviews": [
+              "hotel mit ausreichend parkpl\u00e4tzen in der tiefgarage.",
+              "the parking is in a garage underneath the hotel.",
+              "the guy who looks like a manager helped me a lot for parking. because i drove 11 foot height sprinter to there and there was no place for me to park it.",
+              "free parking",
+              "parking and breakfast are included."
+            ]
+          },
+          {
+            "sub_feature_name": "Stair/Elevator Access",
+            "gap_score": 0.3,
+            "ambiguity_score": 0.0,
+            "staleness_score": 0.0,
+            "allocated_points": 100,
+            "evidence_reviews": [
+              "there were 2 staircase we had to climb to get to the room. being a senior make it difficult plus carrying our suitcase.",
+              "only room left was on third floor. we are 65 yr old and had to go down and then up two flights of stairs with our luggage, i almost fell.",
+              "no elevator to our floor, and couldn't take the luggage cart with us because the stairs."
+            ]
+          }
+        ]
+      },
+      {
+        "bucket_name": "Location & General Property",
+        "mapped_amenities": [
+          "outdoor_space",
+          "no_smoking"
+        ],
+        "sub_features": [
+          {
+            "sub_feature_name": "Walkability to Attractions",
+            "gap_score": 0.0,
+            "ambiguity_score": 0.0,
+            "staleness_score": 0.0,
+            "allocated_points": 0,
+            "evidence_reviews": [
+              "area is safe and walkable to the aquarium and cannery row.",
+              "great location",
+              "convenient location",
+              "good location",
+              "near to cannery row",
+              "within walking distance of everything in monterey",
+              "walking distance to shops and the aquarium.",
+              "walkable distance to attractions.",
+              "only take 10 minutes to walk to the aquarium.",
+              "walking distance to monterey bay aquarium, cannery row and fisherman's wharf.",
+              "short walk to monterey bay aquarium.",
+              "a 5 minute walk to cannery row.",
+              "great location near cannery row",
+              "cool to walk from room to cr",
+              "lots of food nearby",
+              "close proximity to monetary bay aquarium.",
+              "close to the beach",
+              "excellent location at the southeast end of cannery row. a 15min walk to the monterey bay aquarium"
+            ]
+          },
+          {
+            "sub_feature_name": "Neighborhood Safety",
+            "gap_score": 0.8,
+            "ambiguity_score": 0.0,
+            "staleness_score": 0.0,
+            "allocated_points": 50,
+            "evidence_reviews": [
+              "area is safe",
+              "safe streets, no homeless, or concerns like in san francisco."
+            ]
+          },
+          {
+            "sub_feature_name": "Overall Hotel Condition/Vibe",
+            "gap_score": 0.4,
+            "ambiguity_score": 0.6,
+            "staleness_score": 0.0,
+            "allocated_points": 50,
+            "evidence_reviews": [
+              "hotel is very nice.",
+              "room a bit old and dated.",
+              "nice but not fancy hotel .",
+              "hotelcondition\": 3.0",
+              "hotelcondition\": 2.0"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "eg_property_id": "823fb2499b4e37d99acb65e7198e75965d6496fd1c579f976205c0e6179206df",
+    "location": {
+      "city": "Rome",
+      "star_rating": ""
+    },
+    "buckets": [
+      {
+        "bucket_name": "Room",
+        "mapped_amenities": [
+          "ac",
+          "housekeeping",
+          "internet",
+          "room_service",
+          "soundproof_room",
+          "coffee maker",
+          "bottled water",
+          "baby crib",
+          "baths",
+          "showers",
+          "mood lighting",
+          "room comfort",
+          "room cleanliness"
+        ],
+        "sub_features": [
+          {
+            "sub_feature_name": "In-Room Beverage Amenities",
+            "gap_score": 0.8,
+            "ambiguity_score": 0.8,
+            "staleness_score": 0.7,
+            "allocated_points": 150,
+            "evidence_reviews": [
+              "only negative for me no amenities such as coffee maker in the room.",
+              "no bottled water in the room like most hotels do",
+              "pr\u00e9sence d'une bouilloire pour caf\u00e9 /th\u00e9."
+            ]
+          },
+          {
+            "sub_feature_name": "Room Comfort & Design",
+            "gap_score": 0.5,
+            "ambiguity_score": 0.3,
+            "staleness_score": 0.6,
+            "allocated_points": 100,
+            "evidence_reviews": [
+              "room was ready with baby crib when we arrived",
+              "expansive room, great airconditioning.",
+              "the room is modern, clean with air conditioning",
+              "badezimmer gro\u00dfartig mit regendusche und extra badewanne, betten sehr angenehm",
+              "the baths in the rooms are huge. the rooms even have mood lighting.",
+              "big room, lots of space, large bathroom and clean.",
+              "comfortable rooms",
+              "i was given a handicapped room, and the showerhead had issues water sprayed all over the bathroom and i had to mop it up with towels."
+            ]
+          },
+          {
+            "sub_feature_name": "Room Cleanliness",
+            "gap_score": 0.1,
+            "ambiguity_score": 0.1,
+            "staleness_score": 0.2,
+            "allocated_points": 50,
+            "evidence_reviews": [
+              "\"roomcleanliness\": 4.0",
+              "\"roomcleanliness\": 5.0",
+              "clean room.",
+              "nice clean and comfortable rooms",
+              "the rooms are very clean and comfortable",
+              "Facilities were clean."
+            ]
+          }
+        ]
+      },
+      {
+        "bucket_name": "Restaurant & Dining",
+        "mapped_amenities": [
+          "bar",
+          "breakfast_available",
+          "restaurant",
+          "1 bar",
+          "1 restaurant",
+          "24-hour room service",
+          "buffet breakfast",
+          "wheelchair-accessible restaurant"
+        ],
+        "sub_features": [
+          {
+            "sub_feature_name": "Breakfast Quality & Variety",
+            "gap_score": 0.1,
+            "ambiguity_score": 1.0,
+            "staleness_score": 0.2,
+            "allocated_points": 200,
+            "evidence_reviews": [
+              "one of the |MASK| buffet breakfasts i have had. so much choice.",
+              "breakfast is ok",
+              "fr\u00fchst\u00fcck vielf\u00e4ltig f\u00fcr italienische verh\u00e4ltnisse - tipp: espresso beim kellner bestellen.",
+              "ontbijt is uitgebreid, maar wat vlak van smaak.",
+              "the breakfast has a great selection of food.",
+              "the complimentary breakfast was excellent",
+              "breakfast was not good at all. bread and croissants not fresh and eggs watered down.",
+              "at three euros for a buffet breakfast it was unbeatable with a big choice of different food from bacon, sausage and scrambled egg to fruit, cooked meats and cheese, pancakes and different sweet cake options - awesome.",
+              "uitgebreid en goed ontbijtbuffet"
+            ]
+          },
+          {
+            "sub_feature_name": "Bar & Restaurant Service/Atmosphere",
+            "gap_score": 0.9,
+            "ambiguity_score": 0.1,
+            "staleness_score": 0.4,
+            "allocated_points": 150,
+            "evidence_reviews": [
+              "nice little bar in main lobby that has a happy hour with nice munchies."
+            ]
+          }
+        ]
+      },
+      {
+        "bucket_name": "Lobby & Services",
+        "mapped_amenities": [
+          "business_services",
+          "elevator",
+          "frontdesk_24_hour",
+          "internet",
+          "laundry",
+          "accessible airport shuttle",
+          "wheelchair-accessible business center",
+          "wheelchair-accessible path of travel",
+          "wheelchair-accessible registration desk",
+          "staff",
+          "check-in/check-out",
+          "luggage storage",
+          "taxi service",
+          "lobby computer"
+        ],
+        "sub_features": [
+          {
+            "sub_feature_name": "Staff Friendliness & Helpfulness",
+            "gap_score": 0.0,
+            "ambiguity_score": 0.0,
+            "staleness_score": 0.1,
+            "allocated_points": 50,
+            "evidence_reviews": [
+              "helpful and friendly staff.",
+              "staff are very friendly and helpful",
+              "staff was very accommodating.",
+              "the staff was very helpful and friendly.",
+              "special thanks to the front desk staff, especially rina! she went the extra mile for us:)",
+              "all staff are friendly and helpful.",
+              "staff were very friendly"
+            ]
+          },
+          {
+            "sub_feature_name": "Accessibility & Hotel Facilities",
+            "gap_score": 0.9,
+            "ambiguity_score": 0.1,
+            "staleness_score": 0.5,
+            "allocated_points": 150,
+            "evidence_reviews": [
+              "gep\u00e4ckaufbewahrung vor checkin und nach checkout hat einwandfrei funktioniert.",
+              "staff will call taxis if requested, and taxis show up within 2-3 minutes.",
+              "free wifi and computer in lobby with free usage is good for ticket booking."
+            ]
+          }
+        ]
+      },
+      {
+        "bucket_name": "Gym & Fitness",
+        "mapped_amenities": [
+          "fitness_equipment",
+          "fitness center"
+        ],
+        "sub_features": [
+          {
+            "sub_feature_name": "Fitness Center Availability & Quality",
+            "gap_score": 1.0,
+            "ambiguity_score": 0.5,
+            "staleness_score": 1.0,
+            "allocated_points": 150,
+            "evidence_reviews": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "eg_property_id": "a036cbe1d9fbf9cba088075d1b4d966ee871df55aa4a58ba0da23c116c499052",
+    "location": {
+      "city": "Mbombela",
+      "star_rating": "3.5"
+    },
+    "buckets": [
+      {
+        "bucket_name": "Guest Room",
+        "mapped_amenities": [
+          "ac",
+          "crib",
+          "soundproof_room",
+          "housekeeping",
+          "no_smoking",
+          "internet",
+          "room_service",
+          "grab bar near toilet",
+          "low-height counter and sink",
+          "raised toilet seat"
+        ],
+        "sub_features": [
+          {
+            "sub_feature_name": "Room appearance/decor",
+            "gap_score": 0.2,
+            "ambiguity_score": 0.8,
+            "staleness_score": 0.7,
+            "allocated_points": 150,
+            "evidence_reviews": [
+              "our room was nothing like the pictures featured on the internet. the floors were all tile and the overall look and feel was institutional grey, white and black.  it was not at all inviting, and i would never recommend it to anyone."
+            ]
+          },
+          {
+            "sub_feature_name": "In-room internet connectivity",
+            "gap_score": 0.1,
+            "ambiguity_score": 0.9,
+            "staleness_score": 0.7,
+            "allocated_points": 200,
+            "evidence_reviews": [
+              "despite advertising unlimited internet, even in the rooms, the only place that we could connect is in the lobby."
+            ]
+          },
+          {
+            "sub_feature_name": "Room cleanliness/comfort",
+            "gap_score": 0.5,
+            "ambiguity_score": 0.3,
+            "staleness_score": 0.7,
+            "allocated_points": 150,
+            "evidence_reviews": [
+              "room carpet could use a good wash."
+            ]
+          },
+          {
+            "sub_feature_name": "Accessibility features (in-room)",
+            "gap_score": 1.0,
+            "ambiguity_score": 0.0,
+            "staleness_score": 0.0,
+            "allocated_points": 50,
+            "evidence_reviews": []
+          }
+        ]
+      },
+      {
+        "bucket_name": "Dining & Bar",
+        "mapped_amenities": [
+          "bar",
+          "breakfast_included",
+          "restaurant",
+          "room_service"
+        ],
+        "sub_features": [
+          {
+            "sub_feature_name": "Breakfast experience/quality",
+            "gap_score": 0.1,
+            "ambiguity_score": 0.6,
+            "staleness_score": 0.3,
+            "allocated_points": 150,
+            "evidence_reviews": [
+              "just a bit of hustle and bustle at the hotel during breakfast!",
+              "great breakfast",
+              "breakfast was simple, but good and adequate."
+            ]
+          },
+          {
+            "sub_feature_name": "Restaurant condition/ambiance",
+            "gap_score": 0.6,
+            "ambiguity_score": 0.2,
+            "staleness_score": 0.7,
+            "allocated_points": 50,
+            "evidence_reviews": [
+              "restaurant furniture a bit worn."
+            ]
+          }
+        ]
+      },
+      {
+        "bucket_name": "Lobby & Services",
+        "mapped_amenities": [
+          "business_services",
+          "elevator",
+          "frontdesk_24_hour",
+          "internet",
+          "laundry",
+          "free_parking",
+          "staff",
+          "checkin"
+        ],
+        "sub_features": [
+          {
+            "sub_feature_name": "Staff service/friendliness",
+            "gap_score": 0.1,
+            "ambiguity_score": 0.1,
+            "staleness_score": 0.7,
+            "allocated_points": 150,
+            "evidence_reviews": [
+              "the only positive experience was the staff who were very nice.",
+              "staff was very friendly and worked to please."
+            ]
+          },
+          {
+            "sub_feature_name": "General property condition",
+            "gap_score": 0.4,
+            "ambiguity_score": 0.5,
+            "staleness_score": 0.7,
+            "allocated_points": 50,
+            "evidence_reviews": [
+              "busy budget hotel."
+            ]
+          },
+          {
+            "sub_feature_name": "Lobby internet connectivity",
+            "gap_score": 0.3,
+            "ambiguity_score": 0.2,
+            "staleness_score": 0.7,
+            "allocated_points": 50,
+            "evidence_reviews": [
+              "the only place that we could connect is in the lobby."
+            ]
+          }
+        ]
+      },
+      {
+        "bucket_name": "Recreation & Outdoors",
+        "mapped_amenities": [
+          "outdoor_space",
+          "pool"
+        ],
+        "sub_features": [
+          {
+            "sub_feature_name": "Pool condition/availability",
+            "gap_score": 1.0,
+            "ambiguity_score": 0.0,
+            "staleness_score": 0.0,
+            "allocated_points": 0,
+            "evidence_reviews": []
+          },
+          {
+            "sub_feature_name": "Outdoor space experience",
+            "gap_score": 1.0,
+            "ambiguity_score": 0.0,
+            "staleness_score": 0.0,
+            "allocated_points": 0,
+            "evidence_reviews": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "eg_property_id": "3216b1b7885bffdb336265a8de7322ba0cd477cfb3d4f99d19acf488f76a1941",
+    "location": {
+      "city": "Bell Gardens",
+      "star_rating": "2.0"
+    },
+    "buckets": [
+      {
+        "bucket_name": "Room & In-Room Amenities",
+        "mapped_amenities": [
+          "ac",
+          "heater",
+          "tv",
+          "crib",
+          "extra_bed",
+          "microwave",
+          "internet",
+          "housekeeping"
+        ],
+        "sub_features": [
+          {
+            "sub_feature_name": "Room Cleanliness & Condition",
+            "gap_score": 0.1,
+            "ambiguity_score": 0.8,
+            "staleness_score": 0.1,
+            "allocated_points": 250,
+            "evidence_reviews": [
+              "good regular clean place",
+              "this property is filthy!! the walls of the room were all disgusting, they obviously have never been cleaned. paint chipping off the wall and base boards.",
+              "we had to change rooms because of the smell.",
+              "el ba\u00f1o ol\u00eda terrible y estaba en p\u00e9simas condiciones",
+              "everywhere lay hair - in the room, in the bathroom and also on the bed. the pillow also smelled musty.",
+              "room looked a lot better without the carpet and the wwooden floormade if look bigger and clesner",
+              "towels were dirty, looked unwashed. drawers were dirty.",
+              "rooms was smelly,pillowcases had make up or blood stained there was a pice of glass in the room that dint belong it was just leaning on the wall bathroom was full of hairs",
+              "the room air conditioner and bathroom vents were dusty. there were a spider in my room.",
+              "we don\u2019t smoke! they gave us a room that wrecked! it was a very uncomfortable night!",
+              "it's clean and quiet.",
+              "the room was great"
+            ]
+          },
+          {
+            "sub_feature_name": "Bed Quality & Pests",
+            "gap_score": 0.3,
+            "ambiguity_score": 0.9,
+            "staleness_score": 0.1,
+            "allocated_points": 300,
+            "evidence_reviews": [
+              "ended up getting bit by bed bugs",
+              "we both got over 30 bed bug bites.",
+              "bed not comfortable",
+              "the bed had stains as soon as i got there",
+              "super h\u00f4tel bonne literie",
+              "bett war auch okay",
+              "very comfortable rooms."
+            ]
+          },
+          {
+            "sub_feature_name": "In-Room Noise Levels",
+            "gap_score": 0.2,
+            "ambiguity_score": 0.7,
+            "staleness_score": 0.1,
+            "allocated_points": 100,
+            "evidence_reviews": [
+              "un peu brouilland\" (cloison fine)",
+              "we heard a lot of upstairs noise",
+              "could hear their every footstep",
+              "music!",
+              "thin walls",
+              "if you have kids is not a good idea to stay in this hotels . there is way to much traffic noise in the night and the walls are way to thin .",
+              "it's clean and quiet."
+            ]
+          }
+        ]
+      },
+      {
+        "bucket_name": "Lobby & Guest Services",
+        "mapped_amenities": [
+          "frontdesk_24_hour",
+          "business_services",
+          "laundry"
+        ],
+        "sub_features": [
+          {
+            "sub_feature_name": "Staff Professionalism & Responsiveness",
+            "gap_score": 0.1,
+            "ambiguity_score": 0.8,
+            "staleness_score": 0.1,
+            "allocated_points": 100,
+            "evidence_reviews": [
+              "the hotel staff was very friendly and helpful",
+              "the only thing i saw that put a damper on my stay was how one of the young front desk staff yelled and overall mistreated the cleaning staff.",
+              "friendly staff",
+              "person who was at front desk did nothing about it just told me okay & there\u2019s no manager",
+              "the staff very helpful",
+              "i had to go ask for towels and toilet paper.",
+              "i believe the cleaning staff seemed to be bit lazy."
+            ]
+          },
+          {
+            "sub_feature_name": "Laundry & Business Services",
+            "gap_score": 1.0,
+            "ambiguity_score": 0.0,
+            "staleness_score": 0.1,
+            "allocated_points": 0,
+            "evidence_reviews": []
+          }
+        ]
+      },
+      {
+        "bucket_name": "Property & Surroundings",
+        "mapped_amenities": [
+          "free_parking",
+          "wheelchair-accessible parking",
+          "wheelchair-accessible path of travel",
+          "location"
+        ],
+        "sub_features": [
+          {
+            "sub_feature_name": "Location Convenience & External Environment",
+            "gap_score": 0.2,
+            "ambiguity_score": 0.8,
+            "staleness_score": 0.1,
+            "allocated_points": 100,
+            "evidence_reviews": [
+              "location is not good",
+              "near stores and food.",
+              "closed to my event.",
+              "the hotel is close enough to fun things to do and has a good variety of restaurants and shops close by.",
+              "to noisy during the night and people doing maintenance on their cars",
+              "the parkinglot is a nighmare, there were cars using two spaces."
+            ]
+          },
+          {
+            "sub_feature_name": "Accessibility Features & Navigability",
+            "gap_score": 0.9,
+            "ambiguity_score": 0.0,
+            "staleness_score": 0.1,
+            "allocated_points": 50,
+            "evidence_reviews": []
+          }
+        ]
+      },
+      {
+        "bucket_name": "Food & Dining",
+        "mapped_amenities": [],
+        "sub_features": [
+          {
+            "sub_feature_name": "Breakfast Service",
+            "gap_score": 0.1,
+            "ambiguity_score": 1.0,
+            "staleness_score": 0.1,
+            "allocated_points": 100,
+            "evidence_reviews": [
+              "no breakfast \"due to covid\" still, which is ridiculous.",
+              "breakfast was good.",
+              "i had a good night and breakfast."
+            ]
+          },
+          {
+            "sub_feature_name": "On-site Dining Options",
+            "gap_score": 1.0,
+            "ambiguity_score": 0.0,
+            "staleness_score": 0.1,
+            "allocated_points": 0,
+            "evidence_reviews": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "eg_property_id": "f2d8d9557208d58577e9df7ff34e42bf86fb5b10fdfae0c3040d14c374a2a2b9",
+    "location": {
+      "city": "New Smyrna Beach",
+      "star_rating": "2.0"
+    },
+    "buckets": [
+      {
+        "bucket_name": "Room & In-Room Amenities",
+        "mapped_amenities": [
+          "ac",
+          "heater",
+          "internet",
+          "kitchen",
+          "microwave",
+          "tv",
+          "housekeeping",
+          "no_smoking",
+          "grab bar near toilet",
+          "in-room accessibility"
+        ],
+        "sub_features": [
+          {
+            "sub_feature_name": "Room Cleanliness & Condition",
+            "gap_score": 0.2,
+            "ambiguity_score": 0.8,
+            "staleness_score": 0.5,
+            "allocated_points": 150,
+            "evidence_reviews": [
+              "the bathroom was dirty.",
+              "rooms clean but little dated and still some significant storm damage from irma in september.",
+              "the room was very clean, we had a huge wrap around balcony which was amazing.",
+              "i little older type of rooms, but clean",
+              "the room is quiet but the odor was not very good.",
+              "awful, room smells of mold and mildew",
+              "older condo, but effort to keep clean and in good condition.",
+              "the room did have a mildewy smell",
+              "i reported bugs in the room",
+              "this hotel has had quick fixes by bad handymen. it\u2019s outdated, has mold and water stains. smells musty"
+            ]
+          },
+          {
+            "sub_feature_name": "Bed Comfort & Size",
+            "gap_score": 0.6,
+            "ambiguity_score": 0.2,
+            "staleness_score": 0.3,
+            "allocated_points": 100,
+            "evidence_reviews": [
+              "only bad part were the small double beds. can\u2019t fit two adults in one.",
+              "beds were a bit uncomfortable.",
+              "our spread on bed had blood stains!"
+            ]
+          },
+          {
+            "sub_feature_name": "AC/Heater Functionality",
+            "gap_score": 0.6,
+            "ambiguity_score": 0.2,
+            "staleness_score": 0.5,
+            "allocated_points": 100,
+            "evidence_reviews": [
+              "the small ac was in the living room for the whole unit, so it was pretty warm to sleep.",
+              "couldn't use the heat, smelled like urine when tried.",
+              "room was cozy but a little warm (a/c).",
+              "air was not working."
+            ]
+          }
+        ]
+      },
+      {
+        "bucket_name": "Pool & Recreation",
+        "mapped_amenities": [
+          "pool",
+          "kids_pool",
+          "children's pool",
+          "outdoor pool",
+          "barbecue",
+          "outdoor_space",
+          "wheelchair-accessible pool"
+        ],
+        "sub_features": [
+          {
+            "sub_feature_name": "Pool Cleanliness & Size",
+            "gap_score": 0.1,
+            "ambiguity_score": 0.1,
+            "staleness_score": 0.4,
+            "allocated_points": 50,
+            "evidence_reviews": [
+              "pool was clean and well maintained and had plenty of lounge chairs.",
+              "the pool is vert quiet and clean.",
+              "my kids loved the large pool - so much so that we swam until 9 p.m. every night!",
+              "crystal clear, clean pool.",
+              "pool was large. nice size kiddie pool. both very clean."
+            ]
+          },
+          {
+            "sub_feature_name": "Hot Tub Availability",
+            "gap_score": 0.9,
+            "ambiguity_score": 0.1,
+            "staleness_score": 0.5,
+            "allocated_points": 100,
+            "evidence_reviews": [
+              "was hoping for a hot tub."
+            ]
+          }
+        ]
+      },
+      {
+        "bucket_name": "Property & Grounds",
+        "mapped_amenities": [
+          "free_parking",
+          "stair-free path to entrance",
+          "handrails in stairways",
+          "this property does not have elevators",
+          "upper floors accessible by stairs only",
+          "well-lit path to entrance",
+          "wheelchair-accessible parking",
+          "wheelchair-accessible path of travel",
+          "wheelchair-accessible registration desk",
+          "wheelchair-accessible van parking"
+        ],
+        "sub_features": [
+          {
+            "sub_feature_name": "Parking Availability/Management",
+            "gap_score": 0.6,
+            "ambiguity_score": 0.2,
+            "staleness_score": 0.5,
+            "allocated_points": 100,
+            "evidence_reviews": [
+              "but there was a lot of people that were not staying there in the small parking lot. you need a parking pass, but many times there were at least 5 cats in the very small lot without.",
+              "parking was a nightmare."
+            ]
+          },
+          {
+            "sub_feature_name": "Property Condition & Age",
+            "gap_score": 0.2,
+            "ambiguity_score": 0.9,
+            "staleness_score": 0.4,
+            "allocated_points": 150,
+            "evidence_reviews": [
+              "property looked run down.",
+              "property looked run down. great location right on beach.",
+              "hotel is older but well maintained",
+              "rooms clean but little dated and still some significant storm damage from irma in september.",
+              "the building needs a little of tlc.",
+              "older condo, but effort to keep clean and in good condition.",
+              "new gates around property that made it very safe and private",
+              "|MASK| |MASK| is currently under major construction.",
+              "this hotel is a small,older complex but very quiet and well kept.",
+              "the hotel is a little aged and tired and suffered some recent hurricane damage which is still being fixed.",
+              "this hotel has had quick fixes by bad handymen. it\u2019s outdated, has mold and water stains."
+            ]
+          },
+          {
+            "sub_feature_name": "Accessibility (Elevators/Stairs)",
+            "gap_score": 0.9,
+            "ambiguity_score": 0.0,
+            "staleness_score": 1.0,
+            "allocated_points": 100,
+            "evidence_reviews": []
+          }
+        ]
+      },
+      {
+        "bucket_name": "Staff & Services",
+        "mapped_amenities": [
+          "service",
+          "housekeeping",
+          "communication",
+          "checkin"
+        ],
+        "sub_features": [
+          {
+            "sub_feature_name": "Staff Availability/Communication",
+            "gap_score": 0.6,
+            "ambiguity_score": 0.2,
+            "staleness_score": 0.3,
+            "allocated_points": 150,
+            "evidence_reviews": [
+              "we never saw or talked with a human! ",
+              "not happy with the communication with front desk. very poor and management would not talk to us."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "eg_property_id": "7d027ef72c02eaa17af3c993fd5dba50d17b41a6280389a46c13c7e2c32a5b06",
+    "location": {
+      "city": "Ocala",
+      "star_rating": "2.5"
+    },
+    "buckets": [
+      {
+        "bucket_name": "Room/Guestroom",
+        "mapped_amenities": [
+          "ac",
+          "extra_bed",
+          "microwave",
+          "tv",
+          "internet",
+          "smooth flooring in room",
+          "visual fire alarm"
+        ],
+        "sub_features": [
+          {
+            "sub_feature_name": "Cleanliness",
+            "gap_score": 0.0,
+            "ambiguity_score": 1.0,
+            "staleness_score": 0.0,
+            "allocated_points": 50,
+            "evidence_reviews": [
+              "clean",
+              "the room smelled with a dehumidifier running in it",
+              "very clean",
+              "room was very clean and comfortable",
+              "hotel is comfortable and clean",
+              "room was dirty",
+              "cockroach in the lavatory.",
+              "it was dirty"
+            ]
+          },
+          {
+            "sub_feature_name": "Noise Levels",
+            "gap_score": 0.0,
+            "ambiguity_score": 0.0,
+            "staleness_score": 0.0,
+            "allocated_points": 50,
+            "evidence_reviews": [
+              "the room smelled with a dehumidifier running in it",
+              "musty bathroom smell",
+              "room right next to the elevator.",
+              "they gave a room right   nex to the elevator  and the ice machine when its come on sound like a train  passing by elevator door open and. close we couldn't sleep very annoying  the  above guest  walking i can hear the steps",
+              "traffic noise was very loud as hotel is right next to interstate.",
+              "very noisy",
+              "nice hotel just noisy had a ver uncomfortable stay the hall way carpet was dirty had a funny meldow smell to it and the guest next to us stsyed slamming there door all day and talking loud i came for rest and went bsck home tired because i got no sleep they need to make the window class thick all night i heard the interstate traffic judt ovetall awful"
+            ]
+          },
+          {
+            "sub_feature_name": "Amenities Functionality/Condition",
+            "gap_score": 0.0,
+            "ambiguity_score": 0.5,
+            "staleness_score": 0.5,
+            "allocated_points": 50,
+            "evidence_reviews": [
+              "broken toilet seat",
+              "fridge without freezer",
+              "it took forever to get the tv to work.  the neck of the tv was broken - sloped down to the floor.",
+              "my toilet running water all nights  no toilet paper",
+              "hvac was stale",
+              "wifi did not work to weak",
+              "good a/c",
+              "pillows tiny and only one per person.",
+              "needed a new shower curtain."
+            ]
+          },
+          {
+            "sub_feature_name": "Bathroom Configuration/Accessibility",
+            "gap_score": 0.5,
+            "ambiguity_score": 0.0,
+            "staleness_score": 0.5,
+            "allocated_points": 150,
+            "evidence_reviews": [
+              "musty bathroom smell",
+              "my room had a bathtub and no vanity at all.",
+              "room that didn't have a vanity in it",
+              "the bathroom was a little small.",
+              "no walk in showers"
+            ]
+          }
+        ]
+      },
+      {
+        "bucket_name": "Food & Dining",
+        "mapped_amenities": [
+          "breakfast_included",
+          "coffee/tea in common area(s)",
+          "free continental breakfast available 6:00 am\u20139:30 am on weekdays and 7:00 am\u201310:30 am on weekends"
+        ],
+        "sub_features": [
+          {
+            "sub_feature_name": "Breakfast Quality/Variety",
+            "gap_score": 0.0,
+            "ambiguity_score": 0.0,
+            "staleness_score": 0.5,
+            "allocated_points": 50,
+            "evidence_reviews": [
+              "breakfast included",
+              "restaurant facilities were very good.",
+              "good breakfast",
+              "breakfast was good with good choices.",
+              "breakfast was good."
+            ]
+          },
+          {
+            "sub_feature_name": "Complimentary Perks",
+            "gap_score": 0.5,
+            "ambiguity_score": 0.0,
+            "staleness_score": 0.5,
+            "allocated_points": 50,
+            "evidence_reviews": [
+              "i enjoyed the cookies set out in the evening.",
+              "the staff also had fresh cookies ready.",
+              "cookies and free bottled water."
+            ]
+          },
+          {
+            "sub_feature_name": "Dining Area Staff Service",
+            "gap_score": 0.5,
+            "ambiguity_score": 0.0,
+            "staleness_score": 0.5,
+            "allocated_points": 50,
+            "evidence_reviews": [
+              "the employee who worked the breakfast room was just the right amount of friendly.",
+              "the lady who cooks the free breakfast, everyone was so pleasant and really seemed to want to help and seemed to enjoy their job."
+            ]
+          }
+        ]
+      },
+      {
+        "bucket_name": "Pool & Fitness",
+        "mapped_amenities": [
+          "fitness_equipment",
+          "pool",
+          "heated pool",
+          "indoor pool",
+          "24-hour fitness center",
+          "pool hoist on site"
+        ],
+        "sub_features": [
+          {
+            "sub_feature_name": "Pool Availability/Condition",
+            "gap_score": 0.5,
+            "ambiguity_score": 0.0,
+            "staleness_score": 0.5,
+            "allocated_points": 150,
+            "evidence_reviews": [
+              "pool closed.",
+              "pool was out of service for few days.",
+              "pool was dirty"
+            ]
+          },
+          {
+            "sub_feature_name": "Fitness Center (Equipment/Availability)",
+            "gap_score": 1.0,
+            "ambiguity_score": 0.0,
+            "staleness_score": 1.0,
+            "allocated_points": 200,
+            "evidence_reviews": []
+          }
+        ]
+      },
+      {
+        "bucket_name": "Lobby & Services",
+        "mapped_amenities": [
+          "business_services",
+          "elevator",
+          "free_parking",
+          "frontdesk_24_hour",
+          "laundry",
+          "assistive listening devices available",
+          "braille signage",
+          "stair-free path to entrance",
+          "well-lit path to entrance",
+          "wheelchair-accessible parking",
+          "wheelchair-accessible path of travel",
+          "wheelchair-accessible path to elevator",
+          "wheelchair-accessible registration desk",
+          "2 on-site accessible parking spaces"
+        ],
+        "sub_features": [
+          {
+            "sub_feature_name": "Staff Service/Responsiveness",
+            "gap_score": 0.0,
+            "ambiguity_score": 1.0,
+            "staleness_score": 0.0,
+            "allocated_points": 50,
+            "evidence_reviews": [
+              "clean and great staff.",
+              "staff was great, very pleasant and accommodating from the front desk to the housekeeping staff.",
+              "i came to the front desk and aske jacquelyn too see if i can get another  room after explains everything  what im went through  she she don't  worry she gount to find a room  she will let me knows  she took al the informacion  and my personal phone  number  and until  now  i'm in ny  and still has not received a call from her",
+              "friendly staff",
+              "nicest and friendliest staff. from being checked in to the lady who cooks the free breakfast, everyone was so pleasant and really seemed to want to help and seemed to enjoy their job.",
+              "the staff was very good",
+              "good service and staff.",
+              "the staff was extremely helpful especially the late night front desk lady.",
+              "very nice and helpful staff. excellent customer service.",
+              "the manager was the rudest nastiest womam i\u2019ve ever encountered in my life! very unprofessional and very very very rude",
+              "desk seemed rather melancholy."
+            ]
+          },
+          {
+            "sub_feature_name": "Parking/Hotel Access",
+            "gap_score": 0.5,
+            "ambiguity_score": 0.0,
+            "staleness_score": 0.5,
+            "allocated_points": 50,
+            "evidence_reviews": [
+              "the parking lot was small and hard to get back on the main road",
+              "property is a little tricky to get into."
+            ]
+          },
+          {
+            "sub_feature_name": "Common Area Amenities/Cleanliness",
+            "gap_score": 0.5,
+            "ambiguity_score": 0.0,
+            "staleness_score": 0.0,
+            "allocated_points": 50,
+            "evidence_reviews": [
+              "ice maker didn't work on our floor",
+              "both washer and dryer were out of service.",
+              "the hall way carpet was dirty had a funny meldow smell to it",
+              "smoking area just outside so it smelled of smoke."
+            ]
+          }
+        ]
+      },
+      {
+        "bucket_name": "Hotel Condition & Location",
+        "mapped_amenities": [],
+        "sub_features": [
+          {
+            "sub_feature_name": "Overall Hotel Condition/Updates",
+            "gap_score": 0.0,
+            "ambiguity_score": 0.5,
+            "staleness_score": 0.0,
+            "allocated_points": 50,
+            "evidence_reviews": [
+              "they are updating the hotel and the rooms are very nice.",
+              "hotel conditions were disappointing",
+              "rooms and furnishings were outdated",
+              "hotel is comfortable and clean.",
+              "property needs to be refreshed.",
+              "property needs renovations.",
+              "clean and modern."
+            ]
+          },
+          {
+            "sub_feature_name": "Location Convenience/Accessibility",
+            "gap_score": 0.0,
+            "ambiguity_score": 0.0,
+            "staleness_score": 0.5,
+            "allocated_points": 50,
+            "evidence_reviews": [
+              "easy access from 75",
+              "restaurants close",
+              "liked that is was right off i-75 and nearby to several eateries.",
+              "nice clean hotel on the way on highway 75.",
+              "close to airport",
+              "i liked that the property was close to stores and restaurants, also handy having a gas station next door.",
+              "near to every thing."
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

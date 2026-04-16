@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paradise Island Retreat — Interactive Review</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Three.js global builds (no ES modules, works everywhere) -->
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/STLLoader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --gold:#FFD700;--ocean:#006994;--dark:#0A0E1A;
+  --card:#141824;--text:#F0EDE8;--muted:#8A8A9A;
+  --glass:rgba(15,20,40,0.82);--border:rgba(255,255,255,0.1);
+  --green:#52B788;
+}
+html,body{height:100%;overflow:hidden;background:var(--dark);color:var(--text);font-family:'Inter',sans-serif}
+
+/* ── FILE PICKER ───────────────────────────────── */
+#file-screen{
+  position:fixed;inset:0;z-index:100;
+  background:radial-gradient(ellipse at 50% 55%,#0D2137 0%,#0A0E1A 70%);
+  display:flex;align-items:center;justify-content:center;flex-direction:column;
+  text-align:center;padding:40px;gap:12px;
+}
+.palm{font-size:72px;animation:sway 3s ease-in-out infinite}
+@keyframes sway{0%,100%{transform:rotate(-6deg)}50%{transform:rotate(6deg)}}
+.hero-title{
+  font-family:'Playfair Display',serif;font-size:clamp(28px,5vw,58px);
+  background:linear-gradient(135deg,#fff 30%,var(--gold));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+}
+.hero-tag{color:var(--muted);font-size:14px;letter-spacing:3px;text-transform:uppercase;margin-bottom:28px}
+.drop-zone{
+  border:2px dashed rgba(255,215,0,0.3);border-radius:24px;
+  padding:40px 60px;cursor:pointer;max-width:460px;width:100%;
+  background:rgba(255,215,0,0.03);transition:.3s;
+}
+.drop-zone:hover,.drop-zone.drag-over{border-color:var(--gold);background:rgba(255,215,0,0.07);transform:scale(1.02)}
+.zone-icon{font-size:44px;margin-bottom:12px}
+.drop-zone p{color:var(--muted);margin-bottom:10px;font-size:14px;line-height:1.6}
+.btn-browse{
+  display:inline-block;padding:13px 34px;border-radius:50px;cursor:pointer;
+  background:linear-gradient(135deg,var(--gold),#FFA500);color:#000;
+  font-weight:700;font-size:14px;transition:.2s;border:none;margin-top:4px;
+}
+.btn-browse:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(255,215,0,.4)}
+#stl-input{display:none}
+.file-hint{color:var(--muted);font-size:12px;opacity:.6;margin-top:8px}
+#lib-status{font-size:11px;margin-top:16px;padding:6px 14px;border-radius:20px;
+  background:rgba(82,183,136,.12);color:#52B788;border:1px solid rgba(82,183,136,.2)}
+#lib-status.err{background:rgba(230,57,70,.12);color:#E63946;border-color:rgba(230,57,70,.2)}
+
+/* ── LOADING ───────────────────────────────────── */
+#loading-screen{
+  position:fixed;inset:0;z-index:99;background:var(--dark);
+  display:none;align-items:center;justify-content:center;flex-direction:column;gap:20px;
+}
+.loading-ring{
+  width:72px;height:72px;border-radius:50%;
+  border:3px solid rgba(255,215,0,.15);border-top-color:var(--gold);
+  animation:spin 1s linear infinite
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+.loading-bar-wrap{width:260px;height:4px;background:rgba(255,255,255,.08);border-radius:2px;overflow:hidden}
+#loading-bar{height:100%;background:linear-gradient(90deg,var(--gold),#FFA500);width:0;transition:width .4s}
+#loading-text{color:var(--muted);font-size:13px;letter-spacing:.5px}
+
+/* ── APP SHELL ─────────────────────────────────── */
+#app{position:fixed;inset:0;display:none}
+#canvas{position:absolute;inset:0;width:100%!important;height:100%!important;display:block}
+
+/* ── HEADER ────────────────────────────────────── */
+#header{
+  position:absolute;top:0;left:0;right:0;z-index:10;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px 22px;
+  background:linear-gradient(180deg,rgba(10,14,26,.92) 0%,transparent 100%);
+}
+.h-brand{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:600;letter-spacing:.4px}
+.h-brand span:first-child{font-size:20px}
+.h-prog{display:flex;flex-direction:column;align-items:center;gap:5px}
+#prog-text{font-size:11px;color:var(--muted);letter-spacing:1px;text-transform:uppercase}
+#prog-dots{display:flex;gap:5px}
+.pdot{
+  width:11px;height:11px;border-radius:50%;border:2px solid rgba(255,255,255,.15);
+  background:transparent;transition:.4s;position:relative;cursor:default;
+}
+.pdot.done{border-color:transparent}
+.pdot .de{position:absolute;font-size:8px;top:50%;left:50%;transform:translate(-50%,-50%);display:none}
+.pdot.done .de{display:block}
+.h-btns{display:flex;gap:8px}
+.btn-hdr{
+  padding:7px 16px;border-radius:50px;border:1px solid var(--border);
+  background:rgba(255,255,255,.06);color:var(--text);font-size:12px;
+  cursor:pointer;transition:.2s;
+}
+.btn-hdr:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.25)}
+.btn-hdr.gold{background:linear-gradient(135deg,var(--gold),#FFA500);color:#000;border:none;font-weight:700}
+.btn-hdr.gold:hover{transform:translateY(-1px);box-shadow:0 4px 20px rgba(255,215,0,.4)}
+
+/* ── HOTSPOT LABELS ────────────────────────────── */
+#labels{position:absolute;inset:0;pointer-events:none;z-index:5}
+.hslbl{
+  position:absolute;transform:translate(-50%,-100%);
+  pointer-events:auto;cursor:pointer;
+  display:flex;flex-direction:column;align-items:center;gap:0;
+  transition:opacity .25s;
+}
+.hspill{
+  background:rgba(10,14,26,.82);backdrop-filter:blur(12px);
+  border:1px solid rgba(255,255,255,.15);border-radius:50px;
+  padding:5px 13px;font-size:11px;font-weight:600;
+  white-space:nowrap;display:flex;align-items:center;gap:6px;
+  box-shadow:0 4px 16px rgba(0,0,0,.5);transition:.2s;
+}
+.hslbl:hover .hspill{transform:scale(1.06);border-color:rgba(255,255,255,.35)}
+.hslbl.reviewed .hspill{background:rgba(82,183,136,.18);border-color:var(--green)}
+.hsdot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+.hscaret{width:2px;height:14px}
+.hslbl.reviewed .hspill::after{content:' ✓';color:var(--green)}
+
+/* ── REVIEW PANEL ──────────────────────────────── */
+#review-panel{
+  position:absolute;top:0;right:0;bottom:0;z-index:20;
+  width:min(410px,100vw);
+  background:rgba(10,14,26,.92);backdrop-filter:blur(24px);
+  border-left:1px solid var(--border);
+  display:flex;flex-direction:column;
+  transform:translateX(100%);transition:transform .4s cubic-bezier(.16,1,.3,1);
+}
+#review-panel.open{transform:translateX(0)}
+.rp-hdr{
+  padding:22px 22px 14px;display:flex;align-items:flex-start;justify-content:space-between;
+  border-bottom:1px solid var(--border);flex-shrink:0;
+}
+.rp-area{display:flex;align-items:center;gap:12px}
+.rp-icon{font-size:34px;line-height:1}
+.rp-name{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;margin-bottom:2px}
+.rp-sub{font-size:12px;color:var(--muted)}
+.btn-x{
+  background:none;border:1px solid var(--border);color:var(--text);
+  width:30px;height:30px;border-radius:50%;cursor:pointer;font-size:13px;
+  flex-shrink:0;transition:.2s;margin-top:2px;
+}
+.btn-x:hover{background:rgba(255,255,255,.1)}
+.rp-body{flex:1;overflow-y:auto;padding:20px;display:flex;flex-direction:column;gap:22px}
+.rp-body::-webkit-scrollbar{width:3px}
+.rp-body::-webkit-scrollbar-thumb{background:rgba(255,255,255,.12);border-radius:2px}
+
+.rs-lbl{font-size:10px;font-weight:700;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:9px;display:block}
+.rs-q{font-family:'Playfair Display',serif;font-size:15px;color:var(--text);margin-bottom:10px;font-style:italic;line-height:1.5}
+
+.stars{display:flex;gap:6px}
+.star{font-size:32px;cursor:pointer;color:rgba(255,255,255,.14);transition:.12s;user-select:none}
+.star:hover,.star.lit{color:var(--gold);text-shadow:0 0 14px rgba(255,215,0,.5)}
+
+.emoji-row{display:flex;gap:7px;flex-wrap:wrap}
+.emopt{
+  background:rgba(255,255,255,.05);border:2px solid transparent;
+  border-radius:14px;padding:9px 13px;cursor:pointer;font-size:20px;
+  transition:.2s;display:flex;flex-direction:column;align-items:center;gap:3px;
+}
+.emopt span{font-size:9px;color:var(--muted);font-weight:500;white-space:nowrap}
+.emopt:hover{background:rgba(255,255,255,.1)}
+.emopt.sel{border-color:var(--gold);background:rgba(255,215,0,.1)}
+
+.tags-wrap{display:flex;gap:7px;flex-wrap:wrap}
+.tag-btn{
+  padding:6px 13px;border-radius:50px;font-size:11px;font-weight:500;
+  border:1px solid var(--border);background:transparent;color:var(--muted);cursor:pointer;transition:.2s;
+}
+.tag-btn:hover{border-color:rgba(255,255,255,.3);color:var(--text)}
+.tag-btn.sel{background:rgba(255,215,0,.1);border-color:var(--gold);color:var(--gold)}
+
+.rp-ta{
+  width:100%;background:rgba(255,255,255,.05);border:1px solid var(--border);
+  border-radius:12px;padding:12px;color:var(--text);font-family:'Inter',sans-serif;
+  font-size:13px;resize:vertical;min-height:80px;max-height:140px;outline:none;transition:.2s;
+}
+.rp-ta:focus{border-color:rgba(255,215,0,.4)}
+.rp-ta::placeholder{color:var(--muted)}
+.char-c{font-size:10px;color:var(--muted);text-align:right;margin-top:4px}
+
+.rp-foot{padding:14px 20px;flex-shrink:0;border-top:1px solid var(--border)}
+.btn-submit{
+  width:100%;padding:14px;border-radius:50px;font-size:14px;font-weight:700;
+  background:linear-gradient(135deg,var(--gold),#FFA500);color:#000;
+  border:none;cursor:pointer;transition:.2s;letter-spacing:.4px;
+}
+.btn-submit:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(255,215,0,.4)}
+.btn-submit:disabled{opacity:.35;transform:none;box-shadow:none;cursor:not-allowed}
+
+/* ── SUMMARY PANEL ─────────────────────────────── */
+#summary-panel{
+  position:absolute;inset:0;z-index:30;
+  background:var(--dark);overflow-y:auto;
+  transform:translateY(100%);transition:transform .5s cubic-bezier(.16,1,.3,1);
+}
+#summary-panel.open{transform:translateY(0)}
+.sp-hdr{
+  padding:44px 36px 28px;text-align:center;
+  background:linear-gradient(180deg,#141824 0%,transparent 100%);
+  position:sticky;top:0;z-index:1;
+}
+.sp-hdr h1{font-family:'Playfair Display',serif;font-size:32px;margin-bottom:6px}
+.sp-hdr p{color:var(--muted);font-size:13px;margin-bottom:18px}
+.sp-score{
+  display:inline-flex;flex-direction:column;align-items:center;
+  padding:18px 36px;background:rgba(255,215,0,.07);
+  border:1px solid rgba(255,215,0,.2);border-radius:18px;
+}
+.score-n{
+  font-size:48px;font-weight:700;font-family:'Playfair Display',serif;
+  background:linear-gradient(135deg,var(--gold),#FFA500);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+}
+.score-l{font-size:11px;color:var(--muted);letter-spacing:2px;text-transform:uppercase}
+.btn-sp-close{
+  position:fixed;top:20px;right:20px;z-index:2;
+  background:rgba(255,255,255,.08);border:1px solid var(--border);
+  color:var(--text);width:38px;height:38px;border-radius:50%;cursor:pointer;font-size:15px;transition:.2s;
+}
+.btn-sp-close:hover{background:rgba(255,255,255,.18)}
+.sp-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+  gap:18px;padding:0 36px 56px;
+}
+.sp-card{
+  background:var(--card);border:1px solid var(--border);border-radius:18px;
+  padding:20px;transition:.2s;border-top-width:3px;
+}
+.sp-card:hover{border-color:rgba(255,255,255,.18);transform:translateY(-2px)}
+.sc-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.sc-area{display:flex;align-items:center;gap:10px}
+.sc-icon{font-size:26px}
+.sc-name{font-weight:600;font-size:14px}
+.sc-stars{color:var(--gold);font-size:16px;margin-bottom:9px}
+.sc-tags{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:8px}
+.sc-tag{font-size:10px;padding:3px 9px;border-radius:50px;background:rgba(255,255,255,.06);color:var(--muted)}
+.sc-note{font-size:12px;color:var(--muted);font-style:italic;line-height:1.6}
+.unrev{font-size:12px;color:rgba(255,255,255,.2);font-style:italic}
+
+/* ── TOUR HUD ──────────────────────────────────── */
+#tour-hud{
+  position:absolute;bottom:36px;left:50%;transform:translateX(-50%);
+  z-index:15;display:none;
+  background:rgba(10,14,26,.9);backdrop-filter:blur(20px);
+  border:1px solid var(--border);border-radius:22px;
+  padding:22px 28px;text-align:center;min-width:320px;
+  box-shadow:0 16px 50px rgba(0,0,0,.6);
+}
+#tour-hud.on{display:block;animation:upIn .35s ease}
+@keyframes upIn{from{opacity:0;transform:translateX(-50%) translateY(16px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}
+.th-lbl{font-size:10px;color:var(--muted);letter-spacing:2px;text-transform:uppercase;margin-bottom:5px}
+.th-name{font-family:'Playfair Display',serif;font-size:22px;margin-bottom:4px}
+.th-sub{font-size:12px;color:var(--muted);margin-bottom:18px}
+.th-btns{display:flex;align-items:center;gap:10px;justify-content:center;flex-wrap:wrap}
+.btn-th{
+  padding:9px 20px;border-radius:50px;font-size:12px;font-weight:600;
+  cursor:pointer;transition:.2s;border:1px solid var(--border);
+  background:rgba(255,255,255,.06);color:var(--text);
+}
+.btn-th:hover{background:rgba(255,255,255,.12)}
+.btn-th.gold{background:linear-gradient(135deg,var(--gold),#FFA500);color:#000;border:none}
+.btn-th.gold:hover{transform:translateY(-1px);box-shadow:0 4px 18px rgba(255,215,0,.4)}
+.th-footer{margin-top:12px;display:flex;justify-content:space-between;align-items:center}
+.th-cnt{font-size:11px;color:var(--muted)}
+
+/* ── TOOLTIP ───────────────────────────────────── */
+#tooltip{
+  position:fixed;z-index:8;pointer-events:none;
+  background:rgba(0,0,0,.85);border:1px solid var(--border);
+  border-radius:9px;padding:7px 13px;font-size:12px;white-space:nowrap;
+  transition:opacity .15s;opacity:0;
+}
+#tooltip.show{opacity:1}
+
+/* ── TOAST ─────────────────────────────────────── */
+#toast{
+  position:fixed;bottom:28px;left:50%;transform:translateX(-50%);
+  z-index:50;background:var(--green);color:#fff;
+  padding:11px 26px;border-radius:50px;font-weight:600;font-size:13px;
+  pointer-events:none;opacity:0;transition:.3s;white-space:nowrap;
+}
+#toast.show{opacity:1}
+
+/* ── CONFETTI CANVAS ───────────────────────────── */
+#confetti{position:fixed;inset:0;pointer-events:none;z-index:999;display:none}
+</style>
+</head>
+<body>
+
+<!-- FILE PICKER -->
+<div id="file-screen">
+  <div class="palm">🌴</div>
+  <h1 class="hero-title">Paradise Island Retreat</h1>
+  <p class="hero-tag">Interactive 3D Review Experience</p>
+  <div class="drop-zone" id="drop-zone">
+    <div class="zone-icon">🏝️</div>
+    <p>Drop your <strong>.STL</strong> file here, or</p>
+    <label class="btn-browse" for="stl-input">Browse Files</label>
+    <input type="file" id="stl-input" accept=".stl">
+  </div>
+  <p class="file-hint">Select the resort .STL file to begin your interactive review</p>
+  <div id="lib-status">✓ Three.js ready</div>
+</div>
+
+<!-- LOADING -->
+<div id="loading-screen">
+  <div class="loading-ring"></div>
+  <h2 style="font-family:'Playfair Display',serif;font-size:22px">Building your resort...</h2>
+  <div class="loading-bar-wrap"><div id="loading-bar"></div></div>
+  <p id="loading-text">Reading model...</p>
+</div>
+
+<!-- MAIN APP -->
+<div id="app">
+  <div id="header">
+    <div class="h-brand"><span>🏝️</span><span>Paradise Island Retreat</span></div>
+    <div class="h-prog">
+      <span id="prog-text">0 / 8 areas reviewed</span>
+      <div id="prog-dots"></div>
+    </div>
+    <div class="h-btns">
+      <button class="btn-hdr" id="tour-btn">✈️ Tour</button>
+      <button class="btn-hdr gold" id="summary-btn" style="display:none">📋 Summary</button>
+    </div>
+  </div>
+
+  <canvas id="canvas"></canvas>
+  <div id="labels"></div>
+  <div id="tooltip"></div>
+
+  <!-- REVIEW PANEL -->
+  <div id="review-panel">
+    <div class="rp-hdr">
+      <div class="rp-area">
+        <span id="rp-icon" class="rp-icon"></span>
+        <div>
+          <div id="rp-name" class="rp-name"></div>
+          <div id="rp-sub" class="rp-sub"></div>
+        </div>
+      </div>
+      <button class="btn-x" id="close-review">✕</button>
+    </div>
+    <div class="rp-body">
+      <div>
+        <span class="rs-lbl">Overall Rating</span>
+        <p class="rs-q" id="rp-q"></p>
+        <div class="stars" id="stars">
+          <span class="star" data-v="1">★</span>
+          <span class="star" data-v="2">★</span>
+          <span class="star" data-v="3">★</span>
+          <span class="star" data-v="4">★</span>
+          <span class="star" data-v="5">★</span>
+        </div>
+      </div>
+      <div>
+        <span class="rs-lbl" id="vibe-lbl">Vibe Check</span>
+        <div class="emoji-row" id="emoji-row"></div>
+      </div>
+      <div>
+        <span class="rs-lbl">What stood out?</span>
+        <div class="tags-wrap" id="tags-wrap"></div>
+      </div>
+      <div>
+        <span class="rs-lbl">Your thoughts <span style="text-transform:none;letter-spacing:0;font-size:9px">(optional)</span></span>
+        <textarea class="rp-ta" id="rp-ta" placeholder="Share your experience..." maxlength="280"></textarea>
+        <div class="char-c"><span id="char-c">0</span> / 280</div>
+      </div>
+    </div>
+    <div class="rp-foot">
+      <button class="btn-submit" id="btn-submit" disabled>Select a rating to continue</button>
+    </div>
+  </div>
+
+  <!-- SUMMARY PANEL -->
+  <div id="summary-panel">
+    <button class="btn-sp-close" id="close-summary">✕</button>
+    <div class="sp-hdr">
+      <h1>Your Resort Experience</h1>
+      <p>A summary of your Paradise Island stay</p>
+      <div class="sp-score">
+        <span class="score-n" id="sp-score">—</span>
+        <span class="score-l">Overall Score</span>
+      </div>
+    </div>
+    <div class="sp-grid" id="sp-grid"></div>
+  </div>
+
+  <!-- TOUR HUD -->
+  <div id="tour-hud">
+    <div class="th-lbl">Now Visiting</div>
+    <div class="th-name" id="th-name"></div>
+    <div class="th-sub" id="th-sub"></div>
+    <div class="th-btns">
+      <button class="btn-th" id="th-prev">← Prev</button>
+      <button class="btn-th gold" id="th-review">Review This Area</button>
+      <button class="btn-th" id="th-next">Next →</button>
+    </div>
+    <div class="th-footer">
+      <span class="th-cnt" id="th-cnt"></span>
+      <button class="btn-th" id="th-exit" style="font-size:11px;padding:5px 13px">Exit Tour</button>
+    </div>
+  </div>
+</div>
+
+<div id="toast"></div>
+<canvas id="confetti"></canvas>
+
+<script>
+// ──────────────────────────────────────────────────────────
+//  LIBRARY CHECK
+// ──────────────────────────────────────────────────────────
+var libOk = typeof THREE !== 'undefined' && typeof THREE.STLLoader !== 'undefined' && typeof THREE.OrbitControls !== 'undefined';
+var libStatusEl = document.getElementById('lib-status');
+if (!libOk) {
+  libStatusEl.textContent = '⚠ Three.js failed — check internet connection';
+  libStatusEl.className = 'err';
+} else {
+  libStatusEl.textContent = '✓ Three.js loaded — select your STL file';
+}
+
+// ──────────────────────────────────────────────────────────
+//  HOTSPOT DATA
+// ──────────────────────────────────────────────────────────
+var HOTSPOTS = [
+  {
+    id:'lobby', name:'Lobby & Welcome', icon:'🏨', hex:'#FFD700',
+    pos:{x:-50, y:-500, z:300},
+    question:'"How was your first impression of the resort?"',
+    vibeLbl:'Walking in, the lobby felt...',
+    emojis:[{e:'🤩',l:'Jaw-dropping'},{e:'😍',l:'Gorgeous'},{e:'😊',l:'Lovely'},{e:'😐',l:'Just OK'},{e:'😕',l:'Bland'}],
+    tags:['Grand Entrance','Warm Welcome','Stunning Decor','Fragrant Lobby','Fast Check-in','Incredible Views','Friendly Staff'],
+  },
+  {
+    id:'pool', name:'Infinity Pool', icon:'🏊', hex:'#00B4D8',
+    pos:{x:-420, y:80, z:280},
+    question:'"How was your time at the pool?"',
+    vibeLbl:'After the pool, I felt...',
+    emojis:[{e:'😎',l:'So cool'},{e:'🥰',l:'Pure bliss'},{e:'😊',l:'Refreshed'},{e:'😐',l:'It was fine'},{e:'😒',l:'Underwhelmed'}],
+    tags:['Crystal Clear','Perfect Temp','Stunning Views','Great Service','Instagram-worthy','Peaceful','Kid-friendly'],
+  },
+  {
+    id:'restaurant', name:'Dining & Restaurant', icon:'🍽️', hex:'#FF6B35',
+    pos:{x:460, y:-180, z:290},
+    question:'"How was the culinary experience?"',
+    vibeLbl:'The food left me feeling...',
+    emojis:[{e:'😋',l:'Delicious'},{e:'🤩',l:'World-class'},{e:'😊',l:'Enjoyable'},{e:'😐',l:'Average'},{e:'😕',l:'Disappointing'}],
+    tags:['Exceptional Cuisine','Fresh Ingredients','Creative Menu','Great Service','Beautiful Setting','Romantic Vibe','Healthy Options'],
+  },
+  {
+    id:'beach', name:'Private Beach', icon:'🏖️', hex:'#F4A261',
+    pos:{x:100, y:740, z:90},
+    question:'"How was the beach experience?"',
+    vibeLbl:'On the beach, I felt...',
+    emojis:[{e:'☀️',l:'Sun-kissed'},{e:'🌊',l:'In my element'},{e:'😌',l:'At peace'},{e:'😐',l:'Unremarkable'},{e:'😕',l:'Letdown'}],
+    tags:['Pristine Sand','Crystal Waters','Secluded','Stunning Sunsets','Fun Activities','Perfect Waves','Snorkel-worthy'],
+  },
+  {
+    id:'suites', name:'Luxury Suites', icon:'🛏️', hex:'#9B59B6',
+    pos:{x:-560, y:360, z:295},
+    question:'"How was your suite?"',
+    vibeLbl:'Staying here felt...',
+    emojis:[{e:'👑',l:'Royal'},{e:'😍',l:'Luxurious'},{e:'😊',l:'Comfortable'},{e:'😐',l:'Just a room'},{e:'😒',l:'Overrated'}],
+    tags:['Ultra Comfy Bed','Spotless Clean','Amazing View','Modern Amenities','Total Privacy','Spacious','Butler Service'],
+  },
+  {
+    id:'spa', name:'Spa & Wellness', icon:'🧘', hex:'#52B788',
+    pos:{x:550, y:280, z:270},
+    question:'"How was the spa experience?"',
+    vibeLbl:'After the spa, I felt...',
+    emojis:[{e:'😇',l:'Transcendent'},{e:'😌',l:'Deeply relaxed'},{e:'😊',l:'Refreshed'},{e:'😐',l:'Okay'},{e:'😕',l:'Tense still'}],
+    tags:['Deeply Relaxing','Expert Therapists','Premium Products','Serene Atmosphere','World-class Facilities','Personalized Care'],
+  },
+  {
+    id:'bar', name:'Bar & Sunset Lounge', icon:'🍹', hex:'#E63946',
+    pos:{x:200, y:-120, z:310},
+    question:'"How were the drinks and vibes?"',
+    vibeLbl:'The bar atmosphere was...',
+    emojis:[{e:'🥂',l:'Celebratory'},{e:'😎',l:'So cool'},{e:'😊',l:'Fun'},{e:'😐',l:'Meh'},{e:'😕',l:'Flat'}],
+    tags:['Signature Cocktails','Sunset Views','Great Music','Attentive Staff','Lively Atmosphere','Premium Selection','Cozy Seating'],
+  },
+  {
+    id:'activities', name:'Water Sports & Activities', icon:'🤿', hex:'#0077B6',
+    pos:{x:-200, y:640, z:130},
+    question:'"How were the water sports and activities?"',
+    vibeLbl:'The activities left me...',
+    emojis:[{e:'🔥',l:'Pumped up'},{e:'😍',l:'Thrilled'},{e:'😊',l:'Active'},{e:'😐',l:'So-so'},{e:'😕',l:'Bored'}],
+    tags:['Thrilling','Safe & Guided','Top Equipment','Expert Staff','All Skill Levels','Unforgettable','Great Variety'],
+  },
+];
+
+// ──────────────────────────────────────────────────────────
+//  STATE
+// ──────────────────────────────────────────────────────────
+var ST = {
+  reviews:{}, active:null,
+  stars:0, emoji:null, emojiLabel:null, selTags:{},
+  tourMode:false, tourIdx:0,
+};
+
+// ──────────────────────────────────────────────────────────
+//  THREE.JS GLOBALS
+// ──────────────────────────────────────────────────────────
+var scene, camera, renderer, controls, raycaster, mouse;
+var modelMesh, hsMeshes = [], camTarget = null;
+
+function initThree() {
+  var canvas = document.getElementById('canvas');
+  renderer = new THREE.WebGLRenderer({ canvas:canvas, antialias:true });
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
+  renderer.shadowMap.enabled = true;
+
+  scene = new THREE.Scene();
+  scene.background = new THREE.Color(0x0A0E1A);
+  scene.fog = new THREE.Fog(0x0A0E1A, 8000, 14000);
+
+  camera = new THREE.PerspectiveCamera(45, 1, 10, 20000);
+  camera.position.set(0, -2200, 1800);
+
+  // Lights
+  scene.add(new THREE.AmbientLight(0xffffff, 0.7));
+  var sun = new THREE.DirectionalLight(0xFFF5CC, 1.8);
+  sun.position.set(800, -1200, 2000);
+  sun.castShadow = true;
+  scene.add(sun);
+  var fill = new THREE.DirectionalLight(0xA8D8FF, 0.5);
+  fill.position.set(-1000, 800, 500);
+  scene.add(fill);
+
+  controls = new THREE.OrbitControls(camera, renderer.domElement);
+  controls.target.set(0, 0, 168);
+  controls.enableDamping = true;
+  controls.dampingFactor = 0.08;
+  controls.rotateSpeed = 0.6;
+  controls.minDistance = 300;
+  controls.maxDistance = 10000;
+
+  raycaster = new THREE.Raycaster();
+  mouse = new THREE.Vector2();
+
+  doResize();
+  window.addEventListener('resize', doResize);
+  canvas.addEventListener('click', onCanvasClick);
+  canvas.addEventListener('mousemove', onMouseMove);
+
+  animate();
+}
+
+function doResize() {
+  if (!renderer) return;
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+}
+
+// ── STL LOAD ───────────────────────────────────────────────
+function loadModel(buffer) {
+  setLT('Parsing 3D geometry (large file, please wait)...');
+  setLB(60);
+
+  setTimeout(function() {
+    try {
+      var loader = new THREE.STLLoader();
+      var geo = loader.parse(buffer);
+
+      setLT('Applying materials...');
+      setLB(78);
+
+      geo.computeVertexNormals();
+      geo.computeBoundingBox();
+      var box = geo.boundingBox;
+      var cx = (box.min.x + box.max.x) / 2;
+      var cy = (box.min.y + box.max.y) / 2;
+      geo.translate(-cx, -cy, -box.min.z);
+
+      var posArr = geo.attributes.position.array;
+      var maxZ = box.max.z - box.min.z;
+      var colors = new Float32Array(posArr.length);
+      for (var i = 0; i < posArr.length; i += 3) {
+        var t = posArr[i + 2] / maxZ;
+        var r, g, b;
+        if      (t < 0.04) { r=0.05; g=0.42; b=0.62; }
+        else if (t < 0.12) { r=0.24; g=0.66; b=0.34; }
+        else if (t < 0.35) { r=0.76; g=0.68; b=0.50; }
+        else if (t < 0.70) { r=0.90; g=0.85; b=0.74; }
+        else               { r=0.97; g=0.94; b=0.88; }
+        colors[i]=r; colors[i+1]=g; colors[i+2]=b;
+      }
+      geo.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+
+      modelMesh = new THREE.Mesh(geo, new THREE.MeshPhongMaterial({
+        vertexColors: true, shininess: 22,
+        specular: new THREE.Color(0x1a1a1a),
+      }));
+      modelMesh.receiveShadow = true;
+
+      // Initialize Three.js scene BEFORE adding objects to it
+      setLT('Initializing 3D scene...');
+      setLB(88);
+      document.getElementById('loading-screen').style.display = 'none';
+      document.getElementById('app').style.display = 'block';
+      initThree();
+
+      // Now scene exists — add model and hotspots
+      scene.add(modelMesh);
+
+      setLT('Placing review markers...');
+      setLB(96);
+
+      createHotspots();
+      buildLabels();
+      buildDots();
+      setLB(100);
+    } catch(err) {
+      setLT('Error: ' + err.message);
+      console.error('STL parse error:', err);
+    }
+  }, 80);
+}
+
+// ── HOTSPOT MARKERS ────────────────────────────────────────
+function createHotspots() {
+  hsMeshes = [];
+  HOTSPOTS.forEach(function(hp) {
+    var col = new THREE.Color(hp.hex);
+    var mat = new THREE.MeshStandardMaterial({
+      color:col, emissive:col, emissiveIntensity:0.8, transparent:true, opacity:0.9,
+    });
+    var mesh = new THREE.Mesh(new THREE.SphereGeometry(40, 18, 18), mat);
+    mesh.position.set(hp.pos.x, hp.pos.y, hp.pos.z);
+    mesh.userData.hsId = hp.id;
+    scene.add(mesh);
+    hsMeshes.push(mesh);
+    hp.mesh = mesh;
+
+    // Glow ring
+    var ringMat = new THREE.MeshBasicMaterial({color:col, side:THREE.DoubleSide, transparent:true, opacity:0.28});
+    var ring = new THREE.Mesh(new THREE.RingGeometry(52, 60, 32), ringMat);
+    ring.position.set(hp.pos.x, hp.pos.y, hp.pos.z);
+    scene.add(ring);
+    hp.ring = ring;
+  });
+}
+
+// ── HTML LABELS ────────────────────────────────────────────
+function buildLabels() {
+  var container = document.getElementById('labels');
+  container.innerHTML = '';
+  HOTSPOTS.forEach(function(hp) {
+    var el = document.createElement('div');
+    el.className = 'hslbl';
+    el.id = 'lbl-' + hp.id;
+    el.innerHTML =
+      '<div class="hspill">' +
+        '<span class="hsdot" style="background:' + hp.hex + '"></span>' +
+        '<span>' + hp.icon + ' ' + hp.name + '</span>' +
+      '</div>' +
+      '<div class="hscaret" style="background:linear-gradient(180deg,' + hp.hex + '88,transparent)"></div>';
+    el.addEventListener('click', function(){ openReview(hp); });
+    container.appendChild(el);
+    hp.label = el;
+  });
+}
+
+function updateLabels() {
+  if (!camera) return;
+  var w = window.innerWidth, h = window.innerHeight;
+  HOTSPOTS.forEach(function(hp) {
+    if (!hp.label) return;
+    var v = new THREE.Vector3(hp.pos.x, hp.pos.y, hp.pos.z).project(camera);
+    if (v.z > 1) { hp.label.style.opacity = '0'; return; }
+    hp.label.style.left = ((v.x * 0.5 + 0.5) * w) + 'px';
+    hp.label.style.top  = ((-(v.y * 0.5) + 0.5) * h - 8) + 'px';
+    hp.label.style.opacity = '1';
+  });
+}
+
+// ── ANIMATE ────────────────────────────────────────────────
+function animate() {
+  requestAnimationFrame(animate);
+  var t = performance.now() / 1000;
+  var pulse = Math.sin(t * 2.4) * 0.5 + 0.5;
+
+  if (camTarget) {
+    camera.position.lerp(camTarget.pos, 0.04);
+    controls.target.lerp(camTarget.look, 0.04);
+  }
+
+  HOTSPOTS.forEach(function(hp) {
+    if (!hp.mesh) return;
+    var done = !!ST.reviews[hp.id];
+    if (done) {
+      hp.mesh.material.emissiveIntensity = 0.3;
+      hp.mesh.material.color.set(0x52B788);
+      hp.mesh.material.emissive.set(0x52B788);
+      hp.mesh.scale.setScalar(1);
+    } else {
+      hp.mesh.material.emissiveIntensity = 0.5 + pulse * 0.55;
+      hp.mesh.scale.setScalar(1 + pulse * 0.11);
+    }
+    if (hp.ring) {
+      hp.ring.material.opacity = 0.12 + pulse * 0.22;
+      hp.ring.scale.setScalar(1 + pulse * 0.14);
+      hp.ring.lookAt(camera.position);
+    }
+  });
+
+  controls.update();
+  updateLabels();
+  renderer.render(scene, camera);
+}
+
+// ── CAMERA HELPERS ─────────────────────────────────────────
+function flyTo(hp) {
+  var px = hp.pos.x, py = hp.pos.y - 600, pz = hp.pos.z + 500;
+  camTarget = {
+    pos:  new THREE.Vector3(px, py, pz),
+    look: new THREE.Vector3(hp.pos.x, hp.pos.y, hp.pos.z),
+  };
+}
+
+function flyOverview() {
+  camTarget = {
+    pos:  new THREE.Vector3(0, -2200, 1800),
+    look: new THREE.Vector3(0, 0, 168),
+  };
+}
+
+// ── CLICK / HOVER ──────────────────────────────────────────
+function onCanvasClick(e) {
+  if (ST.tourMode) return;
+  var rect = renderer.domElement.getBoundingClientRect();
+  mouse.x =  ((e.clientX - rect.left) / rect.width)  * 2 - 1;
+  mouse.y = -((e.clientY - rect.top)  / rect.height)  * 2 + 1;
+  raycaster.setFromCamera(mouse, camera);
+  var hits = raycaster.intersectObjects(hsMeshes);
+  if (hits.length) {
+    var id = hits[0].object.userData.hsId;
+    var hp = HOTSPOTS.find(function(h){ return h.id === id; });
+    if (hp) openReview(hp);
+  }
+}
+
+var tooltipEl = document.getElementById('tooltip');
+var tooltipTimer;
+function onMouseMove(e) {
+  if (ST.tourMode) return;
+  var rect = renderer.domElement.getBoundingClientRect();
+  mouse.x =  ((e.clientX - rect.left) / rect.width)  * 2 - 1;
+  mouse.y = -((e.clientY - rect.top)  / rect.height)  * 2 + 1;
+  raycaster.setFromCamera(mouse, camera);
+  var hits = raycaster.intersectObjects(hsMeshes);
+  if (hits.length) {
+    var id = hits[0].object.userData.hsId;
+    var hp = HOTSPOTS.find(function(h){ return h.id === id; });
+    if (hp) {
+      tooltipEl.textContent = hp.icon + ' ' + hp.name;
+      tooltipEl.style.left  = (e.clientX + 14) + 'px';
+      tooltipEl.style.top   = (e.clientY - 12) + 'px';
+      tooltipEl.classList.add('show');
+      document.body.style.cursor = 'pointer';
+    }
+  } else {
+    tooltipEl.classList.remove('show');
+    document.body.style.cursor = '';
+  }
+}
+
+// ── REVIEW PANEL ───────────────────────────────────────────
+function openReview(hp) {
+  ST.active = hp;
+  ST.stars = 0; ST.emoji = null; ST.emojiLabel = null; ST.selTags = {};
+
+  document.getElementById('rp-icon').textContent = hp.icon;
+  document.getElementById('rp-name').textContent = hp.name;
+  document.getElementById('rp-sub').textContent  = reviewedCount() + ' of 8 areas reviewed';
+  document.getElementById('rp-q').textContent    = hp.question;
+  document.getElementById('vibe-lbl').textContent = hp.vibeLbl;
+
+  resetStars();
+
+  var row = document.getElementById('emoji-row');
+  row.innerHTML = '';
+  hp.emojis.forEach(function(obj) {
+    var btn = document.createElement('button');
+    btn.className = 'emopt';
+    btn.dataset.e = obj.e;
+    btn.innerHTML = obj.e + '<span>' + obj.l + '</span>';
+    btn.addEventListener('click', function(){ selectEmoji(btn, obj.e, obj.l); });
+    row.appendChild(btn);
+  });
+
+  var wrap = document.getElementById('tags-wrap');
+  wrap.innerHTML = '';
+  hp.tags.forEach(function(t) {
+    var btn = document.createElement('button');
+    btn.className = 'tag-btn';
+    btn.textContent = t;
+    btn.addEventListener('click', function(){ toggleTag(btn, t); });
+    wrap.appendChild(btn);
+  });
+
+  document.getElementById('rp-ta').value = '';
+  document.getElementById('char-c').textContent = '0';
+
+  // Re-fill if previously reviewed
+  var prev = ST.reviews[hp.id];
+  if (prev) {
+    setStars(prev.stars);
+    if (prev.emoji) {
+      var eb = row.querySelector('[data-e="' + prev.emoji + '"]');
+      if (eb) selectEmoji(eb, prev.emoji, prev.emojiLabel);
+    }
+    prev.tags.forEach(function(t) {
+      wrap.querySelectorAll('.tag-btn').forEach(function(b){
+        if (b.textContent === t) toggleTag(b, t);
+      });
+    });
+    document.getElementById('rp-ta').value = prev.note || '';
+    document.getElementById('char-c').textContent = (prev.note || '').length;
+  }
+
+  updateSubmitBtn();
+  document.getElementById('review-panel').classList.add('open');
+  flyTo(hp);
+}
+
+function closeReview() {
+  document.getElementById('review-panel').classList.remove('open');
+  ST.active = null;
+  flyOverview();
+}
+
+function resetStars() { ST.stars = 0; renderStars(0); }
+function setStars(n)  { ST.stars = n; renderStars(n); }
+function renderStars(n) {
+  document.querySelectorAll('#stars .star').forEach(function(s, i){
+    s.classList.toggle('lit', i < n);
+  });
+}
+
+document.querySelectorAll('#stars .star').forEach(function(s) {
+  s.addEventListener('click', function(){
+    ST.stars = parseInt(s.dataset.v);
+    renderStars(ST.stars);
+    updateSubmitBtn();
+  });
+  s.addEventListener('mouseenter', function(){ renderStars(parseInt(s.dataset.v)); });
+  s.addEventListener('mouseleave', function(){ renderStars(ST.stars); });
+});
+
+function selectEmoji(btn, e, l) {
+  document.querySelectorAll('.emopt').forEach(function(b){ b.classList.remove('sel'); });
+  btn.classList.add('sel');
+  ST.emoji = e; ST.emojiLabel = l;
+}
+
+function toggleTag(btn, t) {
+  if (ST.selTags[t]) { delete ST.selTags[t]; btn.classList.remove('sel'); }
+  else { ST.selTags[t] = true; btn.classList.add('sel'); }
+}
+
+document.getElementById('rp-ta').addEventListener('input', function(e){
+  document.getElementById('char-c').textContent = e.target.value.length;
+});
+
+function updateSubmitBtn() {
+  var btn = document.getElementById('btn-submit');
+  if (ST.stars === 0) { btn.disabled = true; btn.textContent = 'Select a rating to continue'; }
+  else { btn.disabled = false; btn.textContent = 'Submit Review ✓'; }
+}
+
+document.getElementById('btn-submit').addEventListener('click', submitReview);
+document.getElementById('close-review').addEventListener('click', closeReview);
+
+function submitReview() {
+  var hp = ST.active;
+  if (!hp || ST.stars === 0) return;
+  ST.reviews[hp.id] = {
+    stars: ST.stars,
+    emoji: ST.emoji,
+    emojiLabel: ST.emojiLabel,
+    tags: Object.keys(ST.selTags),
+    note: document.getElementById('rp-ta').value.trim(),
+  };
+  hp.label.classList.add('reviewed');
+  updateDots();
+  closeReview();
+  showToast(hp.icon + ' ' + hp.name + ' reviewed!');
+  if (reviewedCount() === HOTSPOTS.length) {
+    setTimeout(function(){ triggerConfetti(); showSummary(); }, 800);
+  }
+}
+
+// ── PROGRESS DOTS ──────────────────────────────────────────
+function reviewedCount() { return Object.keys(ST.reviews).length; }
+
+function buildDots() {
+  var c = document.getElementById('prog-dots');
+  c.innerHTML = '';
+  HOTSPOTS.forEach(function(hp) {
+    var d = document.createElement('div');
+    d.className = 'pdot'; d.id = 'dot-' + hp.id;
+    d.style.borderColor = hp.hex + '88'; d.title = hp.name;
+    d.innerHTML = '<span class="de"></span>';
+    c.appendChild(d);
+  });
+  updateDots();
+}
+
+function updateDots() {
+  var n = reviewedCount();
+  document.getElementById('prog-text').textContent = n + ' / ' + HOTSPOTS.length + ' areas reviewed';
+  HOTSPOTS.forEach(function(hp) {
+    var dot = document.getElementById('dot-' + hp.id);
+    if (!dot) return;
+    var rev = ST.reviews[hp.id];
+    if (rev) {
+      dot.classList.add('done');
+      dot.style.background = hp.hex;
+      dot.querySelector('.de').textContent = rev.emoji || '★';
+    }
+  });
+  if (n > 0) document.getElementById('summary-btn').style.display = '';
+}
+
+// ── TOUR ────────────────────────────────────────────────────
+document.getElementById('tour-btn').addEventListener('click', startTour);
+document.getElementById('th-next').addEventListener('click', function(){ tourStep(1); });
+document.getElementById('th-prev').addEventListener('click', function(){ tourStep(-1); });
+document.getElementById('th-review').addEventListener('click', function(){
+  var hp = HOTSPOTS[ST.tourIdx]; exitTour(); openReview(hp);
+});
+document.getElementById('th-exit').addEventListener('click', exitTour);
+
+function startTour() {
+  ST.tourMode = true; ST.tourIdx = 0;
+  closeReview();
+  document.getElementById('tour-hud').classList.add('on');
+  updateTourHud();
+  flyTo(HOTSPOTS[0]);
+}
+
+function tourStep(dir) {
+  ST.tourIdx = (ST.tourIdx + dir + HOTSPOTS.length) % HOTSPOTS.length;
+  updateTourHud();
+  flyTo(HOTSPOTS[ST.tourIdx]);
+}
+
+function updateTourHud() {
+  var hp = HOTSPOTS[ST.tourIdx];
+  document.getElementById('th-name').textContent = hp.icon + ' ' + hp.name;
+  document.getElementById('th-sub').textContent  = hp.question.replace(/"/g,'');
+  document.getElementById('th-cnt').textContent  = (ST.tourIdx + 1) + ' of ' + HOTSPOTS.length;
+  var rev = ST.reviews[hp.id];
+  document.getElementById('th-review').textContent = rev ? '✓ Re-review' : 'Review This Area';
+}
+
+function exitTour() {
+  ST.tourMode = false;
+  document.getElementById('tour-hud').classList.remove('on');
+  flyOverview();
+}
+
+// ── SUMMARY ─────────────────────────────────────────────────
+document.getElementById('summary-btn').addEventListener('click', showSummary);
+document.getElementById('close-summary').addEventListener('click', function(){
+  document.getElementById('summary-panel').classList.remove('open');
+});
+
+function showSummary() {
+  var grid = document.getElementById('sp-grid');
+  grid.innerHTML = '';
+  var total = 0, cnt = 0;
+  HOTSPOTS.forEach(function(hp) {
+    var rev = ST.reviews[hp.id];
+    var card = document.createElement('div');
+    card.className = 'sp-card';
+    card.style.borderTopColor = hp.hex;
+    if (rev) {
+      total += rev.stars; cnt++;
+      var starsH = '★'.repeat(rev.stars) + '<span style="opacity:.2">' + '★'.repeat(5 - rev.stars) + '</span>';
+      var tagsH  = rev.tags.map(function(t){ return '<span class="sc-tag">' + t + '</span>'; }).join('');
+      card.innerHTML =
+        '<div class="sc-top"><div class="sc-area"><span class="sc-icon">' + hp.icon + '</span><span class="sc-name">' + hp.name + '</span></div><span style="font-size:22px">' + (rev.emoji||'') + '</span></div>' +
+        '<div class="sc-stars">' + starsH + '</div>' +
+        (tagsH ? '<div class="sc-tags">' + tagsH + '</div>' : '') +
+        (rev.emojiLabel ? '<p style="font-size:11px;color:var(--muted);margin-bottom:7px">Vibe: ' + rev.emojiLabel + '</p>' : '') +
+        (rev.note ? '<p class="sc-note">"' + rev.note + '"</p>' : '');
+    } else {
+      card.innerHTML =
+        '<div class="sc-top"><div class="sc-area"><span class="sc-icon">' + hp.icon + '</span><span class="sc-name">' + hp.name + '</span></div></div>' +
+        '<p class="unrev">Not reviewed yet</p>';
+    }
+    grid.appendChild(card);
+  });
+  document.getElementById('sp-score').textContent = cnt ? (total / cnt).toFixed(1) + ' / 5' : '—';
+  document.getElementById('summary-panel').classList.add('open');
+}
+
+// ── CONFETTI ────────────────────────────────────────────────
+function triggerConfetti() {
+  var cv = document.getElementById('confetti');
+  cv.style.display = 'block';
+  cv.width = window.innerWidth; cv.height = window.innerHeight;
+  var ctx = cv.getContext('2d');
+  var cols = ['#FFD700','#FFA500','#FF6B35','#00B4D8','#52B788','#E63946','#9B59B6','#F4A261'];
+  var parts = [];
+  for (var i = 0; i < 160; i++) {
+    parts.push({
+      x: Math.random() * cv.width, y: -10 - Math.random() * 180,
+      r: 4 + Math.random() * 5, d: 1.4 + Math.random() * 2.2,
+      col: cols[Math.floor(Math.random() * cols.length)],
+      ta: 0, ts: 0.1 + Math.random() * 0.18,
+    });
+  }
+  var frame = 0;
+  function draw() {
+    ctx.clearRect(0, 0, cv.width, cv.height);
+    parts.forEach(function(p) {
+      p.y += p.d; p.ta += p.ts;
+      ctx.beginPath(); ctx.lineWidth = p.r; ctx.strokeStyle = p.col;
+      ctx.moveTo(p.x + Math.sin(p.ta) * 12, p.y);
+      ctx.lineTo(p.x + Math.sin(p.ta) * 12 + p.r, p.y + p.r);
+      ctx.stroke();
+    });
+    frame++;
+    if (frame < 220) requestAnimationFrame(draw);
+    else { ctx.clearRect(0, 0, cv.width, cv.height); cv.style.display = 'none'; }
+  }
+  draw();
+}
+
+// ── TOAST ───────────────────────────────────────────────────
+var toastT;
+function showToast(msg) {
+  var el = document.getElementById('toast');
+  el.textContent = msg; el.classList.add('show');
+  clearTimeout(toastT);
+  toastT = setTimeout(function(){ el.classList.remove('show'); }, 2800);
+}
+
+// ── LOAD HELPERS ────────────────────────────────────────────
+function setLB(p) { document.getElementById('loading-bar').style.width = p + '%'; }
+function setLT(t)  { document.getElementById('loading-text').textContent = t; }
+function showApp() {
+  document.getElementById('loading-screen').style.display = 'none';
+  document.getElementById('app').style.display = 'block';
+  initThree();
+}
+
+// ── FILE INPUT ──────────────────────────────────────────────
+function startLoad(file) {
+  document.getElementById('file-screen').style.display = 'none';
+  document.getElementById('loading-screen').style.display = 'flex';
+  setLB(8); setLT('Reading file (' + (file.size / 1024 / 1024).toFixed(1) + ' MB)...');
+
+  var reader = new FileReader();
+  reader.onprogress = function(e) {
+    if (e.lengthComputable) setLB(8 + (e.loaded / e.total) * 46);
+  };
+  reader.onload = function(e) {
+    setLB(55);
+    loadModel(e.target.result);
+  };
+  reader.onerror = function() { setLT('Error reading file — please try again'); };
+  reader.readAsArrayBuffer(file);
+}
+
+document.getElementById('stl-input').addEventListener('change', function(e) {
+  var f = e.target.files[0];
+  if (f) startLoad(f);
+});
+
+var dz = document.getElementById('drop-zone');
+dz.addEventListener('dragover', function(e){ e.preventDefault(); dz.classList.add('drag-over'); });
+dz.addEventListener('dragleave', function(){ dz.classList.remove('drag-over'); });
+dz.addEventListener('drop', function(e) {
+  e.preventDefault(); dz.classList.remove('drag-over');
+  var f = e.dataTransfer.files[0];
+  if (f && f.name.toLowerCase().endsWith('.stl')) startLoad(f);
+  else showToast('Please drop a .STL file');
+});
+
+// ── KEYBOARD ────────────────────────────────────────────────
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    if (document.getElementById('summary-panel').classList.contains('open'))
+      document.getElementById('summary-panel').classList.remove('open');
+    else if (document.getElementById('review-panel').classList.contains('open'))
+      closeReview();
+    else if (ST.tourMode) exitTour();
+  }
+  if (ST.tourMode) {
+    if (e.key === 'ArrowRight') tourStep(1);
+    if (e.key === 'ArrowLeft')  tourStep(-1);
+  }
+});
+
+// Catch any global JS errors and surface them
+window.addEventListener('error', function(e) {
+  console.error('Global error:', e.message, e.filename, e.lineno);
+});
+</script>
+</body>
+</html>

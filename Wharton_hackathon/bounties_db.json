@@ -1,0 +1,2142 @@
+[
+  {
+    "eg_property_id": "110f01b8ae518a0ee41047bce5c22572988a435e10ead72dc1af793bba8ce0b0",
+    "location": {
+      "city": "Pompei",
+      "province": "",
+      "country": "Italy",
+      "star_rating": ""
+    },
+    "property_summary": {
+      "guestrating_avg_expedia": "8.4",
+      "n_reviews_total": 146,
+      "total_points_budget": 1000,
+      "points_unit": 50
+    },
+    "amenity_analysis": [
+      {
+        "amenity_name": "AC",
+        "listing_present": true,
+        "gap_score": 0.4,
+        "ambiguity_score": 0.8,
+        "staleness_score": 0.3,
+        "allocated_points": 150,
+        "evidence_reviews": [
+          "also the ac did not work. room remained hot. had room changed next day. here too ac fan did not work.",
+          "the a/c works, but it does not go low enough."
+        ]
+      },
+      {
+        "amenity_name": "Bar",
+        "listing_present": true,
+        "gap_score": 0.8,
+        "ambiguity_score": 0.5,
+        "staleness_score": 0.7,
+        "allocated_points": 150,
+        "evidence_reviews": [
+          "the bar/restaurant sgambati (owned by the same people?) serves omelettes, in addition to a regular menu"
+        ]
+      },
+      {
+        "amenity_name": "No Smoking",
+        "listing_present": true,
+        "gap_score": 1.0,
+        "ambiguity_score": 0.0,
+        "staleness_score": 1.0,
+        "allocated_points": 150,
+        "evidence_reviews": []
+      },
+      {
+        "amenity_name": "Internet",
+        "listing_present": true,
+        "gap_score": 0.6,
+        "ambiguity_score": 0.6,
+        "staleness_score": 0.5,
+        "allocated_points": 100,
+        "evidence_reviews": [
+          "the internet in the rooms is poor but adequate if you go into the corridor near the router.",
+          "lastly, wifi is only functional in the lobby area."
+        ]
+      },
+      {
+        "amenity_name": "Restaurant",
+        "listing_present": true,
+        "gap_score": 0.5,
+        "ambiguity_score": 0.8,
+        "staleness_score": 0.4,
+        "allocated_points": 100,
+        "evidence_reviews": [
+          "describes itself as having a restaurant but it was never open after 6pm.",
+          "breakfast is self-service in the restaurant opposite."
+        ]
+      },
+      {
+        "amenity_name": "Elevator",
+        "listing_present": false,
+        "gap_score": 0.9,
+        "ambiguity_score": 0.1,
+        "staleness_score": 0.9,
+        "allocated_points": 100,
+        "evidence_reviews": []
+      },
+      {
+        "amenity_name": "Breakfast",
+        "listing_present": true,
+        "gap_score": 0.1,
+        "ambiguity_score": 0.5,
+        "staleness_score": 0.2,
+        "allocated_points": 50,
+        "evidence_reviews": [
+          "breakfast was adequate but not the best.",
+          "la colazione meglio non parlarne.",
+          "breakfast is available and it's fair"
+        ]
+      },
+      {
+        "amenity_name": "24-Hour Front Desk",
+        "listing_present": true,
+        "gap_score": 0.3,
+        "ambiguity_score": 0.4,
+        "staleness_score": 0.2,
+        "allocated_points": 50,
+        "evidence_reviews": [
+          "night staff talk no english and were rude when we used translators",
+          "the front desk guy spoke great english and was a huge reservoir of advice",
+          "die rezeption ist 24 h besetzt"
+        ]
+      },
+      {
+        "amenity_name": "Housekeeping",
+        "listing_present": true,
+        "gap_score": 0.2,
+        "ambiguity_score": 0.2,
+        "staleness_score": 0.2,
+        "allocated_points": 50,
+        "evidence_reviews": [
+          "facilities were clean and in good repair, with excellent housekeeping",
+          "man bekommt jeden tag neue handt\u00fccher und neue pflegeprodukte."
+        ]
+      },
+      {
+        "amenity_name": "Barbecue/Outdoor",
+        "listing_present": true,
+        "gap_score": 0.5,
+        "ambiguity_score": 0.6,
+        "staleness_score": 0.3,
+        "allocated_points": 50,
+        "evidence_reviews": [
+          "there is limited outside areas to sit.",
+          "die zimmer liegen mit der terrasse direkt am mit vielen orangenb\u00e4umen bepflanzten parkplatz des campingplatzes"
+        ]
+      },
+      {
+        "amenity_name": "TV",
+        "listing_present": true,
+        "gap_score": 0.9,
+        "ambiguity_score": 0.2,
+        "staleness_score": 0.4,
+        "allocated_points": 50,
+        "evidence_reviews": [
+          "the hotel is clean and the tvs and bathroom fixtures work"
+        ]
+      }
+    ],
+    "gap_targets": [
+      {
+        "amenity_name": "No Smoking",
+        "gap_score": 1.0,
+        "allocated_points": 150
+      },
+      {
+        "amenity_name": "Elevator",
+        "gap_score": 0.9,
+        "allocated_points": 100
+      },
+      {
+        "amenity_name": "TV",
+        "gap_score": 0.9,
+        "allocated_points": 50
+      }
+    ],
+    "ambiguous_targets": [
+      {
+        "amenity_name": "AC",
+        "ambiguity_score": 0.8,
+        "allocated_points": 150
+      },
+      {
+        "amenity_name": "Restaurant",
+        "ambiguity_score": 0.8,
+        "allocated_points": 100
+      },
+      {
+        "amenity_name": "Internet",
+        "ambiguity_score": 0.6,
+        "allocated_points": 100
+      }
+    ],
+    "stale_targets": [
+      {
+        "amenity_name": "No Smoking",
+        "staleness_score": 1.0,
+        "allocated_points": 150
+      },
+      {
+        "amenity_name": "Elevator",
+        "staleness_score": 0.9,
+        "allocated_points": 100
+      },
+      {
+        "amenity_name": "Bar",
+        "staleness_score": 0.7,
+        "allocated_points": 150
+      }
+    ]
+  },
+  {
+    "eg_property_id": "db38b19b897dbece3e34919c662b3fd66d23b615395d11fb69264dd3a9b17723",
+    "location": {
+      "city": "Broomfield",
+      "province": "Colorado",
+      "country": "United States",
+      "star_rating": "4.0"
+    },
+    "property_summary": {
+      "guestrating_avg_expedia": "9.2",
+      "n_reviews_total": 1006,
+      "total_points_budget": 1000,
+      "points_unit": 50
+    },
+    "amenity_analysis": [
+      {
+        "amenity_name": "Golf Course",
+        "listing_present": true,
+        "gap_score": 1.0,
+        "ambiguity_score": 0.3,
+        "staleness_score": 0.9,
+        "allocated_points": 200,
+        "evidence_reviews": [
+          "Property listing claims a golf course and driving range, but no raw reviews mention usage or conditions."
+        ]
+      },
+      {
+        "amenity_name": "Fitness Center",
+        "listing_present": true,
+        "gap_score": 1.0,
+        "ambiguity_score": 0.3,
+        "staleness_score": 0.9,
+        "allocated_points": 200,
+        "evidence_reviews": [
+          "No reviews mention the 24-hour fitness center or equipment quality despite it being a popular listed amenity."
+        ]
+      },
+      {
+        "amenity_name": "Pool",
+        "listing_present": true,
+        "gap_score": 0.2,
+        "ambiguity_score": 0.9,
+        "staleness_score": 0.4,
+        "allocated_points": 150,
+        "evidence_reviews": [
+          "they advertise 2 pools and the whole week we were there only one pool was open as appearantly they put too much chemicals in the pool.",
+          "hot tub and pool could use more cleaning.",
+          "pool wasn\u2019t tended to very well.",
+          "the pools are fantastic"
+        ]
+      },
+      {
+        "amenity_name": "Breakfast",
+        "listing_present": true,
+        "gap_score": 0.4,
+        "ambiguity_score": 0.8,
+        "staleness_score": 0.7,
+        "allocated_points": 150,
+        "evidence_reviews": [
+          "but, no dining for breakfast or lunch.",
+          "sunday breakfast in restaurant was excellent",
+          "you can eat a nice breakfast that won't break the bank"
+        ]
+      },
+      {
+        "amenity_name": "Spa",
+        "listing_present": true,
+        "gap_score": 0.7,
+        "ambiguity_score": 0.7,
+        "staleness_score": 0.6,
+        "allocated_points": 150,
+        "evidence_reviews": [
+          "then we tried to book a massage and they told us they were booked out the 4 days we were there!",
+          "i loved the spa on property."
+        ]
+      },
+      {
+        "amenity_name": "Internet",
+        "listing_present": true,
+        "gap_score": 1.0,
+        "ambiguity_score": 0.4,
+        "staleness_score": 0.9,
+        "allocated_points": 150,
+        "evidence_reviews": [
+          "Listing includes internet as a top amenity, but no guests have verified connection speed or reliability."
+        ]
+      }
+    ],
+    "gap_targets": [
+      {
+        "amenity_name": "Golf Course",
+        "gap_score": 1.0,
+        "allocated_points": 200
+      },
+      {
+        "amenity_name": "Fitness Center",
+        "gap_score": 1.0,
+        "allocated_points": 200
+      },
+      {
+        "amenity_name": "Internet",
+        "gap_score": 1.0,
+        "allocated_points": 150
+      }
+    ],
+    "ambiguous_targets": [
+      {
+        "amenity_name": "Pool",
+        "ambiguity_score": 0.9,
+        "allocated_points": 150
+      },
+      {
+        "amenity_name": "Breakfast",
+        "ambiguity_score": 0.8,
+        "allocated_points": 150
+      },
+      {
+        "amenity_name": "Spa",
+        "ambiguity_score": 0.7,
+        "allocated_points": 150
+      }
+    ],
+    "stale_targets": [
+      {
+        "amenity_name": "Golf Course",
+        "staleness_score": 0.9,
+        "allocated_points": 200
+      },
+      {
+        "amenity_name": "Fitness Center",
+        "staleness_score": 0.9,
+        "allocated_points": 200
+      },
+      {
+        "amenity_name": "Internet",
+        "staleness_score": 0.9,
+        "allocated_points": 150
+      }
+    ]
+  },
+  {
+    "eg_property_id": "5f5a0cd8662f0ddf297f2d27358f680daab5d3ac22fd45a4e1c3c3ec2c101a12",
+    "location": {
+      "city": "Freudenstadt",
+      "province": "Baden-Wurttemberg",
+      "country": "Germany",
+      "star_rating": ""
+    },
+    "property_summary": {
+      "guestrating_avg_expedia": "9.8",
+      "n_reviews_total": 8,
+      "total_points_budget": 1000,
+      "points_unit": 50
+    },
+    "amenity_analysis": [
+      {
+        "amenity_name": "Bowling Alley & Table Tennis",
+        "listing_present": true,
+        "gap_score": 1.0,
+        "ambiguity_score": 0.5,
+        "staleness_score": 1.0,
+        "allocated_points": 150,
+        "evidence_reviews": []
+      },
+      {
+        "amenity_name": "Accessibility",
+        "listing_present": true,
+        "gap_score": 1.0,
+        "ambiguity_score": 0.5,
+        "staleness_score": 1.0,
+        "allocated_points": 150,
+        "evidence_reviews": []
+      },
+      {
+        "amenity_name": "Toys",
+        "listing_present": true,
+        "gap_score": 0.9,
+        "ambiguity_score": 0.4,
+        "staleness_score": 0.9,
+        "allocated_points": 100,
+        "evidence_reviews": [
+          "wir waren mit 2 kleinkindern vor ort"
+        ]
+      },
+      {
+        "amenity_name": "Internet",
+        "listing_present": true,
+        "gap_score": 0.9,
+        "ambiguity_score": 0.5,
+        "staleness_score": 1.0,
+        "allocated_points": 100,
+        "evidence_reviews": []
+      },
+      {
+        "amenity_name": "Free Parking",
+        "listing_present": true,
+        "gap_score": 0.9,
+        "ambiguity_score": 0.5,
+        "staleness_score": 1.0,
+        "allocated_points": 100,
+        "evidence_reviews": []
+      },
+      {
+        "amenity_name": "Laundry",
+        "listing_present": true,
+        "gap_score": 0.9,
+        "ambiguity_score": 0.5,
+        "staleness_score": 1.0,
+        "allocated_points": 100,
+        "evidence_reviews": []
+      },
+      {
+        "amenity_name": "Barbecue/Outdoor",
+        "listing_present": true,
+        "gap_score": 0.8,
+        "ambiguity_score": 0.6,
+        "staleness_score": 0.8,
+        "allocated_points": 100,
+        "evidence_reviews": [
+          "nah an freudenstadt und doch im gr\u00fcnen, mit weitblick"
+        ]
+      },
+      {
+        "amenity_name": "Heater",
+        "listing_present": true,
+        "gap_score": 0.8,
+        "ambiguity_score": 0.4,
+        "staleness_score": 0.7,
+        "allocated_points": 100,
+        "evidence_reviews": [
+          "they gave us a nice and warm welcome."
+        ]
+      },
+      {
+        "amenity_name": "Breakfast",
+        "listing_present": true,
+        "gap_score": 0.4,
+        "ambiguity_score": 0.7,
+        "staleness_score": 0.4,
+        "allocated_points": 50,
+        "evidence_reviews": [
+          "\u00fcberschaubares fr\u00fchst\u00fcck ( nichr \u00fcberladen )",
+          "fr\u00fchst\u00fcck ebenfalls sehr toll und auf wunsch gab es auch sojamilch zum kaffee."
+        ]
+      },
+      {
+        "amenity_name": "Restaurant",
+        "listing_present": true,
+        "gap_score": 0.5,
+        "ambiguity_score": 0.3,
+        "staleness_score": 0.5,
+        "allocated_points": 50,
+        "evidence_reviews": [
+          "deftiges essen.",
+          "the food was delicious and the drinks were brilliant."
+        ]
+      }
+    ],
+    "gap_targets": [
+      {
+        "amenity_name": "Bowling Alley & Table Tennis",
+        "gap_score": 1.0,
+        "allocated_points": 150
+      },
+      {
+        "amenity_name": "Accessibility",
+        "gap_score": 1.0,
+        "allocated_points": 150
+      }
+    ],
+    "ambiguous_targets": [
+      {
+        "amenity_name": "Breakfast",
+        "ambiguity_score": 0.7,
+        "allocated_points": 50
+      },
+      {
+        "amenity_name": "Barbecue/Outdoor",
+        "ambiguity_score": 0.6,
+        "allocated_points": 100
+      }
+    ],
+    "stale_targets": [
+      {
+        "amenity_name": "Internet",
+        "staleness_score": 1.0,
+        "allocated_points": 100
+      },
+      {
+        "amenity_name": "Free Parking",
+        "staleness_score": 1.0,
+        "allocated_points": 100
+      }
+    ]
+  },
+  {
+    "eg_property_id": "3b984f3ba8df55b2609a1e33fd694cf8407842e1d833c9b4d993b07fc83a2820",
+    "location": {
+      "city": "San Isidro de El General",
+      "province": "San Jos\u00e9",
+      "country": "Costa Rica",
+      "star_rating": "3.5"
+    },
+    "property_summary": {
+      "guestrating_avg_expedia": "8.6",
+      "n_reviews_total": 51,
+      "total_points_budget": 1000,
+      "points_unit": 50
+    },
+    "amenity_analysis": [
+      {
+        "amenity_name": "Internet",
+        "listing_present": true,
+        "gap_score": 0.5,
+        "ambiguity_score": 0.9,
+        "staleness_score": 0.6,
+        "allocated_points": 200,
+        "evidence_reviews": [
+          "there was no wifi in the room and it was a little bit noisy",
+          "el internet muy lento",
+          "wi-fi con qualche problema"
+        ]
+      },
+      {
+        "amenity_name": "Breakfast",
+        "listing_present": true,
+        "gap_score": 0.2,
+        "ambiguity_score": 0.7,
+        "staleness_score": 0.8,
+        "allocated_points": 100,
+        "evidence_reviews": [
+          "breakfast was a typical plate, plus fruit, toast and drinks",
+          "breakfast was great",
+          "breakfast buffet was cold and not variety",
+          "breakfast was very basic...there must be more fruit choices then pineapple and watermelon? food was cold"
+        ]
+      },
+      {
+        "amenity_name": "AC",
+        "listing_present": true,
+        "gap_score": 0.9,
+        "ambiguity_score": 0.3,
+        "staleness_score": 0.9,
+        "allocated_points": 100,
+        "evidence_reviews": [
+          "the room was spacious and had good air conditioning"
+        ]
+      },
+      {
+        "amenity_name": "Elevator",
+        "listing_present": true,
+        "gap_score": 1.0,
+        "ambiguity_score": 0.3,
+        "staleness_score": 1.0,
+        "allocated_points": 100,
+        "evidence_reviews": []
+      },
+      {
+        "amenity_name": "Accessibility",
+        "listing_present": true,
+        "gap_score": 1.0,
+        "ambiguity_score": 0.3,
+        "staleness_score": 1.0,
+        "allocated_points": 100,
+        "evidence_reviews": []
+      },
+      {
+        "amenity_name": "Bar",
+        "listing_present": true,
+        "gap_score": 0.7,
+        "ambiguity_score": 0.6,
+        "staleness_score": 0.8,
+        "allocated_points": 100,
+        "evidence_reviews": [
+          "there was no wifi in the room and it was a little bit noisy because a bar there is right in from of the room, crossing the street",
+          "the casino and the restaurant todo bien el servicio al cliente muy bien"
+        ]
+      },
+      {
+        "amenity_name": "Laundry",
+        "listing_present": true,
+        "gap_score": 1.0,
+        "ambiguity_score": 0.3,
+        "staleness_score": 1.0,
+        "allocated_points": 100,
+        "evidence_reviews": []
+      },
+      {
+        "amenity_name": "Room Service",
+        "listing_present": true,
+        "gap_score": 1.0,
+        "ambiguity_score": 0.3,
+        "staleness_score": 1.0,
+        "allocated_points": 100,
+        "evidence_reviews": []
+      },
+      {
+        "amenity_name": "Business Services",
+        "listing_present": true,
+        "gap_score": 1.0,
+        "ambiguity_score": 0.3,
+        "staleness_score": 1.0,
+        "allocated_points": 100,
+        "evidence_reviews": []
+      }
+    ],
+    "gap_targets": [
+      {
+        "amenity_name": "Elevator",
+        "gap_score": 1.0,
+        "allocated_points": 100
+      },
+      {
+        "amenity_name": "Laundry",
+        "gap_score": 1.0,
+        "allocated_points": 100
+      },
+      {
+        "amenity_name": "Business Services",
+        "gap_score": 1.0,
+        "allocated_points": 100
+      }
+    ],
+    "ambiguous_targets": [
+      {
+        "amenity_name": "Internet",
+        "ambiguity_score": 0.9,
+        "allocated_points": 200
+      },
+      {
+        "amenity_name": "Breakfast",
+        "ambiguity_score": 0.7,
+        "allocated_points": 100
+      }
+    ],
+    "stale_targets": [
+      {
+        "amenity_name": "AC",
+        "staleness_score": 0.9,
+        "allocated_points": 100
+      },
+      {
+        "amenity_name": "Room Service",
+        "staleness_score": 1.0,
+        "allocated_points": 100
+      }
+    ]
+  },
+  {
+    "eg_property_id": "9a0043fd4258a1286db1e253ca591662b3aac849da12d0d4f67e08b8f59be65f",
+    "location": {
+      "city": "Bochum",
+      "province": "Bochum",
+      "country": "Germany",
+      "star_rating": ""
+    },
+    "property_summary": {
+      "guestrating_avg_expedia": "8.4",
+      "n_reviews_total": 50,
+      "total_points_budget": 1000,
+      "points_unit": 50
+    },
+    "amenity_analysis": [
+      {
+        "amenity_name": "Bicycle Rentals",
+        "listing_present": true,
+        "gap_score": 1.0,
+        "ambiguity_score": 0.5,
+        "staleness_score": 1.0,
+        "allocated_points": 250,
+        "evidence_reviews": []
+      },
+      {
+        "amenity_name": "Laundry",
+        "listing_present": true,
+        "gap_score": 1.0,
+        "ambiguity_score": 0.5,
+        "staleness_score": 1.0,
+        "allocated_points": 250,
+        "evidence_reviews": []
+      },
+      {
+        "amenity_name": "Restaurant",
+        "listing_present": true,
+        "gap_score": 0.4,
+        "ambiguity_score": 0.9,
+        "staleness_score": 0.6,
+        "allocated_points": 150,
+        "evidence_reviews": [
+          "sehr gutes essen",
+          "also there used to be a very good restaurant downstairs which is now under different management and is much less appealing.",
+          "unangenehmer geruch durch die gastst\u00e4tte im erdgescho\u00df."
+        ]
+      },
+      {
+        "amenity_name": "Internet",
+        "listing_present": true,
+        "gap_score": 0.8,
+        "ambiguity_score": 0.7,
+        "staleness_score": 0.8,
+        "allocated_points": 150,
+        "evidence_reviews": [
+          "das w-lan ist sehr instabil."
+        ]
+      },
+      {
+        "amenity_name": "Accessibility",
+        "listing_present": true,
+        "gap_score": 0.9,
+        "ambiguity_score": 0.5,
+        "staleness_score": 0.9,
+        "allocated_points": 100,
+        "evidence_reviews": []
+      },
+      {
+        "amenity_name": "Breakfast",
+        "listing_present": true,
+        "gap_score": 0.4,
+        "ambiguity_score": 0.8,
+        "staleness_score": 0.6,
+        "allocated_points": 50,
+        "evidence_reviews": [
+          "ontbijt perfect",
+          "beim fr\u00fchst\u00fcck war es schon recht eklig, dass der hund die wurst vom tablett gezogen hat."
+        ]
+      },
+      {
+        "amenity_name": "Free Parking",
+        "listing_present": true,
+        "gap_score": 0.8,
+        "ambiguity_score": 0.3,
+        "staleness_score": 0.7,
+        "allocated_points": 50,
+        "evidence_reviews": [
+          "aureichend parkpl\u00e4tze"
+        ]
+      }
+    ],
+    "gap_targets": [
+      {
+        "amenity_name": "Bicycle Rentals",
+        "gap_score": 1.0,
+        "allocated_points": 250
+      },
+      {
+        "amenity_name": "Laundry",
+        "gap_score": 1.0,
+        "allocated_points": 250
+      }
+    ],
+    "ambiguous_targets": [
+      {
+        "amenity_name": "Restaurant",
+        "ambiguity_score": 0.9,
+        "allocated_points": 150
+      },
+      {
+        "amenity_name": "Breakfast",
+        "ambiguity_score": 0.8,
+        "allocated_points": 50
+      }
+    ],
+    "stale_targets": [
+      {
+        "amenity_name": "Internet",
+        "staleness_score": 0.8,
+        "allocated_points": 150
+      },
+      {
+        "amenity_name": "Accessibility",
+        "staleness_score": 0.9,
+        "allocated_points": 100
+      }
+    ]
+  },
+  {
+    "eg_property_id": "e52d67a758ce4ad0229aacc97e5dfe89984c384c51a70208f9e0cc65c9cd4676",
+    "location": {
+      "city": "Bangkok",
+      "province": "Bangkok",
+      "country": "Thailand",
+      "star_rating": "3.0"
+    },
+    "property_summary": {
+      "guestrating_avg_expedia": "8.8",
+      "n_reviews_total": 50,
+      "total_points_budget": 1000,
+      "points_unit": 50
+    },
+    "amenity_analysis": [
+      {
+        "amenity_name": "TV",
+        "listing_present": true,
+        "gap_score": 1.0,
+        "ambiguity_score": 0.3,
+        "staleness_score": 1.0,
+        "allocated_points": 200,
+        "evidence_reviews": [
+          "No recent or historical guest reviews mention the availability, condition, or channel selection of the television provided in rooms."
+        ]
+      },
+      {
+        "amenity_name": "Free Parking",
+        "listing_present": true,
+        "gap_score": 1.0,
+        "ambiguity_score": 0.3,
+        "staleness_score": 1.0,
+        "allocated_points": 200,
+        "evidence_reviews": [
+          "While listed as a feature, there are zero mentions across all reviews regarding the parking situation, accessibility, or security."
+        ]
+      },
+      {
+        "amenity_name": "Barbecue/Outdoor",
+        "listing_present": true,
+        "gap_score": 0.9,
+        "ambiguity_score": 0.5,
+        "staleness_score": 0.8,
+        "allocated_points": 150,
+        "evidence_reviews": [
+          "very nice little area off beaten path",
+          "it is in a very quite place, with a little monastery nearby"
+        ]
+      },
+      {
+        "amenity_name": "Breakfast",
+        "listing_present": true,
+        "gap_score": 0.4,
+        "ambiguity_score": 0.9,
+        "staleness_score": 0.5,
+        "allocated_points": 150,
+        "evidence_reviews": [
+          "breakfast was listed as an amenity but wasn\u2019t offered to us during check in",
+          "breakfast was delicious ( thai fried rice with egg for me was lovely)",
+          "geen ontbijt maar vlakbij genoeg mogelijkenheden"
+        ]
+      },
+      {
+        "amenity_name": "Housekeeping",
+        "listing_present": true,
+        "gap_score": 0.8,
+        "ambiguity_score": 0.6,
+        "staleness_score": 0.7,
+        "allocated_points": 100,
+        "evidence_reviews": [
+          "housekeeping misunderstood and i made a smoking at room. and they charged me penalty",
+          "les voix des femmes de m\u00e9nage le matin... m'ont tenu \u00e9veill\u00e9"
+        ]
+      },
+      {
+        "amenity_name": "24-Hour Front Desk",
+        "listing_present": true,
+        "gap_score": 0.4,
+        "ambiguity_score": 0.8,
+        "staleness_score": 0.4,
+        "allocated_points": 100,
+        "evidence_reviews": [
+          "staff was exceptional!",
+          "la gardienne de prison qui est derri\u00e8re son comptoir, n'a pas r\u00e9pondu \u00e0 mon bonjour en thai, elle ne sourit pas"
+        ]
+      },
+      {
+        "amenity_name": "AC",
+        "listing_present": true,
+        "gap_score": 0.3,
+        "ambiguity_score": 0.8,
+        "staleness_score": 0.4,
+        "allocated_points": 50,
+        "evidence_reviews": [
+          "airconditioner too old(so i've got a sick)",
+          "air conditioner worked great, our room was nice and cold",
+          "h\u00f4tel tr\u00e8s bruyant \u00e0 cause des climatiseurs"
+        ]
+      },
+      {
+        "amenity_name": "Internet",
+        "listing_present": true,
+        "gap_score": 0.6,
+        "ambiguity_score": 0.3,
+        "staleness_score": 0.6,
+        "allocated_points": 50,
+        "evidence_reviews": [
+          "wifi worked great",
+          "internet excelente"
+        ]
+      }
+    ],
+    "gap_targets": [
+      {
+        "amenity_name": "TV",
+        "gap_score": 1.0,
+        "allocated_points": 200
+      },
+      {
+        "amenity_name": "Free Parking",
+        "gap_score": 1.0,
+        "allocated_points": 200
+      },
+      {
+        "amenity_name": "Barbecue/Outdoor",
+        "gap_score": 0.9,
+        "allocated_points": 150
+      }
+    ],
+    "ambiguous_targets": [
+      {
+        "amenity_name": "Breakfast",
+        "ambiguity_score": 0.9,
+        "allocated_points": 150
+      },
+      {
+        "amenity_name": "24-Hour Front Desk",
+        "ambiguity_score": 0.8,
+        "allocated_points": 100
+      },
+      {
+        "amenity_name": "AC",
+        "ambiguity_score": 0.8,
+        "allocated_points": 50
+      }
+    ],
+    "stale_targets": [
+      {
+        "amenity_name": "TV",
+        "staleness_score": 1.0,
+        "allocated_points": 200
+      },
+      {
+        "amenity_name": "Free Parking",
+        "staleness_score": 1.0,
+        "allocated_points": 200
+      },
+      {
+        "amenity_name": "Housekeeping",
+        "staleness_score": 0.7,
+        "allocated_points": 100
+      }
+    ]
+  },
+  {
+    "eg_property_id": "ff26cdda236b233f7c481f0e896814075ac6bed335e162e0ff01d5491343f838",
+    "location": {
+      "city": "Frisco",
+      "province": "Texas",
+      "country": "United States",
+      "star_rating": "3.5"
+    },
+    "property_summary": {
+      "guestrating_avg_expedia": "9.2",
+      "n_reviews_total": 50,
+      "total_points_budget": 1000,
+      "points_unit": 50
+    },
+    "amenity_analysis": [
+      {
+        "amenity_name": "Fitness Center",
+        "listing_present": true,
+        "gap_score": 0.95,
+        "ambiguity_score": 0.3,
+        "staleness_score": 0.9,
+        "allocated_points": 150,
+        "evidence_reviews": []
+      },
+      {
+        "amenity_name": "Internet",
+        "listing_present": true,
+        "gap_score": 1.0,
+        "ambiguity_score": 0.3,
+        "staleness_score": 1.0,
+        "allocated_points": 150,
+        "evidence_reviews": []
+      },
+      {
+        "amenity_name": "Business Services",
+        "listing_present": true,
+        "gap_score": 0.9,
+        "ambiguity_score": 0.3,
+        "staleness_score": 0.8,
+        "allocated_points": 150,
+        "evidence_reviews": [
+          "good business hotel."
+        ]
+      },
+      {
+        "amenity_name": "Accessibility",
+        "listing_present": true,
+        "gap_score": 1.0,
+        "ambiguity_score": 0.4,
+        "staleness_score": 1.0,
+        "allocated_points": 150,
+        "evidence_reviews": []
+      },
+      {
+        "amenity_name": "Room Service",
+        "listing_present": true,
+        "gap_score": 0.8,
+        "ambiguity_score": 0.7,
+        "staleness_score": 0.7,
+        "allocated_points": 100,
+        "evidence_reviews": [
+          "i was disappointed that there was no food service on sunday night. we were in town for a meet and did not get out until 9:45. it would have been nice to be able to order room service even if only a limited menu."
+        ]
+      },
+      {
+        "amenity_name": "Pool",
+        "listing_present": true,
+        "gap_score": 0.7,
+        "ambiguity_score": 0.6,
+        "staleness_score": 0.8,
+        "allocated_points": 100,
+        "evidence_reviews": [
+          "they only had an outdoor pool which isnt open during the winter months."
+        ]
+      },
+      {
+        "amenity_name": "Restaurant & Breakfast",
+        "listing_present": true,
+        "gap_score": 0.3,
+        "ambiguity_score": 0.8,
+        "staleness_score": 0.4,
+        "allocated_points": 100,
+        "evidence_reviews": [
+          "food at the hotel was expensive.",
+          "dinner at the restaurant was amazing, staff was friendly.",
+          "breakfast was not included, but enjoyed a beautifully presented breakfast at the restaurant."
+        ]
+      },
+      {
+        "amenity_name": "Free Parking",
+        "listing_present": true,
+        "gap_score": 0.6,
+        "ambiguity_score": 0.3,
+        "staleness_score": 0.7,
+        "allocated_points": 50,
+        "evidence_reviews": [
+          "ample parking."
+        ]
+      },
+      {
+        "amenity_name": "Housekeeping",
+        "listing_present": true,
+        "gap_score": 0.1,
+        "ambiguity_score": 0.6,
+        "staleness_score": 0.2,
+        "allocated_points": 50,
+        "evidence_reviews": [
+          "the bathroom wasn't as clean as i like but it was fine.",
+          "room 314, bathroom flooding whenever the shower was used. at least 1/4 inch water covering the floor. unsafe to try and use toilet."
+        ]
+      }
+    ],
+    "gap_targets": [
+      {
+        "amenity_name": "Internet",
+        "gap_score": 1.0,
+        "allocated_points": 150
+      },
+      {
+        "amenity_name": "Accessibility",
+        "gap_score": 1.0,
+        "allocated_points": 150
+      }
+    ],
+    "ambiguous_targets": [
+      {
+        "amenity_name": "Restaurant & Breakfast",
+        "ambiguity_score": 0.8,
+        "allocated_points": 100
+      },
+      {
+        "amenity_name": "Room Service",
+        "ambiguity_score": 0.7,
+        "allocated_points": 100
+      }
+    ],
+    "stale_targets": [
+      {
+        "amenity_name": "Internet",
+        "staleness_score": 1.0,
+        "allocated_points": 150
+      },
+      {
+        "amenity_name": "Fitness Center",
+        "staleness_score": 0.9,
+        "allocated_points": 150
+      }
+    ]
+  },
+  {
+    "eg_property_id": "fa014137b3ea9af6a90c0a86a1d099e46f7e56d6eb33db1ad1ec4bdac68c3caa",
+    "location": {
+      "city": "Monterey",
+      "province": "California",
+      "country": "United States",
+      "star_rating": "2.5"
+    },
+    "property_summary": {
+      "guestrating_avg_expedia": "8.8",
+      "n_reviews_total": 728,
+      "total_points_budget": 1000,
+      "points_unit": 50
+    },
+    "amenity_analysis": [
+      {
+        "amenity_name": "AC",
+        "listing_present": true,
+        "gap_score": 1.0,
+        "ambiguity_score": 0.5,
+        "staleness_score": 1.0,
+        "allocated_points": 100,
+        "evidence_reviews": []
+      },
+      {
+        "amenity_name": "Breakfast",
+        "listing_present": true,
+        "gap_score": 0.1,
+        "ambiguity_score": 0.3,
+        "staleness_score": 0.2,
+        "allocated_points": 50,
+        "evidence_reviews": [
+          "the morning breakfast was filling!",
+          "the continental breakfast was great",
+          "breakfast was decent and they had also a wine and cheese happy hour"
+        ]
+      },
+      {
+        "amenity_name": "Business Services",
+        "listing_present": true,
+        "gap_score": 1.0,
+        "ambiguity_score": 0.5,
+        "staleness_score": 1.0,
+        "allocated_points": 100,
+        "evidence_reviews": []
+      },
+      {
+        "amenity_name": "Free Parking",
+        "listing_present": true,
+        "gap_score": 0.2,
+        "ambiguity_score": 0.1,
+        "staleness_score": 0.3,
+        "allocated_points": 50,
+        "evidence_reviews": [
+          "hotel mit ausreichend parkpl\u00e4tzen in der tiefgarage.",
+          "the parking is in a garage underneath the hotel.",
+          "parking and breakfast are included."
+        ]
+      },
+      {
+        "amenity_name": "24-Hour Front Desk",
+        "listing_present": true,
+        "gap_score": 0.2,
+        "ambiguity_score": 0.7,
+        "staleness_score": 0.4,
+        "allocated_points": 100,
+        "evidence_reviews": [
+          "staff, especially the front desk was very helpful.",
+          "we got there early and jose let us check in and said come back in 2 hours... we came back and he said he did not say that and only room left was on third floor. we are 65 yr old and had to go down and then up two flights of stairs."
+        ]
+      },
+      {
+        "amenity_name": "Housekeeping",
+        "listing_present": true,
+        "gap_score": 0.8,
+        "ambiguity_score": 0.3,
+        "staleness_score": 0.3,
+        "allocated_points": 50,
+        "evidence_reviews": [
+          "this place was very clean and comfortable"
+        ]
+      },
+      {
+        "amenity_name": "Internet",
+        "listing_present": true,
+        "gap_score": 1.0,
+        "ambiguity_score": 0.5,
+        "staleness_score": 1.0,
+        "allocated_points": 100,
+        "evidence_reviews": []
+      },
+      {
+        "amenity_name": "Laundry",
+        "listing_present": true,
+        "gap_score": 1.0,
+        "ambiguity_score": 0.5,
+        "staleness_score": 1.0,
+        "allocated_points": 100,
+        "evidence_reviews": []
+      },
+      {
+        "amenity_name": "Microwave",
+        "listing_present": true,
+        "gap_score": 1.0,
+        "ambiguity_score": 0.5,
+        "staleness_score": 1.0,
+        "allocated_points": 100,
+        "evidence_reviews": []
+      },
+      {
+        "amenity_name": "Accessibility",
+        "listing_present": true,
+        "gap_score": 0.6,
+        "ambiguity_score": 0.9,
+        "staleness_score": 0.5,
+        "allocated_points": 150,
+        "evidence_reviews": [
+          "all was good, however no elevator to our floor, and couldn't take the luggage cart with us because the stairs.",
+          "there were 2 staircase we had to climb to get to the room. being a senior make it difficult plus carrying our suitcase."
+        ]
+      },
+      {
+        "amenity_name": "Free Daily Reception",
+        "listing_present": true,
+        "gap_score": 0.8,
+        "ambiguity_score": 0.3,
+        "staleness_score": 0.6,
+        "allocated_points": 100,
+        "evidence_reviews": [
+          "breakfast was great and we enjoyed the wine tasting in the evening.",
+          "breakfast was decent and they had also a wine and cheese happy hour"
+        ]
+      }
+    ],
+    "gap_targets": [
+      {
+        "amenity_name": "AC",
+        "gap_score": 1.0,
+        "allocated_points": 100
+      },
+      {
+        "amenity_name": "Internet",
+        "gap_score": 1.0,
+        "allocated_points": 100
+      },
+      {
+        "amenity_name": "Laundry",
+        "gap_score": 1.0,
+        "allocated_points": 100
+      },
+      {
+        "amenity_name": "Microwave",
+        "gap_score": 1.0,
+        "allocated_points": 100
+      },
+      {
+        "amenity_name": "Business Services",
+        "gap_score": 1.0,
+        "allocated_points": 100
+      }
+    ],
+    "ambiguous_targets": [
+      {
+        "amenity_name": "Accessibility",
+        "ambiguity_score": 0.9,
+        "allocated_points": 150
+      },
+      {
+        "amenity_name": "24-Hour Front Desk",
+        "ambiguity_score": 0.7,
+        "allocated_points": 100
+      }
+    ],
+    "stale_targets": [
+      {
+        "amenity_name": "Free Daily Reception",
+        "staleness_score": 0.6,
+        "allocated_points": 100
+      }
+    ]
+  },
+  {
+    "eg_property_id": "823fb2499b4e37d99acb65e7198e75965d6496fd1c579f976205c0e6179206df",
+    "location": {
+      "city": "Rome",
+      "province": "RM",
+      "country": "Italy",
+      "star_rating": ""
+    },
+    "property_summary": {
+      "guestrating_avg_expedia": "9.0",
+      "n_reviews_total": 772,
+      "total_points_budget": 1000,
+      "points_unit": 50
+    },
+    "amenity_analysis": [
+      {
+        "amenity_name": "Fitness Center",
+        "listing_present": true,
+        "gap_score": 1.0,
+        "ambiguity_score": 0.0,
+        "staleness_score": 1.0,
+        "allocated_points": 150,
+        "evidence_reviews": []
+      },
+      {
+        "amenity_name": "Room Service",
+        "listing_present": true,
+        "gap_score": 1.0,
+        "ambiguity_score": 0.0,
+        "staleness_score": 1.0,
+        "allocated_points": 150,
+        "evidence_reviews": []
+      },
+      {
+        "amenity_name": "Accessibility",
+        "listing_present": true,
+        "gap_score": 0.8,
+        "ambiguity_score": 0.8,
+        "staleness_score": 0.7,
+        "allocated_points": 150,
+        "evidence_reviews": [
+          "i was given a handicapped room, and the showerhead had issues water sprayed all over the bathroom and i had to mop it up with towels. "
+        ]
+      },
+      {
+        "amenity_name": "Soundproof Rooms",
+        "listing_present": true,
+        "gap_score": 1.0,
+        "ambiguity_score": 0.0,
+        "staleness_score": 1.0,
+        "allocated_points": 100,
+        "evidence_reviews": []
+      },
+      {
+        "amenity_name": "Laundry",
+        "listing_present": true,
+        "gap_score": 1.0,
+        "ambiguity_score": 0.0,
+        "staleness_score": 1.0,
+        "allocated_points": 100,
+        "evidence_reviews": []
+      },
+      {
+        "amenity_name": "Breakfast",
+        "listing_present": true,
+        "gap_score": 0.2,
+        "ambiguity_score": 0.7,
+        "staleness_score": 0.2,
+        "allocated_points": 100,
+        "evidence_reviews": [
+          "one of the buffet breakfasts i have had. so much choice.",
+          "breakfast was not good at all. bread and croissants not fresh and eggs watered down.",
+          "ontbijt is uitgebreid, maar wat vlak van smaak."
+        ]
+      },
+      {
+        "amenity_name": "Bar",
+        "listing_present": true,
+        "gap_score": 0.7,
+        "ambiguity_score": 0.3,
+        "staleness_score": 0.4,
+        "allocated_points": 50,
+        "evidence_reviews": [
+          "nice little bar in main lobby that has a happy hour with nice munchies."
+        ]
+      },
+      {
+        "amenity_name": "Elevator",
+        "listing_present": true,
+        "gap_score": 0.9,
+        "ambiguity_score": 0.3,
+        "staleness_score": 0.9,
+        "allocated_points": 50,
+        "evidence_reviews": []
+      },
+      {
+        "amenity_name": "Business Services",
+        "listing_present": true,
+        "gap_score": 0.8,
+        "ambiguity_score": 0.3,
+        "staleness_score": 0.7,
+        "allocated_points": 50,
+        "evidence_reviews": [
+          "free wifi and computer in lobby with free usage is good for ticket booking."
+        ]
+      },
+      {
+        "amenity_name": "Restaurant",
+        "listing_present": true,
+        "gap_score": 0.7,
+        "ambiguity_score": 0.4,
+        "staleness_score": 0.6,
+        "allocated_points": 50,
+        "evidence_reviews": [
+          "did not try the restaurant or other amenities."
+        ]
+      },
+      {
+        "amenity_name": "AC",
+        "listing_present": true,
+        "gap_score": 0.6,
+        "ambiguity_score": 0.3,
+        "staleness_score": 0.4,
+        "allocated_points": 50,
+        "evidence_reviews": [
+          "expansive room, great airconditioning."
+        ]
+      }
+    ],
+    "gap_targets": [
+      {
+        "amenity_name": "Fitness Center",
+        "gap_score": 1.0,
+        "allocated_points": 150
+      },
+      {
+        "amenity_name": "Room Service",
+        "gap_score": 1.0,
+        "allocated_points": 150
+      },
+      {
+        "amenity_name": "Soundproof Rooms",
+        "gap_score": 1.0,
+        "allocated_points": 100
+      }
+    ],
+    "ambiguous_targets": [
+      {
+        "amenity_name": "Accessibility",
+        "ambiguity_score": 0.8,
+        "allocated_points": 150
+      },
+      {
+        "amenity_name": "Breakfast",
+        "ambiguity_score": 0.7,
+        "allocated_points": 100
+      }
+    ],
+    "stale_targets": [
+      {
+        "amenity_name": "Fitness Center",
+        "staleness_score": 1.0,
+        "allocated_points": 150
+      },
+      {
+        "amenity_name": "Room Service",
+        "staleness_score": 1.0,
+        "allocated_points": 150
+      },
+      {
+        "amenity_name": "Laundry",
+        "staleness_score": 1.0,
+        "allocated_points": 100
+      }
+    ]
+  },
+  {
+    "eg_property_id": "a036cbe1d9fbf9cba088075d1b4d966ee871df55aa4a58ba0da23c116c499052",
+    "location": {
+      "city": "Mbombela",
+      "province": "Mpumalanga",
+      "country": "South Africa",
+      "star_rating": "3.5"
+    },
+    "property_summary": {
+      "guestrating_avg_expedia": "8.6",
+      "n_reviews_total": 10,
+      "total_points_budget": 1000,
+      "points_unit": 50
+    },
+    "amenity_analysis": [
+      {
+        "amenity_name": "Internet",
+        "listing_present": true,
+        "gap_score": 0.7,
+        "ambiguity_score": 0.9,
+        "staleness_score": 0.8,
+        "allocated_points": 150,
+        "evidence_reviews": [
+          "despite advertising unlimited internet, even in the rooms, the only place that we could connect is in the lobby."
+        ]
+      },
+      {
+        "amenity_name": "Breakfast",
+        "listing_present": true,
+        "gap_score": 0.3,
+        "ambiguity_score": 0.6,
+        "staleness_score": 0.4,
+        "allocated_points": 50,
+        "evidence_reviews": [
+          "just a bit of hustle and bustle at the hotel during breakfast!",
+          "great breakfast",
+          "breakfast was simple, but good and adequate."
+        ]
+      },
+      {
+        "amenity_name": "Restaurant",
+        "listing_present": true,
+        "gap_score": 0.8,
+        "ambiguity_score": 0.5,
+        "staleness_score": 0.8,
+        "allocated_points": 100,
+        "evidence_reviews": [
+          "restaurant furniture a bit worn."
+        ]
+      },
+      {
+        "amenity_name": "Pool",
+        "listing_present": true,
+        "gap_score": 0.9,
+        "ambiguity_score": 0.4,
+        "staleness_score": 0.9,
+        "allocated_points": 100,
+        "evidence_reviews": []
+      },
+      {
+        "amenity_name": "Accessibility",
+        "listing_present": true,
+        "gap_score": 0.9,
+        "ambiguity_score": 0.3,
+        "staleness_score": 0.9,
+        "allocated_points": 100,
+        "evidence_reviews": []
+      },
+      {
+        "amenity_name": "AC",
+        "listing_present": true,
+        "gap_score": 0.9,
+        "ambiguity_score": 0.3,
+        "staleness_score": 1.0,
+        "allocated_points": 50,
+        "evidence_reviews": []
+      },
+      {
+        "amenity_name": "Bar",
+        "listing_present": true,
+        "gap_score": 0.9,
+        "ambiguity_score": 0.3,
+        "staleness_score": 1.0,
+        "allocated_points": 50,
+        "evidence_reviews": []
+      },
+      {
+        "amenity_name": "Room Service",
+        "listing_present": true,
+        "gap_score": 0.9,
+        "ambiguity_score": 0.3,
+        "staleness_score": 1.0,
+        "allocated_points": 50,
+        "evidence_reviews": []
+      },
+      {
+        "amenity_name": "Housekeeping",
+        "listing_present": true,
+        "gap_score": 0.9,
+        "ambiguity_score": 0.3,
+        "staleness_score": 1.0,
+        "allocated_points": 50,
+        "evidence_reviews": []
+      },
+      {
+        "amenity_name": "Business Services",
+        "listing_present": true,
+        "gap_score": 1.0,
+        "ambiguity_score": 0.3,
+        "staleness_score": 1.0,
+        "allocated_points": 50,
+        "evidence_reviews": []
+      },
+      {
+        "amenity_name": "Laundry",
+        "listing_present": true,
+        "gap_score": 0.9,
+        "ambiguity_score": 0.3,
+        "staleness_score": 1.0,
+        "allocated_points": 50,
+        "evidence_reviews": []
+      },
+      {
+        "amenity_name": "24-Hour Front Desk",
+        "listing_present": true,
+        "gap_score": 0.8,
+        "ambiguity_score": 0.4,
+        "staleness_score": 0.8,
+        "allocated_points": 50,
+        "evidence_reviews": [
+          "staff who were very nice.",
+          "staff was very friendly and worked to please."
+        ]
+      },
+      {
+        "amenity_name": "Soundproof Rooms",
+        "listing_present": true,
+        "gap_score": 1.0,
+        "ambiguity_score": 0.3,
+        "staleness_score": 1.0,
+        "allocated_points": 50,
+        "evidence_reviews": []
+      },
+      {
+        "amenity_name": "Free Parking",
+        "listing_present": true,
+        "gap_score": 1.0,
+        "ambiguity_score": 0.3,
+        "staleness_score": 1.0,
+        "allocated_points": 50,
+        "evidence_reviews": []
+      },
+      {
+        "amenity_name": "Crib",
+        "listing_present": true,
+        "gap_score": 1.0,
+        "ambiguity_score": 0.3,
+        "staleness_score": 1.0,
+        "allocated_points": 50,
+        "evidence_reviews": []
+      }
+    ],
+    "gap_targets": [
+      {
+        "amenity_name": "Soundproof Rooms",
+        "gap_score": 1.0,
+        "allocated_points": 50
+      },
+      {
+        "amenity_name": "Free Parking",
+        "gap_score": 1.0,
+        "allocated_points": 50
+      }
+    ],
+    "ambiguous_targets": [
+      {
+        "amenity_name": "Internet",
+        "ambiguity_score": 0.9,
+        "allocated_points": 150
+      },
+      {
+        "amenity_name": "Breakfast",
+        "ambiguity_score": 0.6,
+        "allocated_points": 50
+      }
+    ],
+    "stale_targets": [
+      {
+        "amenity_name": "Pool",
+        "staleness_score": 0.9,
+        "allocated_points": 100
+      },
+      {
+        "amenity_name": "Restaurant",
+        "staleness_score": 0.8,
+        "allocated_points": 100
+      }
+    ]
+  },
+  {
+    "eg_property_id": "3216b1b7885bffdb336265a8de7322ba0cd477cfb3d4f99d19acf488f76a1941",
+    "location": {
+      "city": "Bell Gardens",
+      "province": "California",
+      "country": "United States",
+      "star_rating": "2.0"
+    },
+    "property_summary": {
+      "guestrating_avg_expedia": "8.4",
+      "n_reviews_total": 1094,
+      "total_points_budget": 1000,
+      "points_unit": 50
+    },
+    "amenity_analysis": [
+      {
+        "amenity_name": "Housekeeping",
+        "listing_present": true,
+        "gap_score": 0.1,
+        "ambiguity_score": 0.8,
+        "staleness_score": 0.3,
+        "allocated_points": 150,
+        "evidence_reviews": [
+          "good regular clean place",
+          "this property is filthy!! the walls of the room were all disgusting",
+          "towels were dirty, looked unwashed. drawers were dirty.",
+          "cleaning staff seemed to be bit lazy. i left in the morning and got back late night and i was expecting a fitted bed with tucked sheet but i came back and trash was still there"
+        ]
+      },
+      {
+        "amenity_name": "24-Hour Front Desk",
+        "listing_present": true,
+        "gap_score": 0.3,
+        "ambiguity_score": 0.7,
+        "staleness_score": 0.4,
+        "allocated_points": 150,
+        "evidence_reviews": [
+          "the hotel staff was very friendly and helpful",
+          "one of the young front desk staff yelled and overall mistreated the cleaning staff",
+          "person who was at front desk did nothing about it just told me okay & there\u2019s no manager"
+        ]
+      },
+      {
+        "amenity_name": "Internet",
+        "listing_present": true,
+        "gap_score": 1.0,
+        "ambiguity_score": 0.5,
+        "staleness_score": 1.0,
+        "allocated_points": 150,
+        "evidence_reviews": []
+      },
+      {
+        "amenity_name": "Free Parking",
+        "listing_present": true,
+        "gap_score": 0.8,
+        "ambiguity_score": 0.6,
+        "staleness_score": 0.7,
+        "allocated_points": 100,
+        "evidence_reviews": [
+          "the parkinglot is a nighmare, there were cars using two spaces"
+        ]
+      },
+      {
+        "amenity_name": "AC",
+        "listing_present": true,
+        "gap_score": 0.8,
+        "ambiguity_score": 0.4,
+        "staleness_score": 0.7,
+        "allocated_points": 100,
+        "evidence_reviews": [
+          "the room air conditioner and bathroom vents were dusty"
+        ]
+      },
+      {
+        "amenity_name": "Microwave",
+        "listing_present": true,
+        "gap_score": 0.9,
+        "ambiguity_score": 0.3,
+        "staleness_score": 0.5,
+        "allocated_points": 100,
+        "evidence_reviews": [
+          "das zimmer hatte eine mikrowelle, k\u00fchlschrank und eine kaffeemaschine"
+        ]
+      },
+      {
+        "amenity_name": "Accessibility",
+        "listing_present": true,
+        "gap_score": 1.0,
+        "ambiguity_score": 0.5,
+        "staleness_score": 1.0,
+        "allocated_points": 100,
+        "evidence_reviews": [
+          "this property does not have elevators"
+        ]
+      },
+      {
+        "amenity_name": "TV",
+        "listing_present": true,
+        "gap_score": 0.9,
+        "ambiguity_score": 0.4,
+        "staleness_score": 0.7,
+        "allocated_points": 50,
+        "evidence_reviews": [
+          "remote did not work"
+        ]
+      },
+      {
+        "amenity_name": "Business Services",
+        "listing_present": true,
+        "gap_score": 1.0,
+        "ambiguity_score": 0.5,
+        "staleness_score": 1.0,
+        "allocated_points": 50,
+        "evidence_reviews": []
+      },
+      {
+        "amenity_name": "Laundry",
+        "listing_present": true,
+        "gap_score": 1.0,
+        "ambiguity_score": 0.5,
+        "staleness_score": 1.0,
+        "allocated_points": 50,
+        "evidence_reviews": []
+      }
+    ],
+    "gap_targets": [
+      {
+        "amenity_name": "Internet",
+        "gap_score": 1.0,
+        "allocated_points": 150
+      },
+      {
+        "amenity_name": "Accessibility",
+        "gap_score": 1.0,
+        "allocated_points": 100
+      },
+      {
+        "amenity_name": "Laundry",
+        "gap_score": 1.0,
+        "allocated_points": 50
+      }
+    ],
+    "ambiguous_targets": [
+      {
+        "amenity_name": "Housekeeping",
+        "ambiguity_score": 0.8,
+        "allocated_points": 150
+      },
+      {
+        "amenity_name": "24-Hour Front Desk",
+        "ambiguity_score": 0.7,
+        "allocated_points": 150
+      },
+      {
+        "amenity_name": "Free Parking",
+        "ambiguity_score": 0.6,
+        "allocated_points": 100
+      }
+    ],
+    "stale_targets": [
+      {
+        "amenity_name": "Internet",
+        "staleness_score": 1.0,
+        "allocated_points": 150
+      },
+      {
+        "amenity_name": "Business Services",
+        "staleness_score": 1.0,
+        "allocated_points": 50
+      },
+      {
+        "amenity_name": "Laundry",
+        "staleness_score": 1.0,
+        "allocated_points": 50
+      }
+    ]
+  },
+  {
+    "eg_property_id": "f2d8d9557208d58577e9df7ff34e42bf86fb5b10fdfae0c3040d14c374a2a2b9",
+    "location": {
+      "city": "New Smyrna Beach",
+      "province": "Florida",
+      "country": "United States",
+      "star_rating": "2.0"
+    },
+    "property_summary": {
+      "guestrating_avg_expedia": "7.2",
+      "n_reviews_total": 50,
+      "total_points_budget": 1000,
+      "points_unit": 50
+    },
+    "amenity_analysis": [
+      {
+        "amenity_name": "Accessibility",
+        "listing_present": true,
+        "gap_score": 1.0,
+        "ambiguity_score": 0.5,
+        "staleness_score": 1.0,
+        "allocated_points": 200,
+        "evidence_reviews": [
+          "this property does not have elevators",
+          "upper floors accessible by stairs only"
+        ]
+      },
+      {
+        "amenity_name": "Internet",
+        "listing_present": true,
+        "gap_score": 1.0,
+        "ambiguity_score": 0.5,
+        "staleness_score": 1.0,
+        "allocated_points": 150,
+        "evidence_reviews": []
+      },
+      {
+        "amenity_name": "Heater",
+        "listing_present": true,
+        "gap_score": 0.9,
+        "ambiguity_score": 0.8,
+        "staleness_score": 0.7,
+        "allocated_points": 100,
+        "evidence_reviews": [
+          "couldn't use the heat, smelled like urine when tried."
+        ]
+      },
+      {
+        "amenity_name": "AC",
+        "listing_present": true,
+        "gap_score": 0.4,
+        "ambiguity_score": 0.8,
+        "staleness_score": 0.6,
+        "allocated_points": 100,
+        "evidence_reviews": [
+          "small ac was in the living room for the whole unit, so it was pretty warm to sleep.",
+          "room was cozy but a little warm (a/c).",
+          "air was not working. i think it needs remodeling."
+        ]
+      },
+      {
+        "amenity_name": "Kitchen",
+        "listing_present": true,
+        "gap_score": 0.6,
+        "ambiguity_score": 0.7,
+        "staleness_score": 0.6,
+        "allocated_points": 100,
+        "evidence_reviews": [
+          "rented one of my rooms with a kitchen to cook a 25th anniversary dinner and the oven did not work!",
+          "upgraded to a larger room with a full kitchen, living room, and dining area."
+        ]
+      },
+      {
+        "amenity_name": "Housekeeping",
+        "listing_present": true,
+        "gap_score": 0.5,
+        "ambiguity_score": 0.7,
+        "staleness_score": 0.7,
+        "allocated_points": 100,
+        "evidence_reviews": [
+          "the rooms were made up everyday.",
+          "had one bath towel no face towels!"
+        ]
+      },
+      {
+        "amenity_name": "Barbecue/Outdoor",
+        "listing_present": true,
+        "gap_score": 0.8,
+        "ambiguity_score": 0.3,
+        "staleness_score": 0.7,
+        "allocated_points": 100,
+        "evidence_reviews": [
+          "came back to our room enjoyed the beautiful pool & gas grills what else could you ask for"
+        ]
+      },
+      {
+        "amenity_name": "TV",
+        "listing_present": true,
+        "gap_score": 0.7,
+        "ambiguity_score": 0.7,
+        "staleness_score": 0.6,
+        "allocated_points": 50,
+        "evidence_reviews": [
+          "the tv in the room would not reboot, tried many times,it would still not work!",
+          "new paint and tvs and furniture flooring update"
+        ]
+      },
+      {
+        "amenity_name": "Free Parking",
+        "listing_present": true,
+        "gap_score": 0.3,
+        "ambiguity_score": 0.6,
+        "staleness_score": 0.5,
+        "allocated_points": 50,
+        "evidence_reviews": [
+          "parking was a nightmare.",
+          "you need a parking pass, but many times there were at least 5 cats in the very small lot without."
+        ]
+      }
+    ],
+    "gap_targets": [
+      {
+        "amenity_name": "Accessibility",
+        "gap_score": 1.0,
+        "allocated_points": 200
+      },
+      {
+        "amenity_name": "Internet",
+        "gap_score": 1.0,
+        "allocated_points": 150
+      }
+    ],
+    "ambiguous_targets": [
+      {
+        "amenity_name": "AC",
+        "ambiguity_score": 0.8,
+        "allocated_points": 100
+      },
+      {
+        "amenity_name": "Heater",
+        "ambiguity_score": 0.8,
+        "allocated_points": 100
+      }
+    ],
+    "stale_targets": [
+      {
+        "amenity_name": "Accessibility",
+        "staleness_score": 1.0,
+        "allocated_points": 200
+      },
+      {
+        "amenity_name": "Internet",
+        "staleness_score": 1.0,
+        "allocated_points": 150
+      }
+    ]
+  },
+  {
+    "eg_property_id": "7d027ef72c02eaa17af3c993fd5dba50d17b41a6280389a46c13c7e2c32a5b06",
+    "location": {
+      "city": "Ocala",
+      "province": "Florida",
+      "country": "United States",
+      "star_rating": "2.5"
+    },
+    "property_summary": {
+      "guestrating_avg_expedia": "6.6",
+      "n_reviews_total": 765,
+      "total_points_budget": 1000,
+      "points_unit": 50
+    },
+    "amenity_analysis": [
+      {
+        "amenity_name": "Pool",
+        "listing_present": true,
+        "gap_score": 0.6,
+        "ambiguity_score": 0.8,
+        "staleness_score": 0.8,
+        "allocated_points": 150,
+        "evidence_reviews": [
+          "disliked the following: musty bathroom smell, broken toilet seat, fridge without freezer, pool closed.",
+          "hotel conditions were disappointing, ice maker didn't work on our floor, problems with the bathroom and pool was out of service for few days.",
+          "pool was dirty and the smoking area just outside so it smelled of smoke."
+        ]
+      },
+      {
+        "amenity_name": "Fitness Center",
+        "listing_present": true,
+        "gap_score": 1.0,
+        "ambiguity_score": 0.5,
+        "staleness_score": 1.0,
+        "allocated_points": 150,
+        "evidence_reviews": []
+      },
+      {
+        "amenity_name": "Accessibility",
+        "listing_present": true,
+        "gap_score": 0.8,
+        "ambiguity_score": 0.9,
+        "staleness_score": 0.7,
+        "allocated_points": 150,
+        "evidence_reviews": [
+          "i got an accessible room because i dont like bathtubs. my room had a bathtub and no vanity at all.",
+          "it was dirty no walk in showers ",
+          "we were given a room that didn't have a vanity in it... and we are not handicapped."
+        ]
+      },
+      {
+        "amenity_name": "Free Parking",
+        "listing_present": true,
+        "gap_score": 0.9,
+        "ambiguity_score": 0.4,
+        "staleness_score": 0.9,
+        "allocated_points": 150,
+        "evidence_reviews": [
+          "the parking lot was small and hard to get back on the main road"
+        ]
+      },
+      {
+        "amenity_name": "Internet",
+        "listing_present": true,
+        "gap_score": 0.9,
+        "ambiguity_score": 0.6,
+        "staleness_score": 0.7,
+        "allocated_points": 100,
+        "evidence_reviews": [
+          "wifi did not work to weak."
+        ]
+      },
+      {
+        "amenity_name": "Laundry",
+        "listing_present": true,
+        "gap_score": 0.9,
+        "ambiguity_score": 0.4,
+        "staleness_score": 0.5,
+        "allocated_points": 100,
+        "evidence_reviews": [
+          "i needed to use the laundry that night, and both washer and dryer were out of service."
+        ]
+      },
+      {
+        "amenity_name": "TV",
+        "listing_present": true,
+        "gap_score": 0.9,
+        "ambiguity_score": 0.5,
+        "staleness_score": 0.7,
+        "allocated_points": 50,
+        "evidence_reviews": [
+          "it took forever to get the tv to work. the neck of the tv was broken - sloped down to the floor."
+        ]
+      },
+      {
+        "amenity_name": "AC",
+        "listing_present": true,
+        "gap_score": 0.8,
+        "ambiguity_score": 0.7,
+        "staleness_score": 0.7,
+        "allocated_points": 50,
+        "evidence_reviews": [
+          "king size bed, good a/c, clean, good area.",
+          "rooms and furnishings were outdated and the hvac was stale."
+        ]
+      },
+      {
+        "amenity_name": "Elevator",
+        "listing_present": true,
+        "gap_score": 0.7,
+        "ambiguity_score": 0.6,
+        "staleness_score": 0.6,
+        "allocated_points": 50,
+        "evidence_reviews": [
+          "initially we had a room right next to the elevator. asked to switch rooms.",
+          "they gave a room right nex to the elevator and the ice machine when its come on sound like a train passing by elevator door open and. close we couldn't sleep"
+        ]
+      },
+      {
+        "amenity_name": "Breakfast",
+        "listing_present": true,
+        "gap_score": 0.2,
+        "ambiguity_score": 0.3,
+        "staleness_score": 0.4,
+        "allocated_points": 50,
+        "evidence_reviews": [
+          "breakfast was good with good choices.",
+          "the employee who worked the breakfast room was just the right amount of friendly."
+        ]
+      }
+    ],
+    "gap_targets": [
+      {
+        "amenity_name": "Fitness Center",
+        "gap_score": 1.0,
+        "allocated_points": 150
+      },
+      {
+        "amenity_name": "Free Parking",
+        "gap_score": 0.9,
+        "allocated_points": 150
+      }
+    ],
+    "ambiguous_targets": [
+      {
+        "amenity_name": "Accessibility",
+        "ambiguity_score": 0.9,
+        "allocated_points": 150
+      },
+      {
+        "amenity_name": "Pool",
+        "ambiguity_score": 0.8,
+        "allocated_points": 150
+      }
+    ],
+    "stale_targets": [
+      {
+        "amenity_name": "Fitness Center",
+        "staleness_score": 1.0,
+        "allocated_points": 150
+      },
+      {
+        "amenity_name": "Free Parking",
+        "staleness_score": 0.9,
+        "allocated_points": 150
+      }
+    ]
+  }
+]
