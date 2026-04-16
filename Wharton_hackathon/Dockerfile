@@ -3,7 +3,9 @@ FROM node:20-slim AS frontend
 RUN apt-get update && apt-get install -y git git-lfs && rm -rf /var/lib/apt/lists/*
 RUN git lfs install
 WORKDIR /build
-RUN git clone https://github.com/MLN-MNJ/wharton-hackathon.git .
+RUN GIT_LFS_SKIP_SMUDGE=1 git clone https://github.com/MLN-MNJ/wharton-hackathon.git . \
+    && git lfs fetch --all \
+    && git lfs checkout
 WORKDIR /build/Wharton_hackathon/gapquest-react-stl-2
 RUN npm ci
 RUN npm run build
